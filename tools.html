@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amber Chang｜PMO 工具實作</title>
+  <meta name="description" content="Amber Chang 的 PMO 工具實作作品集：以去識別化案例呈現多專案總覽、里程碑、RAID Log、決策紀錄、管理層週報、成本與請款管制。">
+  <link rel="canonical" href="https://amberchang0718.github.io/tools.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/tools.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">
+    <span class="brand-mark">AC</span>
+    <span>Amber Chang</span>
+  </a>
+  <nav aria-label="頁面導覽">
+    <a href="#architecture">資訊架構</a>
+    <a href="#portfolio">多案總覽</a>
+    <a href="#milestone">里程碑</a>
+    <a href="#raid">風險與決策</a>
+    <a href="#reporting">簡報與報告</a>
+    <a href="#cost">成本管制</a>
+  </nav>
+  <a class="back-link" href="/">返回主作品集</a>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> PMO WORKING SYSTEMS · ANONYMIZED</p>
+      <h1>工具不是作品；<br>工具背後的判斷才是。</h1>
+      <p class="hero-lead">同一組專案資訊，會因閱讀者與決策時點不同而改變呈現方式。管理層需要取捨依據，專案團隊需要責任與依賴，現場需要確認下一工序是否具備條件。</p>
+      <p class="hero-note">以下內容依實際工作方法去識別化重建；專案名稱、金額、供應商與人員均已調整，不含原始公司機密。</p>
+    </div>
+    <aside class="hero-index">
+      <div class="index-top">
+        <span>WORK SAMPLE INDEX</span>
+        <strong>07</strong>
+      </div>
+      <ol>
+        <li><b>01</b><span>資訊架構與閱讀者</span></li>
+        <li><b>02</b><span>多專案管理總覽</span></li>
+        <li><b>03</b><span>里程碑與依賴管理</span></li>
+        <li><b>04</b><span>RAID Log 與決策紀錄</span></li>
+        <li><b>05</b><span>管理層簡報與週報</span></li>
+        <li><b>06</b><span>成本、請款與附件管制</span></li>
+        <li><b>07</b><span>工具選擇與治理原則</span></li>
+      </ol>
+    </aside>
+  </section>
+
+  <section class="audience-strip" aria-label="三種閱讀視角">
+    <article>
+      <span>EXECUTIVE</span>
+      <strong>管理層</strong>
+      <p>看影響、選項、決策期限與資源取捨。</p>
+    </article>
+    <article>
+      <span>PROJECT TEAM</span>
+      <strong>專案團隊</strong>
+      <p>看範圍、里程碑、責任、依賴與風險。</p>
+    </article>
+    <article>
+      <span>FIELD / OPERATION</span>
+      <strong>現場與作業端</strong>
+      <p>看當日條件、異常、證據與下一工序。</p>
+    </article>
+  </section>
+
+  <section class="section architecture" id="architecture">
+    <div class="section-heading">
+      <p class="eyebrow"><span></span> 01 · INFORMATION ARCHITECTURE</p>
+      <h2>一份可靠的報告，始於資訊如何進來、被核對，再形成決策。</h2>
+      <p>工具之間不是彼此取代，而是承接不同管理責任。現場紀錄與商務文件先形成可追溯的事實，再依使用情境轉為專案基準與管理輸出。</p>
+    </div>
+    <div class="architecture-map" role="img" aria-label="從原始資料到管理輸出的資訊架構">
+      <div class="map-column input-column">
+        <span class="map-label">01 · SOURCE</span>
+        <h3>原始資訊</h3>
+        <ul>
+          <li>現場日報與施工照片</li>
+          <li>報價、合約與變更文件</li>
+          <li>供應商回覆與交期</li>
+          <li>估驗、發票與附件</li>
+          <li>會議結論與主管指示</li>
+        </ul>
+      </div>
+      <div class="map-arrow" aria-hidden="true">→</div>
+      <div class="map-column control-column">
+        <span class="map-label">02 · CONTROL</span>
+        <h3>共同工作基準</h3>
+        <div class="control-stack">
+          <div><b>Scope</b><span>範圍與交付</span></div>
+          <div><b>Schedule</b><span>里程碑與依賴</span></div>
+          <div><b>RAID</b><span>風險、議題與決策</span></div>
+          <div><b>Cost</b><span>預算、請款與差異</span></div>
+        </div>
+      </div>
+      <div class="map-arrow" aria-hidden="true">→</div>
+      <div class="map-column output-column">
+        <span class="map-label">03 · OUTPUT</span>
+        <h3>依閱讀者轉譯</h3>
+        <ul>
+          <li><b>管理層：</b>一頁式決策摘要</li>
+          <li><b>專案團隊：</b>里程碑與 RAID Log</li>
+          <li><b>財務採購：</b>成本與請款管制</li>
+          <li><b>現場：</b>條件確認與異常回報</li>
+        </ul>
+      </div>
+    </div>
+    <p class="artifact-caption"><b>管理目的</b>：建立單一資訊來源，避免進度、成本與決策分散在訊息、檔案與個人記憶中。</p>
+  </section>
+
+  <section class="section dark-section" id="portfolio">
+    <div class="section-heading light">
+      <p class="eyebrow"><span></span> 02 · PORTFOLIO VIEW</p>
+      <h2>多專案總覽先標示需要介入的位置，再保留向下查閱細節的路徑。</h2>
+      <p>管理層可在短時間內掌握整體狀態，並循異常項目查閱專案、議題或待決事項。</p>
+    </div>
+
+    <div class="dashboard-window artifact-window">
+      <div class="window-bar">
+        <div class="window-title"><span class="window-mark"></span> GROUP PROJECT PORTFOLIO</div>
+        <div class="window-meta">更新：W32 · 去識別化範例</div>
+      </div>
+      <div class="dashboard-kpis">
+        <div><span>進行中專案</span><strong>4</strong><small>2 項需管理介入</small></div>
+        <div><span>里程碑準時率</span><strong>84%</strong><small class="trend-up">較上週 +6%</small></div>
+        <div><span>高風險議題</span><strong>3</strong><small class="trend-warn">1 項逾決策期限</small></div>
+        <div><span>預算使用率</span><strong>68%</strong><small>整體仍在核定範圍</small></div>
+      </div>
+      <div class="dashboard-main">
+        <div class="project-table-wrap">
+          <table class="project-table">
+            <thead>
+              <tr><th>專案</th><th>健康度</th><th>進度</th><th>下一里程碑</th><th>主要議題</th><th>決策期限</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>P-01</b><span>自動化設備導入</span></td>
+                <td><i class="status amber"></i>At Risk</td>
+                <td><div class="mini-progress"><span style="width:72%"></span></div><small>72%</small></td>
+                <td>分區試運轉</td><td>設備介面未關閉</td><td class="deadline">08/29</td>
+              </tr>
+              <tr>
+                <td><b>P-02</b><span>鋼構平台建置</span></td>
+                <td><i class="status green"></i>On Track</td>
+                <td><div class="mini-progress"><span style="width:91%"></span></div><small>91%</small></td>
+                <td>驗收與結算</td><td>新增工項確認</td><td>09/02</td>
+              </tr>
+              <tr>
+                <td><b>P-03</b><span>據點改造計畫</span></td>
+                <td><i class="status red"></i>Critical</td>
+                <td><div class="mini-progress"><span style="width:46%"></span></div><small>46%</small></td>
+                <td>設計凍結</td><td>營運需求變更</td><td class="deadline">08/27</td>
+              </tr>
+              <tr>
+                <td><b>P-04</b><span>管理系統導入</span></td>
+                <td><i class="status green"></i>On Track</td>
+                <td><div class="mini-progress"><span style="width:63%"></span></div><small>63%</small></td>
+                <td>使用者驗證</td><td>欄位權責確認</td><td>09/05</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="attention-panel">
+          <div class="panel-head"><span>MANAGEMENT ATTENTION</span><b>本週需介入</b></div>
+          <article>
+            <span class="priority high">01 · HIGH</span>
+            <h3>據點改造：設計凍結延後</h3>
+            <p>若 8/27 前未確認需求版本，將影響材料下單與進場日。</p>
+            <small>決策者：事業體主管</small>
+          </article>
+          <article>
+            <span class="priority medium">02 · MEDIUM</span>
+            <h3>設備導入：介面責任未關閉</h3>
+            <p>方案 A 保留原時程但增加夜間施工；方案 B 順延三日。</p>
+            <small>決策者：專案 Sponsor</small>
+          </article>
+        </aside>
+      </div>
+    </div>
+    <div class="artifact-explain light-explain">
+      <div><span>回答的問題</span><b>哪個專案需要介入？介入的期限與代價是什麼？</b></div>
+      <div><span>適合載體</span><b>ClickUp／Notion 管理視圖＋Google Sheets 指標計算</b></div>
+      <div><span>閱讀者</span><b>執行長、事業體主管、PMO</b></div>
+    </div>
+  </section>
+
+  <section class="section" id="milestone">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow"><span></span> 03 · MILESTONE & DEPENDENCY</p>
+        <h2>里程碑的價值，在於揭露前後依賴，而不只是標示日期。</h2>
+      </div>
+      <p>以下將大型設備導入拆為決策、採購、安裝、測試與驗收五個階段；延誤不只呈現天數，也標示受影響的後續工作與可回復方案。</p>
+    </div>
+
+    <div class="milestone-board artifact-window">
+      <div class="window-bar light-bar">
+        <div class="window-title"><span class="window-mark"></span> P-01 · AUTOMATION IMPLEMENTATION</div>
+        <div class="window-meta">Baseline v1.6</div>
+      </div>
+      <div class="timeline-header">
+        <div class="phase-title">PHASE / OWNER</div>
+        <div class="weeks"><span>W29</span><span>W30</span><span>W31</span><span>W32</span><span>W33</span><span>W34</span><span>W35</span><span>W36</span></div>
+      </div>
+      <div class="timeline-row">
+        <div class="task-name"><b>01</b><span>範圍與設計凍結<small>Owner · PM / 設計</small></span></div>
+        <div class="timeline-track"><span class="bar done" style="left:0%;width:24%">100%</span><i class="milestone-dot done-dot" style="left:24%"></i></div>
+      </div>
+      <div class="timeline-row">
+        <div class="task-name"><b>02</b><span>長交期設備採購<small>Owner · 採購 / 供應商</small></span></div>
+        <div class="timeline-track"><span class="bar active" style="left:13%;width:38%">78%</span><i class="milestone-dot active-dot" style="left:51%"></i></div>
+      </div>
+      <div class="timeline-row risk-row">
+        <div class="task-name"><b>03</b><span>現場介面與分區安裝<small>Owner · 工程 / 現場</small></span></div>
+        <div class="timeline-track"><span class="bar risk" style="left:38%;width:35%">介面待決</span><i class="dependency-line" style="left:51%;width:22%"></i><i class="milestone-dot risk-dot" style="left:73%"></i></div>
+      </div>
+      <div class="timeline-row">
+        <div class="task-name"><b>04</b><span>單機測試與整合測試<small>Owner · 技術 / 使用單位</small></span></div>
+        <div class="timeline-track"><span class="bar planned" style="left:63%;width:24%">Planned</span><i class="milestone-dot planned-dot" style="left:87%"></i></div>
+      </div>
+      <div class="timeline-row">
+        <div class="task-name"><b>05</b><span>驗收、移交與結案<small>Owner · PM / 財務</small></span></div>
+        <div class="timeline-track"><span class="bar planned" style="left:86%;width:13%">Close</span><i class="milestone-dot planned-dot" style="left:99%"></i></div>
+      </div>
+      <div class="milestone-note">
+        <div><span class="note-no">DEPENDENCY 01</span><b>介面確認 → 分區安裝 → 整合測試</b></div>
+        <p>目前差異：介面確認晚 3 日。回復方案：調整分區順序，維持整合測試基準日；需於 W32 完成決策。</p>
+      </div>
+    </div>
+    <div class="artifact-explain">
+      <div><span>回答的問題</span><b>延誤發生在哪裡？會影響什麼？還有哪些回復方案？</b></div>
+      <div><span>適合載體</span><b>ClickUp Gantt／Google Sheets 甘特／簡報里程碑頁</b></div>
+      <div><span>閱讀者</span><b>專案團隊、部門主管、供應商窗口</b></div>
+    </div>
+  </section>
+
+  <section class="section sage-section" id="raid">
+    <div class="section-heading">
+      <p class="eyebrow"><span></span> 04 · RAID & DECISION LOG</p>
+      <h2>風險、議題與決策分開管理，責任才不會埋在會議紀錄裡。</h2>
+      <p>RAID Log 保留專案的不確定性與處理責任；Decision Log 則記錄選項、影響、核定者與生效條件。兩者相互關聯，但用途不同。</p>
+    </div>
+
+    <div class="raid-layout">
+      <div class="raid-sheet artifact-window">
+        <div class="window-bar light-bar">
+          <div class="window-title"><span class="window-mark"></span> RAID LOG</div>
+          <div class="window-meta">Open items · 6</div>
+        </div>
+        <table class="raid-table">
+          <thead><tr><th>ID</th><th>TYPE</th><th>議題／風險</th><th>影響</th><th>OWNER</th><th>DUE</th><th>STATUS</th></tr></thead>
+          <tbody>
+            <tr><td>R-012</td><td><span class="tag risk-tag">RISK</span></td><td>長交期設備晚於基準日</td><td>測試窗口縮短 4 日</td><td>採購</td><td>08/28</td><td><span class="state amber-state">Mitigating</span></td></tr>
+            <tr><td>I-018</td><td><span class="tag issue-tag">ISSUE</span></td><td>現場介面尺寸不一致</td><td>分區安裝暫停</td><td>工程</td><td>08/27</td><td><span class="state red-state">Escalated</span></td></tr>
+            <tr><td>A-021</td><td><span class="tag action-tag">ACTION</span></td><td>補齊變更報價與圖面版本</td><td>支援方案比較</td><td>PM</td><td>08/26</td><td><span class="state green-state">In Progress</span></td></tr>
+            <tr><td>D-009</td><td><span class="tag decision-tag">DECISION</span></td><td>確認夜間施工或順延方案</td><td>成本／工期取捨</td><td>Sponsor</td><td>08/29</td><td><span class="state neutral-state">Pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="decision-card">
+        <div class="decision-head"><span>DECISION D-009</span><b>需於 08/29 前核定</b></div>
+        <h3>設備介面修正期間，如何維持整合測試目標？</h3>
+        <div class="option recommended">
+          <span>OPTION A · 建議</span>
+          <b>調整分區順序＋兩日夜間施工</b>
+          <ul><li>維持原測試日</li><li>增加直接成本 2.8%</li><li>需協調現場與安全人力</li></ul>
+        </div>
+        <div class="option">
+          <span>OPTION B</span>
+          <b>維持日間施工，整體順延三日</b>
+          <ul><li>不增加夜間成本</li><li>占用既定測試窗口</li><li>後續驗收緩衝歸零</li></ul>
+        </div>
+        <div class="decision-footer"><span>決策依據</span><b>時程基準 · 成本估算 · 現場可行性 · 驗收窗口</b></div>
+      </aside>
+    </div>
+    <div class="artifact-explain">
+      <div><span>回答的問題</span><b>現在的風險是什麼、由誰處理、何時需要升級？</b></div>
+      <div><span>適合載體</span><b>ClickUp Issue List／Notion Database／Google Sheets Log</b></div>
+      <div><span>閱讀者</span><b>PM、責任窗口、Sponsor、跨部門團隊</b></div>
+    </div>
+  </section>
+
+  <section class="section reporting-section" id="reporting">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow"><span></span> 05 · EXECUTIVE REPORTING</p>
+        <h2>報告不以資訊量取勝，而以能否促成判斷為準。</h2>
+      </div>
+      <p>同一週的專案資料，依會議目的整理成三種形式：高階簡報、專案週報與現場摘要。內容相互連結，但不要求不同閱讀者閱讀同一份文件。</p>
+    </div>
+
+    <div class="report-tabs" role="tablist" aria-label="報告形式切換">
+      <button class="report-tab active" type="button" data-report="executive" role="tab" aria-selected="true">管理層簡報</button>
+      <button class="report-tab" type="button" data-report="weekly" role="tab" aria-selected="false">專案週報</button>
+      <button class="report-tab" type="button" data-report="field" role="tab" aria-selected="false">現場摘要</button>
+    </div>
+
+    <div class="report-stage">
+      <article class="report-view active" data-view="executive">
+        <div class="slide-deck">
+          <div class="slide-side">
+            <span>EXECUTIVE PROJECT REVIEW</span>
+            <strong>W32</strong>
+            <small>P-01 · 自動化設備導入</small>
+            <div class="slide-pagination">03 / 08</div>
+          </div>
+          <div class="slide-main">
+            <div class="slide-title"><span>DECISION REQUIRED</span><h3>整合測試基準日可維持，需核定夜間施工資源。</h3></div>
+            <div class="slide-grid">
+              <div class="slide-metric"><span>整體進度</span><strong>72%</strong><small>Baseline 75%</small></div>
+              <div class="slide-metric"><span>時程差異</span><strong class="amber-text">-3 Days</strong><small>可於 W34 回復</small></div>
+              <div class="slide-metric"><span>成本影響</span><strong>+2.8%</strong><small>仍在管理預備金內</small></div>
+            </div>
+            <div class="slide-message">
+              <div><span>背景</span><p>介面尺寸差異導致分區安裝暫停，已完成現況確認與兩方案估算。</p></div>
+              <div><span>建議</span><p>採方案 A：調整分區順序並配置兩日夜間施工，維持整合測試與驗收窗口。</p></div>
+              <div><span>待決</span><p>核定追加資源與夜間施工安排；決策期限 08/29。</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="report-view" data-view="weekly" hidden>
+        <div class="weekly-report">
+          <div class="report-paper-head">
+            <div><span>PROJECT WEEKLY REPORT</span><h3>P-01 · 自動化設備導入</h3></div>
+            <div><b>W32</b><small>Reporting period · 08/19–08/25</small></div>
+          </div>
+          <div class="weekly-status">
+            <div><span>Overall</span><b class="status-pill amber-pill">AT RISK</b></div>
+            <div><span>Scope</span><b class="status-pill green-pill">ON TRACK</b></div>
+            <div><span>Schedule</span><b class="status-pill amber-pill">AT RISK</b></div>
+            <div><span>Cost</span><b class="status-pill green-pill">ON TRACK</b></div>
+            <div><span>Quality</span><b class="status-pill green-pill">ON TRACK</b></div>
+          </div>
+          <div class="weekly-columns">
+            <section><span>本週完成</span><ul><li>完成分區 A 設備定位</li><li>確認介面差異與修正範圍</li><li>更新採購交期與到場計畫</li></ul></section>
+            <section><span>下週計畫</span><ul><li>完成分區 B 安裝</li><li>啟動單機測試</li><li>關閉 3 項高風險議題</li></ul></section>
+            <section><span>風險與支援</span><ul><li>夜間施工資源待核定</li><li>供應商需補新版圖面</li><li>驗收窗口無剩餘緩衝</li></ul></section>
+          </div>
+          <div class="weekly-bottom"><span>本週管理重點</span><b>08/29 前完成 D-009 決策，否則整合測試轉為 Critical Path。</b></div>
+        </div>
+      </article>
+
+      <article class="report-view" data-view="field" hidden>
+        <div class="field-report">
+          <div class="field-report-head"><span>FIELD UPDATE · 08/25</span><b>分區 A 設備安裝／介面確認</b><small>回報人：Site PM · 現場狀態 16:30</small></div>
+          <div class="field-report-body">
+            <div class="field-photo-placeholder"><span>PHOTO EVIDENCE</span><b>施工照片／定位標示／圖面版本</b><small>附件編號：F-0825-01 ～ 06</small></div>
+            <div class="field-checks">
+              <div><i class="check ok">✓</i><span><b>人力與機具</b><small>符合今日施工計畫</small></span></div>
+              <div><i class="check ok">✓</i><span><b>材料到場</b><small>主要設備已點收</small></span></div>
+              <div><i class="check warn">!</i><span><b>介面條件</b><small>尺寸差異，已建立 I-018</small></span></div>
+              <div><i class="check stop">×</i><span><b>下一工序</b><small>待決策後方可釋放</small></span></div>
+            </div>
+          </div>
+          <div class="field-report-footer"><span>異常影響</span><p>分區 B 暫不進場；分區 A 其餘工作依原計畫執行。現況、圖面與責任窗口已同步 RAID Log。</p></div>
+        </div>
+      </article>
+    </div>
+    <div class="artifact-explain">
+      <div><span>回答的問題</span><b>這次會議要做決策、同步進度，還是確認現場條件？</b></div>
+      <div><span>適合載體</span><b>Google Slides／PowerPoint／一頁式 PDF／LINE 摘要</b></div>
+      <div><span>閱讀者</span><b>依報告目的調整，不以單一模板涵蓋所有人</b></div>
+    </div>
+  </section>
+
+  <section class="section dark-section" id="cost">
+    <div class="section-heading light">
+      <p class="eyebrow"><span></span> 06 · COST & PAYMENT CONTROL</p>
+      <h2>成本管制不只看預算差異，也要確認合約、進度、驗收與付款依據是否一致。</h2>
+      <p>此範例把合約、估驗、扣回、保留款、發票與附件放在同一條核對鏈，降低錯付、漏扣與結案時無法回溯的風險。</p>
+    </div>
+
+    <div class="cost-board artifact-window">
+      <div class="window-bar">
+        <div class="window-title"><span class="window-mark"></span> CONTRACT × PROGRESS × PAYMENT</div>
+        <div class="window-meta">Project P-02 · Period 04</div>
+      </div>
+      <div class="cost-kpis">
+        <div><span>合約金額</span><strong>100%</strong><small>核定基準</small></div>
+        <div><span>累計完成</span><strong>76.4%</strong><small>依現場估驗</small></div>
+        <div><span>累計請款</span><strong>71.6%</strong><small>含本期送審</small></div>
+        <div><span>保留／扣回</span><strong>8.2%</strong><small>依合約條件</small></div>
+      </div>
+      <div class="cost-main">
+        <div class="payment-flow">
+          <h3>本期請款核對鏈</h3>
+          <div class="flow-step complete"><span>01</span><div><b>合約條件</b><small>付款比例／扣回／保留</small></div><i>✓</i></div>
+          <div class="flow-step complete"><span>02</span><div><b>現場估驗</b><small>數量／工項／完成證據</small></div><i>✓</i></div>
+          <div class="flow-step complete"><span>03</span><div><b>累計計算</b><small>前期＋本期＝累計</small></div><i>✓</i></div>
+          <div class="flow-step alert"><span>04</span><div><b>附件與發票</b><small>點工單缺 1 份</small></div><i>!</i></div>
+          <div class="flow-step pending"><span>05</span><div><b>核准付款</b><small>待附件補齊</small></div><i>—</i></div>
+        </div>
+        <div class="variance-panel">
+          <div class="variance-head"><span>VARIANCE REVIEW</span><b>本期差異</b></div>
+          <table>
+            <thead><tr><th>檢核項目</th><th>申請</th><th>核認</th><th>差異</th></tr></thead>
+            <tbody>
+              <tr><td>主體工項</td><td>18.0%</td><td>18.0%</td><td class="ok-text">0.0%</td></tr>
+              <tr><td>新增工項</td><td>3.8%</td><td>2.6%</td><td class="bad-text">-1.2%</td></tr>
+              <tr><td>訂金扣回</td><td>-2.0%</td><td>-2.0%</td><td class="ok-text">0.0%</td></tr>
+              <tr><td>保留款</td><td>-1.1%</td><td>-1.1%</td><td class="ok-text">0.0%</td></tr>
+            </tbody>
+          </table>
+          <div class="variance-callout"><span>退回原因</span><b>新增工項之點工單與照片描述不足，暫不列入本期核認。</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="artifact-explain light-explain">
+      <div><span>回答的問題</span><b>這筆款項是否有合約、進度、驗收與附件依據？</b></div>
+      <div><span>適合載體</span><b>Google Sheets／Excel／ERP 正式付款與歸檔流程</b></div>
+      <div><span>閱讀者</span><b>PM、採購、財務、工程與核准主管</b></div>
+    </div>
+  </section>
+
+  <section class="section governance-section" id="governance">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow"><span></span> 07 · TOOL GOVERNANCE</p>
+        <h2>工具的選擇，取決於資料性質、維護責任與正式性。</h2>
+      </div>
+      <p>實際工作中，任務追蹤、數值計算、知識沉澱與正式交易紀錄有不同需求。工具越多，不代表管理越成熟；關鍵是資料來源、權責與版本必須清楚。</p>
+    </div>
+
+    <div class="tool-matrix">
+      <article>
+        <div class="tool-name"><span>01</span><b>ClickUp</b></div>
+        <h3>任務、責任與依賴</h3>
+        <p>承接 WBS、里程碑、Owner、Due Date、Issue 與狀態更新，適合團隊共同維護。</p>
+        <small>治理重點：欄位最少化、狀態定義、逾期與升級規則。</small>
+      </article>
+      <article>
+        <div class="tool-name"><span>02</span><b>Google Sheets / Excel</b></div>
+        <h3>計算、核對與差異分析</h3>
+        <p>處理成本、請款、工數、估驗與彈性報表，保留公式與核對邏輯。</p>
+        <small>治理重點：資料驗證、公式保護、版本與權限。</small>
+      </article>
+      <article>
+        <div class="tool-name"><span>03</span><b>Notion</b></div>
+        <h3>知識、範本與決策脈絡</h3>
+        <p>整合 SOP、會議決議、專案頁、範本與結案紀錄，支援後續查詢與延用。</p>
+        <small>治理重點：資料結構、關聯、命名與歸檔規則。</small>
+      </article>
+      <article>
+        <div class="tool-name"><span>04</span><b>ERP / 正式系統</b></div>
+        <h3>交易、權限與稽核紀錄</h3>
+        <p>正式承接採購、驗收、付款與財務紀錄；周邊工具不得取代公司治理與資安規範。</p>
+        <small>經驗邊界：曾參與 ERP 與 ISO 9001 導入前期盤點，非系統顧問。</small>
+      </article>
+    </div>
+
+    <div class="governance-principles">
+      <span>WORKING PRINCIPLES</span>
+      <div><b>單一來源</b><p>同一資訊只指定一個正式維護位置。</p></div>
+      <div><b>責任明確</b><p>每個欄位與狀態都有維護者與更新時點。</p></div>
+      <div><b>可回溯</b><p>保留版本、依據、決策者與生效條件。</p></div>
+      <div><b>適度設計</b><p>資訊粒度以能支持判斷為準，不增加無效維護。</p></div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <p class="eyebrow"><span></span> CLOSING NOTE</p>
+    <h2>能被持續使用的工具，才會成為管理能力的一部分。</h2>
+    <p>這份作品集沒有展示特定軟體的操作步驟，而是呈現如何從專案目標出發，決定資訊結構、閱讀層級、追蹤節奏與正式紀錄。工具可以更換；對責任、依據與交付的要求不能因此改變。</p>
+    <div class="closing-actions">
+      <a class="primary-button" href="/">返回主作品集</a>
+      <a class="secondary-button" href="#top">回到頁首</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>Amber Chang · PMO / Project Manager</strong>
+  <span>所有範例均為去識別化重建。</span>
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.report-tab');
+  const views = document.querySelectorAll('.report-view');
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.report;
+      tabs.forEach((item) => {
+        const active = item === tab;
+        item.classList.toggle('active', active);
+        item.setAttribute('aria-selected', String(active));
+      });
+      views.forEach((view) => {
+        const active = view.dataset.view === target;
+        view.classList.toggle('active', active);
+        view.hidden = !active;
+      });
+    });
+  });
+</script>
+</body>
+</html>
