@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amber Chang｜製造業產品專案管理實作</title>
+  <meta name="description" content="Amber Chang 的製造業產品專案管理實作：以去識別化案例呈現需求與報價基準、供應商製作、交付時程、變更管理及跨國協作。">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --ink: #172029;
+      --steel: #26495e;
+      --steel-deep: #122c3a;
+      --steel-soft: #dbe6eb;
+      --orange: #c56b32;
+      --orange-soft: #f2e1d5;
+      --paper: #f6f5f1;
+      --white: #fff;
+      --muted: #64717a;
+      --line: #d4dade;
+      --green: #31715a;
+      --amber: #a66d27;
+      --red: #a34b40;
+      --gutter: clamp(22px, 5vw, 82px);
+      --shadow: 0 22px 60px rgb(18 44 58 / 12%);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, p { text-wrap: pretty; }
+    h1, h2, h3 { text-wrap: balance; }
+    .topbar { position: sticky; z-index: 10; top: 0; min-height: 70px; padding: 0 var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid rgb(23 32 41 / 12%); background: rgb(246 245 241 / 94%); backdrop-filter: blur(14px); }
+    .brand { display: flex; align-items: center; gap: 11px; font-size: 13px; font-weight: 800; letter-spacing: .01em; }
+    .brand-mark { width: 36px; height: 36px; display: grid; place-items: center; color: white; background: var(--steel); border-radius: 5px; font: 10px ui-monospace, monospace; letter-spacing: .08em; }
+    nav { display: flex; align-items: center; gap: 22px; color: #53616a; font-size: 11px; }
+    nav a:hover { color: var(--orange); }
+    .page-type { padding: 8px 12px; border: 1px solid var(--line); color: var(--steel); font: 9px ui-monospace, monospace; letter-spacing: .08em; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--orange); font: 800 9px ui-monospace, monospace; letter-spacing: .14em; }
+    .eyebrow::before { width: 28px; height: 1px; content: ""; background: currentColor; }
+    .hero { min-height: 690px; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(420px, .92fr); background: var(--steel-deep); color: white; }
+    .hero-copy { padding: 94px var(--gutter) 80px; align-self: center; }
+    .hero h1 { max-width: 820px; margin: 24px 0 26px; font-size: clamp(46px, 5.8vw, 80px); line-height: 1.06; letter-spacing: -.055em; }
+    .hero-lead { max-width: 720px; margin: 0; color: #c3d2d9; font-size: 17px; line-height: 1.9; }
+    .hero-note { max-width: 720px; margin: 24px 0 0; padding-top: 20px; border-top: 1px solid rgb(255 255 255 / 16%); color: #8fa6b1; font-size: 11px; line-height: 1.75; }
+    .hero-visual { position: relative; min-height: 540px; overflow: hidden; }
+    .hero-visual img { width: 100%; height: 100%; display: block; object-fit: cover; filter: saturate(.78) contrast(1.05); }
+    .hero-visual::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, var(--steel-deep), transparent 28%), linear-gradient(0deg, rgb(18 44 58 / 70%), transparent 55%); }
+    .hero-card { position: absolute; z-index: 2; right: 30px; bottom: 30px; width: min(380px, calc(100% - 60px)); padding: 24px; color: var(--ink); background: rgb(255 255 255 / 93%); box-shadow: var(--shadow); }
+    .hero-card span, .hero-card strong, .hero-card small { display: block; }
+    .hero-card span { color: var(--orange); font: 800 9px ui-monospace, monospace; letter-spacing: .08em; }
+    .hero-card strong { margin-top: 11px; font-size: 18px; line-height: 1.45; }
+    .hero-card small { margin-top: 10px; color: var(--muted); font-size: 10px; line-height: 1.65; }
+    .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid var(--line); background: white; }
+    .metrics article { min-height: 132px; padding: 28px var(--gutter); border-right: 1px solid var(--line); }
+    .metrics article:last-child { border-right: 0; }
+    .metrics span, .metrics strong, .metrics small { display: block; }
+    .metrics span { color: #77858d; font: 8px ui-monospace, monospace; letter-spacing: .08em; }
+    .metrics strong { margin-top: 12px; color: var(--steel); font-size: 25px; }
+    .metrics small { margin-top: 6px; color: var(--muted); font-size: 10px; }
+    .section { padding: 96px var(--gutter); }
+    .section.alt { background: #eaf0f2; }
+    .section.dark { color: white; background: var(--steel-deep); }
+    .section-heading { max-width: 1020px; margin-bottom: 42px; }
+    .section-heading h2 { margin: 18px 0 0; font-size: clamp(36px, 4.3vw, 60px); line-height: 1.15; letter-spacing: -.05em; }
+    .section-heading > p:last-child { max-width: 800px; margin: 20px 0 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
+    .dark .section-heading > p:last-child { color: #a8bbc4; }
+    .artifact { overflow: hidden; border: 1px solid var(--line); background: white; box-shadow: var(--shadow); }
+    .bar { min-height: 48px; padding: 0 18px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line); background: #eef2f3; }
+    .bar b { font: 800 9px ui-monospace, monospace; letter-spacing: .08em; }
+    .bar span { color: #78858d; font: 8px ui-monospace, monospace; }
+    .baseline-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .baseline-grid article { min-height: 240px; padding: 25px; border-right: 1px solid var(--line); }
+    .baseline-grid article:last-child { border-right: 0; }
+    .baseline-grid i { width: 32px; height: 32px; display: grid; place-items: center; color: white; background: var(--steel); border-radius: 50%; font: normal 9px ui-monospace, monospace; }
+    .baseline-grid h3 { margin: 30px 0 14px; font-size: 16px; }
+    .baseline-grid p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
+    .artifact-note { margin: 18px 0 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
+    .artifact-note b { color: var(--steel); }
+    .quote-layout { display: grid; grid-template-columns: minmax(0, 1.38fr) minmax(320px, .62fr); }
+    .quote-table { width: 100%; border-collapse: collapse; }
+    .quote-table th, .quote-table td { padding: 15px 17px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: left; }
+    .quote-table th { color: #79868d; background: #f8f8f6; font: 8px ui-monospace, monospace; }
+    .quote-table td { color: #53616a; font-size: 10px; line-height: 1.5; }
+    .quote-table td:first-child { color: var(--ink); font-weight: 760; }
+    .status { padding: 4px 6px; display: inline-block; border-radius: 3px; font: 8px ui-monospace, monospace; }
+    .ok { color: var(--green); background: #e0ebe6; }
+    .check { color: var(--amber); background: #f3e6d7; }
+    .risk { color: var(--red); background: #f1dfdc; }
+    .decision { padding: 27px; color: white; background: var(--steel); }
+    .decision > span { color: #9ab1bd; font: 8px ui-monospace, monospace; }
+    .decision h3 { margin: 18px 0 22px; font-size: 22px; line-height: 1.4; }
+    .decision dl { margin: 0; }
+    .decision div { padding: 15px 0; border-top: 1px solid rgb(255 255 255 / 14%); }
+    .decision dt { color: #9fb4be; font-size: 9px; }
+    .decision dd { margin: 7px 0 0; font-size: 11px; line-height: 1.65; }
+    .savings { margin-top: 20px; padding: 17px; color: var(--ink); background: var(--orange-soft); }
+    .savings span, .savings strong { display: block; }
+    .savings span { color: #8d603d; font-size: 8px; }
+    .savings strong { margin-top: 6px; font-size: 20px; }
+    .schedule { overflow-x: auto; }
+    .schedule-inner { min-width: 980px; }
+    .schedule-head, .schedule-row { display: grid; grid-template-columns: 260px repeat(8, minmax(75px, 1fr)); }
+    .schedule-head { color: #75848c; background: #f5f6f4; font: 8px ui-monospace, monospace; }
+    .schedule-head > div { padding: 14px; border-right: 1px solid var(--line); }
+    .schedule-row { min-height: 78px; border-top: 1px solid var(--line); }
+    .schedule-row > div { position: relative; border-right: 1px solid #e3e7e9; }
+    .task { padding: 16px 18px; }
+    .task b, .task small { display: block; }
+    .task b { font-size: 11px; }
+    .task small { margin-top: 5px; color: var(--muted); font-size: 8px; }
+    .track { grid-column: 2 / 10; background: repeating-linear-gradient(90deg, transparent 0 calc(12.5% - 1px), #e3e7e9 calc(12.5% - 1px) 12.5%); }
+    .taskbar { position: absolute; top: 26px; height: 25px; padding: 0 9px; display: flex; align-items: center; color: white; border-radius: 3px; background: var(--steel); font: 8px ui-monospace, monospace; }
+    .taskbar.done { background: var(--green); }
+    .taskbar.warn { background: var(--orange); }
+    .schedule-alert { padding: 20px 24px; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 24px; color: white; background: var(--orange); }
+    .schedule-alert span { font: 8px ui-monospace, monospace; }
+    .schedule-alert p { margin: 0; font-size: 11px; line-height: 1.7; }
+    .photo-band { display: grid; grid-template-columns: 1.15fr .85fr 1fr; gap: 10px; margin-top: 24px; }
+    .photo-band figure { position: relative; min-height: 260px; margin: 0; overflow: hidden; background: #cad3d7; }
+    .photo-band img { width: 100%; height: 100%; display: block; object-fit: cover; filter: saturate(.78); }
+    .photo-band figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 32px 17px 15px; color: white; background: linear-gradient(transparent, rgb(16 35 45 / 90%)); font-size: 10px; }
+    .change-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(340px, .75fr); gap: 14px; }
+    .log { border: 1px solid rgb(255 255 255 / 15%); }
+    .log .bar { border-color: rgb(255 255 255 / 12%); background: #1d3b4b; }
+    .log table { width: 100%; border-collapse: collapse; }
+    .log th, .log td { padding: 15px 14px; border-right: 1px solid rgb(255 255 255 / 11%); border-bottom: 1px solid rgb(255 255 255 / 11%); text-align: left; }
+    .log th { color: #8fa7b2; font: 8px ui-monospace, monospace; }
+    .log td { color: #c6d3d9; font-size: 9px; line-height: 1.55; }
+    .change-card { padding: 28px; color: var(--ink); background: white; }
+    .change-card > span { color: var(--orange); font: 8px ui-monospace, monospace; }
+    .change-card h3 { margin: 16px 0 24px; font-size: 23px; line-height: 1.4; }
+    .impact { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .impact div { padding: 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .impact span, .impact b { display: block; }
+    .impact span { color: #7e8a91; font-size: 8px; }
+    .impact b { margin-top: 7px; font-size: 11px; }
+    .change-card p { margin: 20px 0 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
+    .communication { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .62fr); border: 1px solid var(--line); background: white; box-shadow: var(--shadow); }
+    .message { padding: 32px; }
+    .message-head { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+    .message-head span, .message-head strong { display: block; }
+    .message-head span { color: var(--steel); font: 8px ui-monospace, monospace; }
+    .message-head strong { margin-top: 9px; font-size: 19px; }
+    .message-body { color: #53616a; font-size: 11px; line-height: 1.8; }
+    .message-body b { color: var(--ink); }
+    .message-body ul { padding-left: 18px; }
+    .handoff { padding: 32px; color: white; background: var(--steel); }
+    .handoff > span { color: #a8bdc7; font: 8px ui-monospace, monospace; }
+    .handoff h3 { margin: 17px 0 22px; font-size: 22px; line-height: 1.4; }
+    .handoff ol { padding: 0; margin: 0; list-style: none; counter-reset: handoff; }
+    .handoff li { padding: 15px 0; display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; border-top: 1px solid rgb(255 255 255 / 14%); color: #d2dde2; font-size: 10px; line-height: 1.55; counter-increment: handoff; }
+    .handoff li::before { content: "0" counter(handoff); color: #8fa9b5; font: 8px ui-monospace, monospace; }
+    .fit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .fit-card { min-height: 210px; padding: 27px; border: 1px solid var(--line); background: white; }
+    .fit-card span { color: var(--orange); font: 8px ui-monospace, monospace; }
+    .fit-card h3 { margin: 17px 0 12px; font-size: 19px; }
+    .fit-card p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+    .scope-note { margin-top: 22px; padding: 22px 25px; display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 26px; color: white; background: var(--steel-deep); }
+    .scope-note b { color: #9fb6c1; font-size: 10px; }
+    .scope-note p { margin: 0; color: #c7d4da; font-size: 11px; line-height: 1.75; }
+    footer { padding: 44px var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 30px; color: #7d898f; border-top: 1px solid var(--line); background: white; font-size: 10px; }
+    footer strong { color: var(--steel); font-size: 13px; }
+    @media (max-width: 980px) {
+      nav { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 460px; }
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .metrics article:nth-child(2) { border-right: 0; }
+      .metrics article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .baseline-grid { grid-template-columns: repeat(2, 1fr); }
+      .baseline-grid article { border-bottom: 1px solid var(--line); }
+      .baseline-grid article:last-child { grid-column: 1 / -1; }
+      .quote-layout, .change-grid, .communication { grid-template-columns: 1fr; }
+      .photo-band { grid-template-columns: 1fr 1fr; }
+      .photo-band figure:first-child { grid-column: 1 / -1; }
+      .fit-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .topbar { min-height: 62px; }
+      .page-type { display: none; }
+      .hero-copy { padding-top: 74px; }
+      .hero h1 { font-size: 43px; }
+      .hero-lead { font-size: 15px; }
+      .hero-visual { min-height: 390px; }
+      .hero-card { right: 18px; bottom: 18px; width: calc(100% - 36px); }
+      .metrics { grid-template-columns: 1fr; }
+      .metrics article { min-height: 105px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .section { padding-top: 72px; padding-bottom: 72px; }
+      .section-heading h2 { font-size: 36px; }
+      .baseline-grid { grid-template-columns: 1fr; }
+      .baseline-grid article, .baseline-grid article:last-child { min-height: 190px; grid-column: auto; border-right: 0; }
+      .quote-table { min-width: 740px; }
+      .quote-layout > div:first-child { overflow-x: auto; }
+      .photo-band { grid-template-columns: 1fr; }
+      .photo-band figure:first-child { grid-column: auto; }
+      .change-card { padding: 22px; }
+      .log { overflow-x: auto; }
+      .log table { min-width: 720px; }
+      .communication { border-right: 0; border-left: 0; }
+      .message, .handoff { padding: 24px; }
+      .scope-note { grid-template-columns: 1fr; gap: 8px; }
+      footer { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">AC</span><span>Amber Chang</span></div>
+    <nav aria-label="本頁內容">
+      <a href="#baseline">需求與報價</a>
+      <a href="#cost">成本分析</a>
+      <a href="#schedule">製作與交付</a>
+      <a href="#change">變更管理</a>
+      <a href="#communication">跨國協作</a>
+    </nav>
+    <span class="page-type">PRODUCT PROJECT DELIVERY</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">MANUFACTURING PROJECT WORK SAMPLES</p>
+        <h1>從需求與報價，<br>推進到準時交付。</h1>
+        <p class="hero-lead">以設備、工程材料與供應商交付經驗為基礎，呈現如何釐清規格、建立報價基準、追蹤製作與物料進度，並在內外部之間維持一致的責任與時程。</p>
+        <p class="hero-note">本頁依實際工作方法去識別化重建；專案名稱、數據、供應商與人員均已調整，不含原公司或客戶機密。</p>
+      </div>
+      <div class="hero-visual">
+        <img src="/field-highbay-install.jpg" alt="大型自動化倉儲設備安裝現場">
+        <aside class="hero-card">
+          <span>ROLE POSITIONING</span>
+          <strong>產品／專案跟單 · 報價成本 · 供應商進度 · 跨部門交付</strong>
+          <small>工作方法來自國際零售、營建機電及自動化設備工程；製造流程案例僅呈現已具備、可被驗證的經驗。</small>
+        </aside>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="經驗摘要">
+      <article><span>PROJECT EXPERIENCE</span><strong>7+ 年</strong><small>跨產業專案與商務協調</small></article>
+      <article><span>COST IMPROVEMENT</span><strong>NT$ 4M+</strong><small>單一專案成本改善</small></article>
+      <article><span>DELIVERY CONTEXT</span><strong>3 類場域</strong><small>零售／營建／自動化</small></article>
+      <article><span>OVERSEAS PROJECT</span><strong>泰國／馬來西亞</strong><small>專案會議與後續追蹤</small></article>
+    </section>
+
+    <section class="section" id="baseline">
+      <div class="section-heading">
+        <p class="eyebrow">01 · REQUIREMENT TO QUOTATION</p>
+        <h2>報價之前，先讓需求成為可以共同確認的基準。</h2>
+        <p>客戶描述、技術規格、現場限制與商務條件若分散在不同窗口，容易在製作或交付階段形成落差。以下範例將需求整理為五項相互連動的確認內容。</p>
+      </div>
+      <div class="artifact">
+        <div class="bar"><b>RFQ REQUIREMENT BASELINE</b><span>ANONYMIZED · REV. 03</span></div>
+        <div class="baseline-grid">
+          <article><i>01</i><h3>需求與使用情境</h3><p>確認用途、數量、交付範圍、使用環境與不可變更條件。</p></article>
+          <article><i>02</i><h3>圖面與規格版本</h3><p>標示基準版本、材料、尺寸、設備介面及仍待確認項目。</p></article>
+          <article><i>03</i><h3>報價範圍</h3><p>拆分材料、製作、施工、人力、運輸、測試與排除項目。</p></article>
+          <article><i>04</i><h3>時程與前後依賴</h3><p>連結設計凍結、採購、製作、到貨、安裝、測試與驗收。</p></article>
+          <article><i>05</i><h3>責任與驗收</h3><p>確認內外部窗口、完成證據、驗收條件、保固及付款節點。</p></article>
+        </div>
+      </div>
+      <p class="artifact-note"><b>管理判斷：</b>報價不是單一價格，而是規格、範圍、時程與責任的共同承諾；未確認項目必須被標示，而不能隱藏在總價中。</p>
+    </section>
+
+    <section class="section alt" id="cost">
+      <div class="section-heading">
+        <p class="eyebrow">02 · QUOTATION & COST REVIEW</p>
+        <h2>比較價格之前，先確認每個方案承擔了什麼。</h2>
+        <p>以下以去識別化範例呈現報價審查：不只比較總價，也核對規格、範圍、交期、付款、保固與履約責任，避免低價方案在後段形成追加成本。</p>
+      </div>
+      <div class="artifact quote-layout">
+        <div>
+          <div class="bar"><b>QUOTATION COMPARISON</b><span>BASELINE v2.1</span></div>
+          <table class="quote-table">
+            <thead><tr><th>比較項目</th><th>方案 A</th><th>方案 B</th><th>判斷依據</th></tr></thead>
+            <tbody>
+              <tr><td>材料與規格</td><td><span class="status ok">符合</span></td><td><span class="status check">替代規格</span></td><td>需確認性能與核准程序</td></tr>
+              <tr><td>製作與加工</td><td>完整包含</td><td>部分排除</td><td>排除項目可能形成追加</td></tr>
+              <tr><td>運輸與安裝</td><td>含運含裝</td><td>僅含運輸</td><td>施工人力需另行估算</td></tr>
+              <tr><td>交付時程</td><td>6 週</td><td>5 週</td><td>方案 B 需提前凍結圖面</td></tr>
+              <tr><td>付款與保固</td><td><span class="status ok">可接受</span></td><td><span class="status risk">風險較高</span></td><td>付款前移且保固範圍較窄</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="decision">
+          <span>COMMERCIAL REVIEW</span>
+          <h3>將價格差異轉為可比較的責任與風險。</h3>
+          <dl>
+            <div><dt>必要條件</dt><dd>規格、工期與驗收責任不得降低。</dd></div>
+            <div><dt>主要差異</dt><dd>替代材料、施工排除項目與付款節點。</dd></div>
+            <div><dt>建議處理</dt><dd>先補齊排除項目成本，再進行整體方案議價。</dd></div>
+          </dl>
+          <div class="savings"><span>VERIFIED RESULT</span><strong>單一專案成本改善 NT$ 4M+</strong></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="schedule">
+      <div class="section-heading">
+        <p class="eyebrow">03 · FABRICATION & DELIVERY FOLLOW-UP</p>
+        <h2>交期管理的重點，是看見製作、物料與後續工作的依賴。</h2>
+        <p>將供應商製作、材料設備到場、現場整合及驗收串在同一基準中；出現偏差時，先確認真正阻塞點，再判斷調整順序、補充資源或升級決策。</p>
+      </div>
+      <div class="artifact schedule">
+        <div class="bar"><b>SUPPLIER DELIVERY PLAN</b><span>WEEKLY CONTROL VIEW</span></div>
+        <div class="schedule-inner">
+          <div class="schedule-head"><div>PHASE / OWNER</div><div>W1</div><div>W2</div><div>W3</div><div>W4</div><div>W5</div><div>W6</div><div>W7</div><div>W8</div></div>
+          <div class="schedule-row"><div class="task"><b>規格與報價基準</b><small>專案／需求端</small></div><div class="track"><span class="taskbar done" style="left:1%;width:21%">完成</span></div></div>
+          <div class="schedule-row"><div class="task"><b>圖面確認與採購</b><small>工程／採購</small></div><div class="track"><span class="taskbar done" style="left:13%;width:25%">核定</span></div></div>
+          <div class="schedule-row"><div class="task"><b>供應商製作與備料</b><small>供應商／採購</small></div><div class="track"><span class="taskbar warn" style="left:27%;width:36%">進度偏差 3 日</span></div></div>
+          <div class="schedule-row"><div class="task"><b>到貨與現場整合</b><small>工程／現場</small></div><div class="track"><span class="taskbar" style="left:59%;width:27%">待前置完成</span></div></div>
+          <div class="schedule-row"><div class="task"><b>測試、驗收與結案</b><small>專案／使用端</small></div><div class="track"><span class="taskbar" style="left:79%;width:20%">計畫</span></div></div>
+          <div class="schedule-alert"><span>RECOVERY ACTION</span><p>製作晚於基準 3 日；先調整分區到貨與安裝順序，保留整合測試日期，並於下一決策點確認加班或物流方案。</p></div>
+        </div>
+      </div>
+      <div class="photo-band" aria-label="實際專案現場照片">
+        <figure><img src="/field-structure-install.jpg" alt="鋼構平台安裝現場"><figcaption>鋼構與施工介面：核對材料、圖面、製作及安裝條件</figcaption></figure>
+        <figure><img src="/field-material-review.jpg" alt="現場材料與規格確認"><figcaption>材料與規格：確認到場內容與後續工序條件</figcaption></figure>
+        <figure><img src="/field-equipment-interface.jpg" alt="自動化設備介面確認"><figcaption>設備介面：釐清前後依賴與責任窗口</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section dark" id="change">
+      <div class="section-heading">
+        <p class="eyebrow">04 · ISSUE & CHANGE CONTROL</p>
+        <h2>變更不只更新日期，也要更新成本、責任與交付承諾。</h2>
+        <p>每項異常保留原因、影響、負責人、期限與決策狀態；重要變更則同步確認報價、圖面、合約及驗收依據是否需要更新。</p>
+      </div>
+      <div class="change-grid">
+        <div class="log">
+          <div class="bar"><b>ISSUE / CHANGE LOG</b><span>OPEN ITEMS · 04</span></div>
+          <table>
+            <thead><tr><th>ID</th><th>議題／變更</th><th>影響</th><th>OWNER</th><th>DUE</th><th>狀態</th></tr></thead>
+            <tbody>
+              <tr><td>I-012</td><td>材料交期晚於基準</td><td>安裝窗口縮短</td><td>採購</td><td>08/28</td><td><span class="status check">處理中</span></td></tr>
+              <tr><td>C-006</td><td>現場介面尺寸調整</td><td>圖面與報價需更新</td><td>工程</td><td>08/27</td><td><span class="status risk">待決策</span></td></tr>
+              <tr><td>A-018</td><td>補齊替代方案成本</td><td>支援方案比較</td><td>專案</td><td>08/26</td><td><span class="status ok">完成</span></td></tr>
+              <tr><td>R-009</td><td>測試資源重疊</td><td>驗收可能順延</td><td>專案</td><td>08/30</td><td><span class="status check">監控中</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="change-card">
+          <span>CHANGE IMPACT NOTE · C-006</span>
+          <h3>介面尺寸變更：採用修正件或調整現場條件？</h3>
+          <div class="impact">
+            <div><span>COST</span><b>兩方案皆需補充報價</b></div>
+            <div><span>SCHEDULE</span><b>差異 2–4 日</b></div>
+            <div><span>QUALITY</span><b>維持既定驗收條件</b></div>
+            <div><span>DECISION</span><b>工程主管／需求端</b></div>
+          </div>
+          <p>先確認不可變更條件，再比較成本、工期與現場可執行性；決議後同步更新圖面版本、報價範圍、負責人及生效日期。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section alt" id="communication">
+      <div class="section-heading">
+        <p class="eyebrow">05 · CROSS-BORDER & CROSS-FUNCTIONAL HANDOFF</p>
+        <h2>英文文件的目的，是讓需求、責任與下一步沒有第二種解讀。</h2>
+        <p>具國際品牌英文文件與海外專案會議經驗；以下用精簡英文摘要示範如何確認規格版本、時程影響、責任窗口及決策期限，不宣稱既有國外客戶產品報價經歷。</p>
+      </div>
+      <div class="communication">
+        <article class="message">
+          <div class="message-head"><span>PROJECT FOLLOW-UP · SAMPLE</span><strong>Subject: Specification Confirmation and Delivery Impact</strong></div>
+          <div class="message-body">
+            <p>Dear Project Team,</p>
+            <p>Please confirm whether <b>drawing revision B</b> will be used as the quotation and fabrication baseline.</p>
+            <ul>
+              <li>Required confirmation: material and interface dimensions</li>
+              <li>Current impact: supplier fabrication is on hold</li>
+              <li>Decision due: Aug. 28</li>
+              <li>Next action: update quotation scope and delivery schedule</li>
+            </ul>
+            <p>After confirmation, I will consolidate the revised responsibilities and follow-up dates for all related teams.</p>
+            <p>Best regards,<br>Amber Chang</p>
+          </div>
+        </article>
+        <aside class="handoff">
+          <span>INTERNAL HANDOFF</span>
+          <h3>外部需求轉入內部執行的四個確認點</h3>
+          <ol>
+            <li>需求與圖面是否為最新核定版本</li>
+            <li>報價範圍是否涵蓋材料、製作及交付責任</li>
+            <li>各部門是否清楚承接內容與完成期限</li>
+            <li>變更是否同步反映在成本、時程與驗收依據</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">EXPERIENCE TRANSFER</p>
+        <h2>能立即帶入的能力，以及需要進一步深化的製程知識。</h2>
+      </div>
+      <div class="fit-grid">
+        <article class="fit-card"><span>IMMEDIATE VALUE</span><h3>需求、報價與交付整合</h3><p>由規格與範圍確認開始，持續追蹤供應商製作、材料設備、安裝、驗收及結案。</p></article>
+        <article class="fit-card"><span>TECHNICAL CONTEXT</span><h3>金屬材料與設備介面</h3><p>具鋼構平台、金屬工程材料、輸送設備及自動化系統經驗，可依圖面與規格核對交付條件。</p></article>
+        <article class="fit-card"><span>WORKING METHOD</span><h3>跨部門與異常推進</h3><p>將需求變更、報價差異、交期與現場限制整理為影響、責任、期限及後續行動。</p></article>
+      </div>
+      <div class="scope-note"><b>誠實邊界</b><p>既有經驗主要來自工程與設備專案；精密金屬加工製程，以及汽車與醫療零件的量產品質要求，屬於進入製造業後需優先深化的專業。本頁未使用虛構的 CNC、NPI 或汽車／醫療產品案例。</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Amber Chang · Product Project Delivery</strong>
+    <span>去識別化工作方法與案例 · 2026</span>
+  </footer>
+</body>
+</html>
