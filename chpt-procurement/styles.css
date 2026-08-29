@@ -170,6 +170,8 @@ nav a:hover, nav a:focus-visible { color: var(--copper); }
 .amber-text { color: var(--amber); }
 .table-scroll { overflow-x: auto; }
 table { width: 100%; min-width: 920px; border-collapse: collapse; }
+.portfolio-table { min-width: 1120px; }
+.portfolio-table th:first-child, .portfolio-table td:first-child { min-width: 190px; }
 th { padding: 14px 16px; background: #e4e8e9; color: #75828b; font: 7px ui-monospace, monospace; letter-spacing: .06em; text-align: left; }
 td { padding: 17px 16px; border-bottom: 1px solid #dde2e4; color: #566570; font-size: 10px; }
 td:first-child { color: var(--ink); font-weight: 720; }
