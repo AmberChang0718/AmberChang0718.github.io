@@ -58,8 +58,8 @@
     <section class="section approach" id="approach">
       <header class="section-heading">
         <p class="eyebrow">01 · PROCUREMENT APPROACH</p>
-        <h2>這份工作需要的，<br>是能把採購帶進專案現場的人。</h2>
-        <p>中華精測的職務橫跨專案採購、工程商務、合約、進度、供應商開發及成本決策。我的工作方法不是把這些拆成孤立任務，而是用同一條管理主線，持續確認範圍、責任、成本與時程是否仍然一致。</p>
+        <h2>以專案管理方法，<br>讓採購決策延伸至履約與交付。</h2>
+        <p>工程設備採購橫跨需求、工程商務、合約、供應商、成本與交付。我的管理方式是先建立共同基準，再以里程碑、責任窗口與決策節點串接各階段，持續確認範圍、成本、品質與時程是否仍然一致。</p>
       </header>
 
       <div class="process-grid">
@@ -148,21 +148,44 @@
       <header class="section-heading light">
         <p class="eyebrow">03 · PROJECT PROCUREMENT WORKBENCH</p>
         <h2>同一筆資訊，<br>要能同時支援採購與專案決策。</h2>
-        <p>以下工具以匿名化情境重建。專案名稱、金額、供應商與日期均為示意資料；呈現的是資訊架構與判斷方法，不含任職公司或客戶機密。</p>
+        <p>以下工具以匿名化情境重建，從多專案優先排序延伸至詢比價、成本、合約、供應商、交付異常及決策摘要。專案名稱、金額、供應商與日期均為示意資料，不含任職公司或客戶機密。</p>
       </header>
 
       <div class="workbench-shell">
         <div class="tab-list" role="tablist" aria-label="採購工具實作">
-          <button class="tool-tab active" id="tab-compare" role="tab" aria-selected="true" aria-controls="panel-compare" data-tab="compare"><span>01</span>詢比價矩陣</button>
-          <button class="tool-tab" id="tab-cost" role="tab" aria-selected="false" aria-controls="panel-cost" data-tab="cost"><span>02</span>成本拆解</button>
-          <button class="tool-tab" id="tab-contract" role="tab" aria-selected="false" aria-controls="panel-contract" data-tab="contract"><span>03</span>合約風險</button>
-          <button class="tool-tab" id="tab-supplier" role="tab" aria-selected="false" aria-controls="panel-supplier" data-tab="supplier"><span>04</span>供應商評估</button>
-          <button class="tool-tab" id="tab-delivery" role="tab" aria-selected="false" aria-controls="panel-delivery" data-tab="delivery"><span>05</span>交付異常</button>
-          <button class="tool-tab" id="tab-brief" role="tab" aria-selected="false" aria-controls="panel-brief" data-tab="brief"><span>06</span>決策摘要</button>
+          <button class="tool-tab active" id="tab-portfolio" role="tab" aria-selected="true" aria-controls="panel-portfolio" data-tab="portfolio"><span>01</span>多案總覽</button>
+          <button class="tool-tab" id="tab-compare" role="tab" aria-selected="false" aria-controls="panel-compare" data-tab="compare"><span>02</span>詢比價矩陣</button>
+          <button class="tool-tab" id="tab-cost" role="tab" aria-selected="false" aria-controls="panel-cost" data-tab="cost"><span>03</span>成本拆解</button>
+          <button class="tool-tab" id="tab-contract" role="tab" aria-selected="false" aria-controls="panel-contract" data-tab="contract"><span>04</span>合約風險</button>
+          <button class="tool-tab" id="tab-supplier" role="tab" aria-selected="false" aria-controls="panel-supplier" data-tab="supplier"><span>05</span>供應商評估</button>
+          <button class="tool-tab" id="tab-delivery" role="tab" aria-selected="false" aria-controls="panel-delivery" data-tab="delivery"><span>06</span>交付異常</button>
+          <button class="tool-tab" id="tab-brief" role="tab" aria-selected="false" aria-controls="panel-brief" data-tab="brief"><span>07</span>決策摘要</button>
         </div>
 
         <div class="tool-stage">
-          <section class="tool-panel active" id="panel-compare" role="tabpanel" aria-labelledby="tab-compare" data-panel="compare">
+          <section class="tool-panel active" id="panel-portfolio" role="tabpanel" aria-labelledby="tab-portfolio" data-panel="portfolio">
+            <div class="artifact-header"><div><span>PORTFOLIO CONTROL / WEEK 11</span><h3>工程與設備採購｜多專案交付總覽</h3></div><b>4 ACTIVE</b></div>
+            <div class="artifact-summary">
+              <div><small>進行中專案</small><strong>4</strong></div>
+              <div><small>風險項目</small><strong class="amber-text">2</strong></div>
+              <div><small>待決策事項</small><strong>3</strong></div>
+              <div><small>30日內里程碑</small><strong>6</strong></div>
+            </div>
+            <div class="table-scroll">
+              <table class="portfolio-table">
+                <thead><tr><th>專案／採購包</th><th>目前階段</th><th>下一里程碑</th><th>成本狀態</th><th>交付風險</th><th>待決策事項</th><th>責任窗口</th></tr></thead>
+                <tbody>
+                  <tr><td>P-01 自動化輸送設備</td><td>最終議價</td><td>03/18 商務定案</td><td><span class="state good">基準內</span></td><td><span class="state neutral">可控</span></td><td>尾款與SAT綁定</td><td>採購／工程</td></tr>
+                  <tr><td>P-02 鋼構平台增設</td><td>製作</td><td>03/22 材料到廠</td><td><span class="state good">基準內</span></td><td><span class="state warn">注意</span></td><td>分批交貨方案</td><td>供應商／現場</td></tr>
+                  <tr><td>P-03 配電工程</td><td>進場安裝</td><td>03/15 分區送電</td><td><span class="state warn">待確認</span></td><td><span class="state bad">高</span></td><td>夜間施工窗口</td><td>工程／營運</td></tr>
+                  <tr><td>P-04 設備復機</td><td>測試驗收</td><td>03/20 SAT</td><td><span class="state neutral">追蹤中</span></td><td><span class="state good">低</span></td><td>缺失關閉順序</td><td>供應商／專案</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="artifact-decision"><span>PRIORITY LOGIC</span><p>依最終交付影響、時程承諾、前後依賴、資源負荷與風險排序；需要跨部門取捨的事項，明確標示決策者、截止日與未決影響。</p></div>
+          </section>
+
+          <section class="tool-panel" id="panel-compare" role="tabpanel" aria-labelledby="tab-compare" data-panel="compare" hidden>
             <div class="artifact-header"><div><span>RFQ-24-017</span><h3>自動化輸送設備｜技術與商務比價</h3></div><b>REV. 03</b></div>
             <div class="artifact-summary">
               <div><small>受邀供應商</small><strong>4</strong></div>
@@ -309,7 +332,7 @@
       <div class="profile-details">
         <article><span>TECHNICAL</span><h3>工程條件理解</h3><p>具AutoCAD ACU證照，熟悉鋼構、金屬材料、輸送設備、自動化與營建機電情境；能讀取圖面與規格、確認技術條件，並與工程及供應端釐清執行界面。</p></article>
         <article><span>COMMERCIAL</span><h3>商務與風險判斷</h3><p>從報價假設、成本結構、付款、保固、變更與履約責任形成談判方向，並將結果落實至合約與交付節點。</p></article>
-        <article><span>ENGLISH</span><h3>英文工作能力</h3><p>TOEIC 635，可處理英文文件、需求釐清與會議紀錄；持續強化口語溝通，所有重要規格、數據與商務條件均保留人工核對。</p></article>
+        <article><span>ENGLISH</span><h3>英文工作能力</h3><p>TOEIC 635，可處理英文規格、報價、需求釐清與會議資料；重要技術及商務條件均以書面紀錄確認。</p></article>
       </div>
     </section>
 
