@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amber Chang｜Sourcing Decision Portfolio</title>
+  <meta name="description" content="Amber Chang 的製造業 Sourcing 決策作品集：RFQ、供應商評估、成本改善、替代來源與跨部門交付。">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:title" content="Amber Chang｜Sourcing Decision Portfolio">
+  <meta property="og:description" content="從需求、RFQ 與供應商評估，到成本改善、替代來源與交付風險。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:image" content="https://amberchang0718.github.io/field-equipment-interface.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amber Chang｜Sourcing Decision Portfolio">
+  <meta name="twitter:description" content="RFQ、供應商選擇、成本改善與交付風險的去識別化實作。">
+  <meta name="twitter:image" content="https://amberchang0718.github.io/field-equipment-interface.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --ink: #12232d;
+      --navy: #173b4a;
+      --blue: #176b87;
+      --cyan: #70b7c3;
+      --orange: #e46e35;
+      --paper: #f7f8f5;
+      --white: #fff;
+      --mist: #e8eeec;
+      --line: #d3ddda;
+      --muted: #607079;
+      --soft: #eef3f1;
+      --good: #2b796e;
+      --warn: #a65b2b;
+      --shadow: 0 24px 60px rgb(18 35 45 / 10%);
+      --gutter: clamp(22px, 5vw, 78px);
+      --section: clamp(78px, 9vw, 132px);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+    img { display: block; width: 100%; }
+    button { font: inherit; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .08em; }
+
+    .topbar {
+      position: sticky;
+      z-index: 30;
+      top: 0;
+      min-height: 68px;
+      padding: 0 var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      color: #d9e6e7;
+      background: rgb(18 35 45 / 94%);
+      border-bottom: 1px solid rgb(255 255 255 / 10%);
+      backdrop-filter: blur(14px);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; color: white; font-weight: 700; }
+    .brand-mark {
+      width: 33px; height: 33px; display: grid; place-items: center;
+      border: 1px solid rgb(255 255 255 / 34%); border-radius: 50%;
+      font: 10px ui-monospace, monospace;
+    }
+    nav { display: flex; align-items: center; gap: clamp(16px, 2vw, 32px); }
+    nav a { color: #c6d5d8; text-decoration: none; font-size: 12px; }
+    nav a:hover, nav a:focus-visible { color: white; }
+    .role-label { color: #9fc4cc; font: 10px ui-monospace, monospace; letter-spacing: .12em; }
+
+    .hero {
+      min-height: 760px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(400px, .95fr);
+      background: var(--navy);
+      overflow: hidden;
+    }
+    .hero-copy {
+      padding: clamp(88px, 11vw, 160px) var(--gutter) 90px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .eyebrow { margin: 0 0 24px; color: var(--orange); font: 10px ui-monospace, monospace; letter-spacing: .18em; }
+    .hero h1 { margin: 0; font-size: clamp(50px, 6.4vw, 94px); line-height: 1.04; letter-spacing: -.055em; }
+    .hero h1 em { display: block; margin-top: 22px; color: #a9c9cf; font-size: .31em; font-style: normal; font-weight: 500; letter-spacing: .01em; line-height: 1.55; }
+    .hero-lead { max-width: 760px; margin: 34px 0 0; color: #d2e0e2; font-size: clamp(15px, 1.35vw, 19px); line-height: 1.9; }
+    .hero-proof { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .hero-proof span { padding: 8px 12px; color: #cfe2e5; border: 1px solid rgb(255 255 255 / 16%); font-size: 11px; }
+    .hero-visual { position: relative; min-height: 560px; background: #0d242d; }
+    .hero-visual img { height: 100%; object-fit: cover; object-position: 50% center; opacity: .76; filter: saturate(.78) contrast(1.05); }
+    .hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--navy), transparent 34%), linear-gradient(0deg, rgb(10 30 38 / 74%), transparent 58%); }
+    .hero-card {
+      position: absolute; z-index: 2; right: clamp(20px, 4vw, 58px); bottom: clamp(20px, 4vw, 58px);
+      width: min(430px, calc(100% - 40px)); padding: 28px;
+      color: var(--ink); background: rgb(255 255 255 / 95%); box-shadow: var(--shadow);
+    }
+    .hero-card > span { color: var(--blue); font: 9px ui-monospace, monospace; letter-spacing: .12em; }
+    .hero-card strong { display: block; margin-top: 12px; font-size: 23px; line-height: 1.45; }
+    .hero-card small { display: block; margin-top: 14px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); background: white; border-bottom: 1px solid var(--line); }
+    .metrics article { min-height: 165px; padding: 30px var(--gutter); border-right: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; }
+    .metrics article:last-child { border-right: 0; }
+    .metrics span { color: var(--blue); font: 9px ui-monospace, monospace; letter-spacing: .1em; }
+    .metrics strong { margin-top: 11px; font-size: clamp(28px, 3vw, 44px); line-height: 1.1; }
+    .metrics small { margin-top: 9px; color: var(--muted); font-size: 12px; }
+
+    .section { padding: var(--section) var(--gutter); }
+    .section.alt { background: #edf2f0; }
+    .section.dark { color: white; background: var(--ink); }
+    .section-heading { max-width: 890px; margin-bottom: 48px; }
+    .section-heading h2 { margin: 0; font-size: clamp(35px, 4.5vw, 64px); line-height: 1.15; letter-spacing: -.04em; }
+    .section-heading > p:last-child { max-width: 760px; margin: 24px 0 0; color: var(--muted); font-size: 15px; line-height: 1.9; }
+    .dark .section-heading > p:last-child { color: #aebfc4; }
+
+    .evidence-map { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); background: white; box-shadow: var(--shadow); }
+    .evidence-map article { min-height: 230px; padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .evidence-map span { color: var(--orange); font: 9px ui-monospace, monospace; }
+    .evidence-map h3 { margin: 18px 0 12px; font-size: 20px; line-height: 1.4; }
+    .evidence-map p { margin: 0; color: var(--muted); font-size: 13px; }
+    .evidence-map b { display: inline-block; margin-top: 20px; color: var(--blue); font-size: 11px; }
+
+    .artifact { overflow: hidden; background: white; border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .artifact-bar { min-height: 46px; padding: 0 18px; display: flex; align-items: center; justify-content: space-between; gap: 15px; color: #d9e5e7; background: var(--navy); font: 9px ui-monospace, monospace; letter-spacing: .08em; }
+    .artifact-bar span:last-child { color: #8db7c0; }
+    .artifact-note { margin: 20px 0 0; color: var(--muted); font-size: 12px; }
+    .artifact-note b { color: var(--ink); }
+
+    .rfq-baseline { display: grid; grid-template-columns: repeat(6, 1fr); }
+    .rfq-baseline article { min-height: 210px; padding: 25px 20px; border-right: 1px solid var(--line); }
+    .rfq-baseline article:last-child { border-right: 0; }
+    .rfq-baseline i { width: 28px; height: 28px; display: grid; place-items: center; color: white; background: var(--blue); border-radius: 50%; font: 9px ui-monospace, monospace; font-style: normal; }
+    .rfq-baseline h3 { margin: 20px 0 10px; font-size: 15px; }
+    .rfq-baseline p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
+
+    .matrix-layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(310px, .65fr); }
+    .table-scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th, td { padding: 15px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+    th { color: #6b7b83; background: #f2f5f3; font: 9px ui-monospace, monospace; letter-spacing: .06em; }
+    tbody tr:last-child td { border-bottom: 0; }
+    td b { font-size: 13px; }
+    .score { font-weight: 800; font-variant-numeric: tabular-nums; }
+    .score.high { color: var(--good); }
+    .score.mid { color: var(--warn); }
+    .decision-panel { padding: 30px; color: white; background: var(--navy); }
+    .decision-panel > span { color: #91bec7; font: 9px ui-monospace, monospace; }
+    .decision-panel h3 { margin: 18px 0; font-size: 25px; line-height: 1.4; }
+    .decision-panel p { color: #d0dfe1; font-size: 12px; }
+    .decision-panel dl { margin: 24px 0 0; }
+    .decision-panel dl div { padding: 14px 0; border-top: 1px solid rgb(255 255 255 / 14%); }
+    .decision-panel dt { color: #8eb7bf; font-size: 10px; }
+    .decision-panel dd { margin: 5px 0 0; color: white; font-size: 12px; }
+
+    .cost-story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .72fr); gap: 18px; }
+    .cost-steps { background: white; border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .cost-steps article { padding: 25px; display: grid; grid-template-columns: 68px minmax(0, 1fr); gap: 18px; border-bottom: 1px solid var(--line); }
+    .cost-steps article:last-child { border-bottom: 0; }
+    .cost-steps i { width: 48px; height: 48px; display: grid; place-items: center; color: white; background: var(--navy); border-radius: 50%; font: 10px ui-monospace, monospace; font-style: normal; }
+    .cost-steps h3 { margin: 0 0 7px; font-size: 17px; }
+    .cost-steps p { margin: 0; color: var(--muted); font-size: 12px; }
+    .result-card { position: relative; min-height: 100%; padding: 42px; color: white; background: linear-gradient(150deg, var(--blue), var(--navy)); overflow: hidden; }
+    .result-card::after { content: "+"; position: absolute; right: -4px; bottom: -95px; color: rgb(255 255 255 / 7%); font: 260px/1 ui-monospace, monospace; }
+    .result-card > span { color: #a8d1d8; font: 9px ui-monospace, monospace; }
+    .result-card strong { display: block; margin-top: 28px; font-size: clamp(52px, 6vw, 84px); line-height: .95; letter-spacing: -.06em; }
+    .result-card h3 { margin: 24px 0 12px; font-size: 23px; }
+    .result-card p { color: #d5e4e6; font-size: 13px; }
+    .result-card small { position: absolute; z-index: 2; left: 42px; bottom: 36px; max-width: 360px; color: #a8c1c6; font-size: 10px; }
+
+    .funnel { display: grid; grid-template-columns: repeat(5, 1fr); align-items: stretch; }
+    .funnel article { position: relative; min-height: 230px; padding: 26px 22px; color: white; background: var(--navy); border-right: 1px solid rgb(255 255 255 / 14%); }
+    .funnel article:nth-child(2) { background: #1d4b5c; }
+    .funnel article:nth-child(3) { background: #245d70; }
+    .funnel article:nth-child(4) { background: #2b6e7e; }
+    .funnel article:nth-child(5) { background: var(--blue); border-right: 0; }
+    .funnel span { color: #9fc7ce; font: 9px ui-monospace, monospace; }
+    .funnel h3 { margin: 20px 0 10px; font-size: 17px; }
+    .funnel p { margin: 0; color: #d5e1e3; font-size: 11px; }
+    .funnel b { position: absolute; left: 22px; bottom: 20px; color: white; font-size: 11px; }
+    .gate-grid { margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .gate-card { padding: 27px; background: white; border: 1px solid var(--line); }
+    .gate-card span { color: var(--orange); font: 9px ui-monospace, monospace; }
+    .gate-card h3 { margin: 16px 0 10px; font-size: 18px; }
+    .gate-card ul { margin: 0; padding-left: 17px; color: var(--muted); font-size: 12px; }
+
+    .photo-strip { display: grid; grid-template-columns: 1.1fr .9fr .9fr; gap: 2px; background: var(--navy); }
+    .photo-strip figure { position: relative; min-height: 360px; margin: 0; overflow: hidden; }
+    .photo-strip img { height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .photo-strip figure:hover img { transform: scale(1.025); }
+    .photo-strip figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 54px 24px 22px; color: white; background: linear-gradient(transparent, rgb(10 28 35 / 88%)); }
+    .photo-strip figcaption span, .photo-strip figcaption b { display: block; }
+    .photo-strip figcaption span { color: #a7c7cd; font: 9px ui-monospace, monospace; }
+    .photo-strip figcaption b { margin-top: 7px; font-size: 14px; }
+
+    .risk-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr); }
+    .risk-register { padding: 0; }
+    .risk-register table { min-width: 680px; }
+    .tag { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 9px; font-weight: 800; }
+    .tag.red { color: #903c2c; background: #f6ded6; }
+    .tag.amber { color: #8a5a22; background: #f6e8cb; }
+    .tag.green { color: #246b60; background: #dceee9; }
+    .milestone { padding: 30px; color: white; background: var(--navy); }
+    .milestone > span { color: #9dc5cc; font: 9px ui-monospace, monospace; }
+    .milestone h3 { margin: 16px 0 24px; font-size: 23px; }
+    .milestone ol { margin: 0; padding: 0; list-style: none; }
+    .milestone li { position: relative; padding: 0 0 23px 28px; color: #cfdddf; font-size: 12px; }
+    .milestone li::before { content: ""; position: absolute; left: 3px; top: 7px; width: 8px; height: 8px; border: 2px solid #9fcad1; border-radius: 50%; background: var(--navy); }
+    .milestone li::after { content: ""; position: absolute; left: 8px; top: 19px; bottom: 0; width: 1px; background: rgb(255 255 255 / 17%); }
+    .milestone li:last-child::after { display: none; }
+    .milestone b { display: block; color: white; font-size: 13px; }
+
+    .english-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr); border: 1px solid var(--line); background: white; box-shadow: var(--shadow); }
+    .email { padding: 34px; }
+    .email-head { padding-bottom: 21px; border-bottom: 1px solid var(--line); }
+    .email-head span { color: var(--blue); font: 9px ui-monospace, monospace; }
+    .email-head h3 { margin: 9px 0 0; font-size: 20px; }
+    .email-body { margin-top: 22px; color: #4f6068; font-family: Inter, Arial, sans-serif; font-size: 13px; line-height: 1.8; }
+    .email-body ul { padding-left: 20px; }
+    .email-body b { color: var(--ink); }
+    .brief { padding: 34px; color: white; background: var(--blue); }
+    .brief > span { color: #b1d4d9; font: 9px ui-monospace, monospace; }
+    .brief h3 { margin: 18px 0 20px; font-size: 23px; }
+    .brief dl { margin: 0; }
+    .brief dl div { padding: 15px 0; border-top: 1px solid rgb(255 255 255 / 17%); }
+    .brief dt { color: #b8d5da; font-size: 10px; }
+    .brief dd { margin: 4px 0 0; font-size: 12px; }
+
+    .transfer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .transfer article { min-height: 260px; padding: 28px; background: white; border: 1px solid var(--line); }
+    .transfer span { color: var(--orange); font: 9px ui-monospace, monospace; }
+    .transfer h3 { margin: 18px 0 12px; font-size: 20px; }
+    .transfer p { color: var(--muted); font-size: 12px; }
+    .transfer b { display: block; margin-top: 24px; color: var(--blue); font-size: 11px; }
+    .closing { margin-top: 20px; padding: 30px; color: white; background: var(--navy); display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 34px; }
+    .closing span { color: #94bbc3; font: 9px ui-monospace, monospace; }
+    .closing p { margin: 0; color: #d1dfe1; font-size: 14px; line-height: 1.9; }
+
+    footer { padding: 38px var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; color: #718089; background: white; border-top: 1px solid var(--line); font-size: 11px; }
+    footer strong { color: var(--ink); font-size: 14px; }
+
+    @media (max-width: 1050px) {
+      nav { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 520px; }
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .metrics article:nth-child(2) { border-right: 0; }
+      .metrics article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .evidence-map { grid-template-columns: repeat(2, 1fr); }
+      .rfq-baseline { grid-template-columns: repeat(3, 1fr); }
+      .rfq-baseline article { border-bottom: 1px solid var(--line); }
+      .matrix-layout, .cost-story, .risk-layout, .english-layout { grid-template-columns: 1fr; }
+      .funnel { grid-template-columns: 1fr 1fr; }
+      .funnel article:last-child { grid-column: 1 / -1; }
+      .photo-strip { grid-template-columns: 1fr 1fr; }
+      .photo-strip figure:first-child { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 680px) {
+      .topbar { min-height: 61px; }
+      .role-label { display: none; }
+      .hero { min-height: auto; }
+      .hero-copy { padding-top: 84px; padding-bottom: 70px; }
+      .hero h1 { font-size: 48px; }
+      .hero-visual { min-height: 420px; }
+      .hero-card { padding: 22px; }
+      .metrics { grid-template-columns: 1fr; }
+      .metrics article { min-height: 112px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .section { padding-top: 78px; padding-bottom: 78px; }
+      .section-heading h2 { font-size: 38px; }
+      .evidence-map, .rfq-baseline, .funnel, .gate-grid, .photo-strip, .transfer { grid-template-columns: 1fr; }
+      .evidence-map article { min-height: 190px; }
+      .rfq-baseline article { min-height: 170px; border-right: 0; }
+      .funnel article, .funnel article:last-child { min-height: 190px; grid-column: auto; border-right: 0; border-bottom: 1px solid rgb(255 255 255 / 14%); }
+      .photo-strip figure, .photo-strip figure:first-child { min-height: 330px; grid-column: auto; }
+      .cost-steps article { grid-template-columns: 52px minmax(0, 1fr); padding: 22px; }
+      .cost-steps i { width: 40px; height: 40px; }
+      .result-card { min-height: 470px; padding: 30px; }
+      .result-card small { left: 30px; right: 30px; }
+      .decision-panel, .milestone, .email, .brief { padding: 25px; }
+      .closing { grid-template-columns: 1fr; gap: 10px; }
+      footer { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">AC</span><span>Amber Chang</span></div>
+    <nav aria-label="頁面導覽">
+      <a href="#rfq">RFQ</a>
+      <a href="#supplier">供應商評估</a>
+      <a href="#cost">成本改善</a>
+      <a href="#alternative">替代來源</a>
+      <a href="#risk">交付風險</a>
+      <a href="#english">英文文件</a>
+    </nav>
+    <span class="role-label">SOURCER · STRATEGIC PROCUREMENT</span>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">SOURCING DECISION PORTFOLIO · 2026</p>
+        <h1>把供應條件，<br>整理成可以決定的方案。<em>Requirement · Supplier · Cost · Risk · Delivery</em></h1>
+        <p class="hero-lead">七年以上跨產業採購與專案交付經驗。從圖面、規格與範圍釐清開始，建立 RFQ 比較基準，評估供應商能力、成本、產能、交期及履約風險，並將採購決定一路連結到交付與結案。</p>
+        <div class="hero-proof" aria-label="核心能力">
+          <span>RFQ & Quotation Analysis</span><span>Supplier Sourcing</span><span>Cost Improvement</span><span>Project Delivery</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="/field-equipment-interface.jpg" alt="自動化設備安裝現場，工程人員確認設備介面">
+        <aside class="hero-card">
+          <span>DECISION PRINCIPLE</span>
+          <strong>價格必須在相同條件上比較；供應決策必須能被交付。</strong>
+          <small>本頁以實際工作方法與去識別化資料重建。專案名稱、供應商與商務數據均經匿名化處理。</small>
+        </aside>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="經驗摘要">
+      <article><span>EXPERIENCE</span><strong>7+ 年</strong><small>採購、專案與跨部門交付</small></article>
+      <article><span>VERIFIED RESULT</span><strong>NT$ 4M+</strong><small>單一專案成本改善</small></article>
+      <article><span>SOURCING CONTEXT</span><strong>5+ 類</strong><small>金屬／鋼構／機電／設備／工程服務</small></article>
+      <article><span>DELIVERY SCOPE</span><strong>End-to-End</strong><small>需求、詢價、合約、到貨、驗收與結案</small></article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">WHAT THIS PORTFOLIO PROVES</p>
+        <h2>不是軟體操作展示，<br>而是六項採購判斷的證據。</h2>
+        <p>每一組工具都對應一個實際決策問題：報價能不能比較、供應商能不能交付、成本改善是否可持續，以及替代來源導入後是否仍能維持品質與時程。</p>
+      </div>
+      <div class="evidence-map">
+        <article><span>01 · RFQ</span><h3>需求與報價基準</h3><p>把圖面、規格、範圍、數量與驗收條件整理成可共同確認的詢價基準。</p><b>決策證據：RFQ分析</b></article>
+        <article><span>02 · SUPPLIER</span><h3>供應商比較與選擇</h3><p>同時評估技術、成本、產能、品質、交期、商務條件與供應風險。</p><b>決策證據：供應商評估</b></article>
+        <article><span>03 · COST</span><h3>成本改善形成過程</h3><p>從範圍重整、報價校準、替代方案到議價，說明逾400萬元成果如何形成。</p><b>決策證據：量化成果</b></article>
+        <article><span>04 · ALTERNATIVE</span><h3>替代來源導入邏輯</h3><p>以階段關卡確認技術、商務與交付條件，避免替代來源只停留在名單。</p><b>決策證據：新來源開發</b></article>
+        <article><span>05 · RISK</span><h3>採購與專案交付</h3><p>將供應商進度、異常、責任窗口與專案里程碑放在同一個追蹤基準。</p><b>決策證據：跨部門協作</b></article>
+        <article><span>06 · ENGLISH</span><h3>英文確認與內部轉譯</h3><p>示範如何以英文確認規格、產能、交期及下一步，再轉為內部執行條件。</p><b>決策證據：英文文件</b></article>
+      </div>
+    </section>
+
+    <section class="section alt" id="rfq">
+      <div class="section-heading">
+        <p class="eyebrow">01 · REQUIREMENT TO RFQ</p>
+        <h2>詢價之前，先建立所有供應商共同回答的問題。</h2>
+        <p>報價無法比較，通常不是因為表格不夠完整，而是需求、範圍與責任尚未定義清楚。以下範例將分散資訊收斂為六項基準。</p>
+      </div>
+      <div class="artifact">
+        <div class="artifact-bar"><b>RFQ REQUIREMENT BASELINE</b><span>ANONYMIZED · REV. 03</span></div>
+        <div class="rfq-baseline">
+          <article><i>01</i><h3>需求情境</h3><p>用途、數量、使用環境、年度需求及不可變更條件。</p></article>
+          <article><i>02</i><h3>圖面規格</h3><p>版本、材料、尺寸、公差、設備介面及待確認項目。</p></article>
+          <article><i>03</i><h3>供應範圍</h3><p>材料、製作、測試、包裝、運輸、安裝及排除項目。</p></article>
+          <article><i>04</i><h3>產能交期</h3><p>打樣、備料、製作、分批到貨、最大產能及前置時間。</p></article>
+          <article><i>05</i><h3>商務條件</h3><p>幣別、MOQ、付款、保固、報價效期及價格調整機制。</p></article>
+          <article><i>06</i><h3>品質驗收</h3><p>檢驗文件、允收基準、異常責任與驗收付款節點。</p></article>
+        </div>
+      </div>
+      <p class="artifact-note"><b>管理判斷：</b>未確認項目應明確標示並設定回覆期限；不能讓不確定性被包在總價中，直到交付階段才轉為追加成本或延誤。</p>
+    </section>
+
+    <section class="section" id="supplier">
+      <div class="section-heading">
+        <p class="eyebrow">02 · SUPPLIER EVALUATION</p>
+        <h2>價格是比較項目，<br>不是供應商選擇的唯一答案。</h2>
+        <p>下表使用匿名化示範數據，呈現如何以加權基準比較供應商。分數之外，仍需留下條件差異、主要風險及建議的後續行動。</p>
+      </div>
+      <div class="artifact matrix-layout">
+        <div class="table-scroll">
+          <div class="artifact-bar"><b>SUPPLIER EVALUATION MATRIX</b><span>WEIGHTED SCORE · 100</span></div>
+          <table aria-label="供應商評估矩陣">
+            <thead><tr><th>評估構面</th><th>權重</th><th>供應商 A</th><th>供應商 B</th><th>供應商 C</th></tr></thead>
+            <tbody>
+              <tr><td><b>技術與規格符合度</b></td><td>25</td><td class="score high">23</td><td class="score high">24</td><td class="score mid">20</td></tr>
+              <tr><td><b>總評估成本</b></td><td>25</td><td class="score mid">20</td><td class="score high">22</td><td class="score high">24</td></tr>
+              <tr><td><b>產能與交期</b></td><td>20</td><td class="score high">18</td><td class="score mid">15</td><td class="score mid">12</td></tr>
+              <tr><td><b>品質與文件條件</b></td><td>15</td><td class="score high">14</td><td class="score high">13</td><td class="score mid">11</td></tr>
+              <tr><td><b>商務與合作條件</b></td><td>10</td><td>8</td><td>8</td><td>9</td></tr>
+              <tr><td><b>供應風險</b></td><td>5</td><td>4</td><td>3</td><td>2</td></tr>
+              <tr><td><b>加權總分</b></td><td>100</td><td class="score high">87</td><td class="score high">85</td><td class="score mid">78</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="decision-panel">
+          <span>DECISION MEMO</span>
+          <h3>主來源選 A，保留 B 作為替代來源。</h3>
+          <p>A 的總價不是最低，但產能、交期與品質條件較完整；B 的技術符合度高，可在補齊產能與風險改善計畫後列為第二來源。</p>
+          <dl>
+            <div><dt>PRIMARY</dt><dd>供應商 A｜交付條件較穩定</dd></div>
+            <div><dt>ALTERNATIVE</dt><dd>供應商 B｜完成產能改善確認</dd></div>
+            <div><dt>FOLLOW-UP</dt><dd>確認週產能、關鍵材料及交期承諾</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section alt" id="cost">
+      <div class="section-heading">
+        <p class="eyebrow">03 · COST IMPROVEMENT CASE</p>
+        <h2>逾400萬元成本改善，<br>來自比較基準的重建。</h2>
+        <p>成果不是一次議價取得，而是先找出報價不可比較的原因，再逐步調整採購範圍、執行方案與商務條件。</p>
+      </div>
+      <div class="cost-story">
+        <div class="cost-steps">
+          <article><i>01</i><div><h3>重新界定採購範圍</h3><p>拆開材料、製作、運輸、施工與驗收責任，排除重複或未定義項目。</p></div></article>
+          <article><i>02</i><div><h3>統一報價假設</h3><p>將不同供應商的規格、數量、工序、付款及交期拉回同一比較基準。</p></div></article>
+          <article><i>03</i><div><h3>比較替代執行方案</h3><p>在必要規格不降低的前提下，重新評估製作分工、施工界面與資源配置。</p></div></article>
+          <article><i>04</i><div><h3>完成商務協商與風險確認</h3><p>將成本差異、履約責任與交付風險一併納入議價及最終建議。</p></div></article>
+        </div>
+        <aside class="result-card">
+          <span>VERIFIED PROJECT RESULT</span>
+          <strong>NT$<br>4M+</strong>
+          <h3>單一專案成本改善</h3>
+          <p>保留必要品質與交付條件，並以重新定義的範圍及方案比較支撐最終決策。</p>
+          <small>本頁不揭露專案總價、客戶、供應商與合約資料；成果數字採履歷中可公開的範圍。</small>
+        </aside>
+      </div>
+    </section>
+
+    <section class="photo-strip" aria-label="實際工作情境">
+      <figure><img src="/field-highbay-install-clean.jpg" alt="大型自動化倉儲施工現場"><figcaption><span>SYSTEM SCALE</span><b>理解供應範圍如何影響整體交付</b></figcaption></figure>
+      <figure><img src="/field-material-review.jpg" alt="材料與樣品確認"><figcaption><span>MATERIAL REVIEW</span><b>從實物、規格與使用情境確認需求</b></figcaption></figure>
+      <figure><img src="/field-structure-install.jpg" alt="大型鋼構吊裝現場"><figcaption><span>DELIVERY INTERFACE</span><b>材料、製作、運輸與施工彼此連動</b></figcaption></figure>
+    </section>
+
+    <section class="section" id="alternative">
+      <div class="section-heading">
+        <p class="eyebrow">04 · ALTERNATIVE SOURCE DEVELOPMENT</p>
+        <h2>替代來源要能通過驗證，<br>而不只是多一個供應商名稱。</h2>
+        <p>面對新供應類別時，先定義必要條件與淘汰標準，再逐步確認技術、品質、商務與供應能力。以下為可移轉至產品型製造業的階段關卡。</p>
+      </div>
+      <div class="artifact">
+        <div class="artifact-bar"><b>SOURCING FUNNEL & STAGE GATES</b><span>METHOD DEMONSTRATION</span></div>
+        <div class="funnel">
+          <article><span>GATE 01</span><h3>供應市場盤點</h3><p>材料、製程、區域、價格訊號與可能供應來源。</p><b>輸出：候選名單</b></article>
+          <article><span>GATE 02</span><h3>初步條件篩選</h3><p>必要規格、設備能力、產能、品質制度及合作意願。</p><b>輸出：初選供應商</b></article>
+          <article><span>GATE 03</span><h3>技術能力確認</h3><p>圖面與規格理解、製程可行性、樣品或文件驗證。</p><b>輸出：技術可行</b></article>
+          <article><span>GATE 04</span><h3>商務與風險評估</h3><p>成本、MOQ、付款、交期、產能承諾及關鍵依賴。</p><b>輸出：決策建議</b></article>
+          <article><span>GATE 05</span><h3>導入與持續監控</h3><p>責任窗口、里程碑、異常處理及供應績效追蹤。</p><b>輸出：可管理來源</b></article>
+        </div>
+      </div>
+      <div class="gate-grid">
+        <article class="gate-card"><span>MARKET SIGNALS</span><h3>市場與材料變化</h3><ul><li>供需與交期變化</li><li>主要材料價格訊號</li><li>產能集中與單一來源風險</li></ul></article>
+        <article class="gate-card"><span>CAPABILITY EVIDENCE</span><h3>供應能力證據</h3><ul><li>設備、製程與實績</li><li>品質文件與異常回覆</li><li>最大產能與交付彈性</li></ul></article>
+        <article class="gate-card"><span>APPROVAL LOGIC</span><h3>導入決策依據</h3><ul><li>技術與商務條件均符合</li><li>風險與改善責任已確認</li><li>後續里程碑可持續追蹤</li></ul></article>
+      </div>
+      <p class="artifact-note"><b>方法來源：</b>此架構整理自工程材料、設備與服務採購中的供應商開發經驗，並依產品型製造環境常見的技術、品質、商務與導入關卡重新編排。</p>
+    </section>
+
+    <section class="section dark" id="risk">
+      <div class="section-heading">
+        <p class="eyebrow">05 · SOURCING RISK & PROJECT DELIVERY</p>
+        <h2>採購決定完成之後，<br>仍要對交期與異常負責。</h2>
+        <p>供應商進度不是獨立資料；它必須連到專案的設計凍結、到貨、整合、測試與驗收。以下示範如何把供應風險轉為可追蹤的責任與決策。</p>
+      </div>
+      <div class="artifact risk-layout">
+        <div class="risk-register table-scroll">
+          <div class="artifact-bar"><b>SUPPLY RISK REGISTER</b><span>WEEKLY REVIEW</span></div>
+          <table aria-label="供應風險追蹤表">
+            <thead><tr><th>風險</th><th>影響</th><th>狀態</th><th>OWNER</th><th>處理方式</th></tr></thead>
+            <tbody>
+              <tr><td><b>關鍵材料交期延後</b></td><td>製作啟動晚3日</td><td><span class="tag red">HIGH</span></td><td>採購</td><td>分批到貨／確認替代來源</td></tr>
+              <tr><td><b>圖面版本尚未凍結</b></td><td>報價與備料暫停</td><td><span class="tag amber">MED</span></td><td>工程</td><td>設定決策期限與影響說明</td></tr>
+              <tr><td><b>供應商產能重疊</b></td><td>交付窗口縮短</td><td><span class="tag amber">MED</span></td><td>供應商</td><td>確認週產能與加班方案</td></tr>
+              <tr><td><b>驗收文件未齊</b></td><td>付款與結案延後</td><td><span class="tag green">LOW</span></td><td>專案</td><td>到貨前完成文件檢核</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="milestone">
+          <span>PROJECT LINKAGE</span>
+          <h3>供應里程碑如何連到專案交付</h3>
+          <ol>
+            <li><b>需求與圖面凍結</b>確認詢價及製作基準。</li>
+            <li><b>供應商選擇與下單</b>確認成本、責任及交期承諾。</li>
+            <li><b>材料與製作進度</b>追蹤關鍵依賴及異常處理。</li>
+            <li><b>到貨與現場整合</b>核對數量、規格與進場條件。</li>
+            <li><b>測試、驗收與結案</b>完成文件、責任與付款閉環。</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section alt" id="english">
+      <div class="section-heading">
+        <p class="eyebrow">06 · ENGLISH SOURCING COMMUNICATION</p>
+        <h2>英文文件的目的，<br>是讓供應條件沒有第二種解讀。</h2>
+        <p>以下使用可在面試中說明的英文程度，示範規格、產能及交期確認；重點是內容精確、責任清楚，而不是堆疊艱深字彙。</p>
+      </div>
+      <div class="english-layout">
+        <article class="email">
+          <div class="email-head"><span>RFQ CLARIFICATION · SAMPLE</span><h3>Subject: RFQ Baseline and Supplier Readiness Confirmation</h3></div>
+          <div class="email-body">
+            <p>Dear Supplier Team,</p>
+            <p>Before completing the quotation review, please confirm the following items based on <b>drawing revision C</b>:</p>
+            <ul>
+              <li>Material specification and included processes</li>
+              <li>Sample lead time and production lead time</li>
+              <li>Monthly capacity and minimum order quantity</li>
+              <li>Packaging, delivery, payment, and warranty terms</li>
+              <li>Known supply risks and available alternatives</li>
+            </ul>
+            <p>Please identify any exclusions or assumptions in the quotation. After receiving your confirmation, I will consolidate the commercial comparison and follow-up actions.</p>
+            <p>Best regards,<br>Amber Chang</p>
+          </div>
+        </article>
+        <aside class="brief">
+          <span>INTERNAL SOURCING BRIEF</span>
+          <h3>英文回覆轉為內部決策資訊</h3>
+          <dl>
+            <div><dt>TECHNICAL</dt><dd>規格、製程與排除項目是否符合。</dd></div>
+            <div><dt>CAPACITY</dt><dd>打樣、量產與高峰需求能否承接。</dd></div>
+            <div><dt>COMMERCIAL</dt><dd>總成本、MOQ、付款及保固條件。</dd></div>
+            <div><dt>RISK</dt><dd>單一來源、關鍵材料與交期風險。</dd></div>
+            <div><dt>NEXT STEP</dt><dd>責任窗口、回覆期限與下一決策點。</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">EXPERIENCE TRANSFER</p>
+        <h2>進入產品型製造環境後，<br>我會先建立可使用的供應判斷基準。</h2>
+      </div>
+      <div class="transfer">
+        <article><span>FIRST 30 DAYS</span><h3>理解產品與供應鏈</h3><p>建立主要品類、BOM關聯、供應商結構、採購流程及目前風險的基本圖譜。</p><b>輸出：CATEGORY & RISK MAP</b></article>
+        <article><span>DAY 31–60</span><h3>參與一項實際RFQ</h3><p>依既有制度完成需求確認、供應商比較、商務分析及決策紀錄，與工程、品質及PM校準。</p><b>輸出：RFQ DECISION PACK</b></article>
+        <article><span>DAY 61–90</span><h3>提出一項改善機會</h3><p>由成本、替代來源或交期風險擇一，提出具依據、責任與里程碑的改善建議。</p><b>輸出：SOURCING ACTION PLAN</b></article>
+      </div>
+      <div class="closing">
+        <span>THE VALUE I BRING</span>
+        <p>我帶入的並非一份既有廠商名單，而是面對新需求時，能夠建立比較基準、辨認供應風險、形成決策建議，並將採購承諾持續推進至交付的工作方法。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Amber Chang · Sourcing Decision Portfolio</strong>
+    <span>去識別化工作方法與實作案例 · 2026</span>
+  </footer>
+</body>
+</html>
