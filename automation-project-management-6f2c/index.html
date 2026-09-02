@@ -12,7 +12,7 @@
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button{font:inherit}img{display:block;width:100%}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}.eyebrow{margin:0 0 12px;color:var(--teal);font-size:12px;font-weight:800;letter-spacing:.18em}.micro{font-size:12px;color:var(--muted)}
     header{position:sticky;top:0;z-index:50;background:rgba(19,42,49,.96);color:#fff;border-bottom:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.05em}.brand i{width:11px;height:11px;border-radius:50%;background:var(--orange);box-shadow:18px 0 0 var(--mint)}.brand small{display:block;font-size:10px;color:#b9cecf;letter-spacing:.16em}.links{display:flex;gap:22px;color:#dce7e7;font-size:13px}.links a:hover{color:var(--mint)}
     .hero{background:var(--ink);color:#fff;overflow:hidden;position:relative;padding:92px 0 70px}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,rgba(255,255,255,.04) 50%),linear-gradient(rgba(255,255,255,.04) 49.8%,transparent 50%);background-size:56px 56px;mask-image:linear-gradient(90deg,transparent,#000 55%)}.hero-grid{position:relative;display:grid;grid-template-columns:.88fr 1.12fr;gap:56px;align-items:center}.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.08;letter-spacing:-.055em;margin:0 0 24px}.hero h1 em{font-style:normal;color:var(--mint)}.lead{font-size:18px;color:#d7e3e2;max-width:580px}.hero-note{border-left:3px solid var(--orange);padding-left:18px;margin-top:30px;color:#bdcdcd;font-size:14px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.16);margin-top:45px}.metric{background:var(--ink);padding:18px 12px}.metric b{display:block;font-size:26px;color:#fff}.metric b.long{font-size:17px;line-height:1.35;margin:5px 0 4px}.metric span{font-size:11px;color:#aec1c1;letter-spacing:.05em}
-    .architecture{position:relative;min-height:520px}.arch-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:180px;height:180px;border-radius:50%;background:var(--orange);display:grid;place-items:center;text-align:center;box-shadow:0 0 0 18px rgba(232,117,50,.13),0 0 0 40px rgba(232,117,50,.06)}.arch-core b{font-size:22px}.arch-core small{display:block;font-size:11px;letter-spacing:.14em}.arch-node{position:absolute;width:190px;min-height:94px;padding:15px;border:1px solid rgba(255,255,255,.24);background:#18343d;box-shadow:var(--shadow)}.arch-node b{display:block;color:var(--mint);font-size:13px}.arch-node span{font-size:12px;color:#d6e2e1}.arch-node:after{content:"";position:absolute;border-top:1px dashed rgba(157,214,202,.7);width:86px;top:50%}.n1{left:0;top:48px}.n1:after,.n4:after{left:100%;transform:rotate(22deg);transform-origin:left}.n2{right:0;top:48px}.n2:after,.n5:after{right:100%;transform:rotate(-22deg);transform-origin:right}.n3{left:0;bottom:48px}.n3:after{left:100%;transform:rotate(-22deg);transform-origin:left}.n4{right:0;bottom:48px}.n4:after{right:100%;transform:rotate(22deg);transform-origin:right}.n5{left:50%;bottom:0;transform:translateX(-50%)}.n5:after{bottom:100%;top:auto;left:50%;width:65px;transform:rotate(90deg);transform-origin:left}
+    .architecture{border:1px solid rgba(255,255,255,.22);background:rgba(17,41,48,.88);box-shadow:var(--shadow)}.arch-head{display:flex;justify-content:space-between;align-items:end;gap:20px;padding:20px 22px;border-bottom:1px solid rgba(255,255,255,.17)}.arch-head small{display:block;color:var(--mint);font-size:10px;font-weight:800;letter-spacing:.15em}.arch-head b{font-size:20px}.arch-head span{font-size:11px;color:#adc1c1;text-align:right}.arch-columns{display:grid;grid-template-columns:.9fr 1.15fr .95fr;padding:0 22px;color:#9eb3b4;font-size:10px;font-weight:800;letter-spacing:.12em}.arch-columns span{padding:12px 10px}.arch-columns span:nth-child(2){color:var(--orange)}.arch-row{display:grid;grid-template-columns:.9fr 1.15fr .95fr;align-items:stretch;border-top:1px solid rgba(255,255,255,.12);min-height:82px}.arch-cell{position:relative;padding:14px 18px;display:flex;flex-direction:column;justify-content:center}.arch-cell+ .arch-cell{border-left:1px solid rgba(255,255,255,.12)}.arch-cell:not(:last-child):after{content:"→";position:absolute;right:-10px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--ink);color:var(--mint);z-index:2}.arch-cell b{font-size:12px;color:#fff}.arch-cell span{font-size:11px;color:#b9cccc}.arch-cell.control{background:rgba(232,117,50,.09);border-left-color:rgba(232,117,50,.35)}.arch-cell.control b{color:#ffb27f}.arch-cell.output b{color:var(--mint)}.arch-row.warn .arch-cell.control{background:rgba(182,75,61,.12)}.arch-row.warn .arch-cell.control b{color:#ffad9f}
     section{padding:92px 0}.section-head{display:grid;grid-template-columns:1fr .75fr;gap:56px;align-items:end;margin-bottom:42px}.section-head h2{font-size:clamp(32px,4.4vw,58px);line-height:1.13;letter-spacing:-.04em;margin:0}.section-head>p{color:var(--muted);margin:0}
     .lifecycle{background:#fff}.flow{display:grid;grid-template-columns:repeat(8,1fr);border:1px solid var(--line);overflow:auto}.phase{min-width:138px;position:relative;padding:24px 16px 26px;border-right:1px solid var(--line);background:#fff}.phase:last-child{border:0}.phase:after{content:"›";position:absolute;right:-11px;top:28px;z-index:2;background:var(--ink);color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;line-height:20px}.phase:last-child:after{display:none}.phase i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#e8f4f1;color:var(--teal);font-style:normal;font-weight:800}.phase small{display:block;color:var(--muted);font-size:10px;margin-top:14px;letter-spacing:.1em}.phase b{font-size:14px}.phase.active{background:var(--ink);color:#fff}.phase.active small{color:#adc0c1}.phase.active i{background:var(--orange);color:#fff}.impact-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.impact{padding:15px;border-top:3px solid var(--orange);background:#f2f4f1;font-size:13px}.impact b{display:block}.impact span{color:var(--muted)}
     .role-map{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}.control-board{background:var(--ink);color:#fff;padding:34px;position:relative;overflow:hidden}.control-board:after{content:"AMBER";position:absolute;right:-10px;bottom:-38px;font-size:90px;font-weight:900;color:rgba(255,255,255,.035)}.control-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.control{border:1px solid rgba(255,255,255,.18);padding:18px;min-height:145px}.control i{font-style:normal;font-size:22px}.control b{display:block;margin:7px 0}.control p{font-size:12px;color:#b9cccc;margin:0}.role-side{display:grid;gap:12px}.role-card{background:#fff;border:1px solid var(--line);padding:20px;display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start}.role-card i{display:grid;place-items:center;width:38px;height:38px;background:#eaf4f1;border-radius:50%;font-style:normal}.role-card b{display:block}.role-card p{margin:4px 0 0;color:var(--muted);font-size:13px}
@@ -25,36 +25,857 @@
     .overseas-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.country{position:relative;min-height:310px;background:var(--ink);color:#fff;padding:34px;overflow:hidden}.country:after{content:attr(data-code);position:absolute;right:-5px;bottom:-55px;font-size:170px;font-weight:900;color:rgba(255,255,255,.05)}.country h3{font-size:30px;margin:0 0 18px}.country ul{padding-left:18px;color:#c9d8d8}.country li+li{margin-top:10px}.language-note{grid-column:1/-1;border:1px solid var(--line);padding:20px;background:#fff;display:grid;grid-template-columns:150px 1fr;gap:20px}.language-note b{color:var(--teal)}
     .field{background:#fff}.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:225px;gap:10px}.photo-grid figure{margin:0;position:relative;overflow:hidden;cursor:pointer;background:#cbd5d1}.photo-grid figure:nth-child(1),.photo-grid figure:nth-child(6){grid-column:span 2;grid-row:span 2}.photo-grid img{height:100%;object-fit:cover;transition:.4s}.photo-grid figure:hover img{transform:scale(1.035)}.photo-grid figcaption{position:absolute;inset:auto 0 0;padding:42px 16px 15px;background:linear-gradient(transparent,rgba(10,27,32,.9));color:#fff}.photo-grid span{font-size:10px;color:var(--mint);font-weight:800;letter-spacing:.12em}.photo-grid b{display:block;font-size:14px}.lightbox{display:none;position:fixed;inset:0;background:rgba(7,19,23,.86);z-index:100;padding:30px;align-items:center;justify-content:center}.lightbox.open{display:flex}.lightbox-card{background:#fff;max-width:1040px;width:100%;display:grid;grid-template-columns:1.25fr .75fr;max-height:88vh;position:relative}.lightbox-card img{height:100%;max-height:78vh;object-fit:cover}.lightbox-copy{padding:34px;overflow:auto}.lightbox-copy span{font-size:11px;color:var(--teal);font-weight:800;letter-spacing:.12em}.lightbox-copy h3{font-size:27px;margin:8px 0 14px}.lightbox-copy p{color:var(--muted)}.lightbox-close{position:absolute;right:12px;top:10px;border:0;background:var(--ink);color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;z-index:2}
     .close{background:var(--ink);color:#fff;padding:72px 0}.close-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.close h2{font-size:clamp(34px,5vw,62px);line-height:1.12;margin:0}.method{display:grid;gap:1px;background:rgba(255,255,255,.14)}.method div{background:#17343c;padding:16px}.method b{display:block;color:var(--mint)}.method span{font-size:12px;color:#b9cccc}footer{background:#0d2026;color:#9fb3b4;padding:22px 0;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:20px}
-    @media(max-width:900px){.links{display:none}.hero-grid,.section-head,.role-map,.panel-grid,.decision-case,.close-grid{grid-template-columns:1fr}.architecture{min-height:520px}.arch-node{width:160px}.system-map{grid-template-columns:1fr}.control-strip{grid-template-columns:repeat(2,1fr)}.impact-row,.control-grid{grid-template-columns:repeat(2,1fr)}.photo-grid{grid-template-columns:repeat(2,1fr)}.issue-grid,.overseas-grid{grid-template-columns:1fr}.language-note{grid-column:auto}.timeline{grid-template-columns:repeat(3,1fr)}.time-step:nth-child(n+4){margin-top:24px}}
-    @media(max-width:600px){.wrap{width:min(100% - 26px,1180px)}.hero{padding-top:58px}.metrics{grid-template-columns:repeat(2,1fr)}.architecture{min-height:auto;display:grid;gap:10px}.arch-core,.arch-node{position:relative;inset:auto;transform:none;width:100%;height:auto;min-height:0;border-radius:0}.arch-core{padding:22px}.arch-node:after{display:none}.section-head{gap:18px}.impact-row,.control-grid,.decision-steps{grid-template-columns:1fr}.control-board{padding:24px}.photo-grid{grid-template-columns:1fr;grid-auto-rows:260px}.photo-grid figure:nth-child(1),.photo-grid figure:nth-child(6){grid-column:auto;grid-row:auto}.lightbox-card{grid-template-columns:1fr}.lightbox-card img{height:300px}.lightbox-copy{padding:24px}.issue-grid{grid-template-columns:1fr}.escalation{grid-template-columns:1fr}.escalation div:not(:last-child):after{content:"↓";right:14px;bottom:-13px;top:auto}.timeline{grid-template-columns:repeat(2,1fr)}.language-note{grid-template-columns:1fr}.footer-inner{display:block}.footer-inner span{display:block;margin-top:8px}}
+    @media(max-width:900px){.links{display:none}.hero-grid,.section-head,.role-map,.panel-grid,.decision-case,.close-grid{grid-template-columns:1fr}.system-map{grid-template-columns:1fr}.control-strip{grid-template-columns:repeat(2,1fr)}.impact-row,.control-grid{grid-template-columns:repeat(2,1fr)}.photo-grid{grid-template-columns:repeat(2,1fr)}.issue-grid,.overseas-grid{grid-template-columns:1fr}.language-note{grid-column:auto}.timeline{grid-template-columns:repeat(3,1fr)}.time-step:nth-child(n+4){margin-top:24px}}
+    @media(max-width:600px){.wrap{width:min(100% - 26px,1180px)}.hero{padding-top:58px}.metrics{grid-template-columns:repeat(2,1fr)}.arch-head{display:block}.arch-head span{display:block;text-align:left;margin-top:5px}.arch-columns{display:none}.arch-row{grid-template-columns:1fr}.arch-cell{padding:12px 16px}.arch-cell+.arch-cell{border-left:0;border-top:1px solid rgba(255,255,255,.1)}.arch-cell:not(:last-child):after{content:"↓";right:14px;top:auto;bottom:-10px;transform:none}.section-head{gap:18px}.impact-row,.control-grid,.decision-steps{grid-template-columns:1fr}.control-board{padding:24px}.photo-grid{grid-template-columns:1fr;grid-auto-rows:260px}.photo-grid figure:nth-child(1),.photo-grid figure:nth-child(6){grid-column:auto;grid-row:auto}.lightbox-card{grid-template-columns:1fr}.lightbox-card img{height:300px}.lightbox-copy{padding:24px}.issue-grid{grid-template-columns:1fr}.escalation{grid-template-columns:1fr}.escalation div:not(:last-child):after{content:"↓";right:14px;bottom:-13px;top:auto}.timeline{grid-template-columns:repeat(2,1fr)}.language-note{grid-template-columns:1fr}.footer-inner{display:block}.footer-inner span{display:block;margin-top:8px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.photo-grid img{transition:none}}
   </style>
 </head>
 <body>
-  <header><div class="wrap nav"><a class="brand" href="#top"><i></i><span>AMBER CHANG<small>PROJECT MANAGEMENT PORTFOLIO</small></span></a><nav class="links" aria-label="作品集章節"><a href="#architecture">工作架構</a><a href="#case">專案案例</a><a href="#evidence">管理證據</a><a href="#field">現場紀錄</a></nav></div></header>
+  <header>
+<div class="wrap nav">
+<a class="brand" href="#top">
+<i>
+</i>
+<span>AMBER CHANG<small>PROJECT MANAGEMENT PORTFOLIO</small>
+</span>
+</a>
+<nav class="links" aria-label="作品集章節">
+<a href="#architecture">工作架構</a>
+<a href="#case">專案案例</a>
+<a href="#evidence">管理證據</a>
+<a href="#field">現場紀錄</a>
+</nav>
+</div>
+</header>
   <main id="top">
-    <section class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">AUTOMATION EQUIPMENT × PROJECT DELIVERY</p><h1>把複雜工作拆清楚，<br><em>讓專案持續往下走。</em></h1><p class="lead">近8年工程、設備採購與跨場域專案經驗。工作內容涵蓋需求與範圍確認、排程依存、供應商交付、現場介面、成本與驗收資料；異常發生時，先確認下游影響，再安排責任與追蹤節點。</p><p class="hero-note">這裡呈現的是我實際參與專案時的工作方法與匿名化證據，不是管理制度介紹。</p><div class="metrics"><div class="metric"><b>近8年</b><span>跨產業專案實務</span></div><div class="metric"><b class="long">泰國／馬來西亞</b><span>現場進度確認、介面溝通與待辦追蹤</span></div><div class="metric"><b>26天</b><span>鋼構平台施工案例</span></div><div class="metric"><b>NT$4M+</b><span>單案成本改善</span></div></div></div><div class="architecture" aria-label="Amber的專案控制架構"><div class="arch-core"><div><small>MY ROLE</small><b>PROJECT<br>COORDINATION</b></div></div><article class="arch-node n1"><b>◫ SCOPE / INTERFACE</b><span>把需求、圖面、供應範圍與排除項目整理成共同基準。</span></article><article class="arch-node n2"><b>◷ SCHEDULE / MILESTONE</b><span>連接製作、到貨、吊裝、安裝、測試與驗收節點。</span></article><article class="arch-node n3"><b>⚠ RISK / ISSUE</b><span>確認異常對成本、工期、施工面與付款的影響。</span></article><article class="arch-node n4"><b>◎ STAKEHOLDER</b><span>對齊工程、現場、PM、供應商與管理窗口。</span></article><article class="arch-node n5"><b>＄ COST / CLOSE</b><span>檢核變更、估驗、驗收證據與結案條件。</span></article></div></div></section>
+    <section class="hero">
+<div class="wrap hero-grid">
+<div>
+<p class="eyebrow">AUTOMATION EQUIPMENT × PROJECT DELIVERY</p>
+<h1>把複雜工作拆清楚，<br>
+<em>讓專案持續往下走。</em>
+</h1>
+<p class="lead">近8年工程、設備採購與跨場域專案經驗。工作內容涵蓋需求與範圍確認、排程依存、供應商交付、現場介面、成本與驗收資料；異常發生時，先確認下游影響，再安排責任與追蹤節點。</p>
+<p class="hero-note"><b>職務定位｜</b>協調設備與工程專案的範圍、供應商、現場條件與交付節點，讓待處理事項能被確認、分工與持續追蹤。</p>
+<div class="metrics">
+<div class="metric">
+<b>近8年</b>
+<span>跨產業專案實務</span>
+</div>
+<div class="metric">
+<b class="long">泰國／馬來西亞</b>
+<span>現場進度確認、介面溝通與待辦追蹤</span>
+</div>
+<div class="metric">
+<b>26天</b>
+<span>鋼構平台施工案例</span>
+</div>
+<div class="metric">
+<b>NT$4M+</b>
+<span>單案成本改善</span>
+</div>
+</div>
+</div>
+<div class="architecture" aria-label="專案資訊、Amber控制點與交付輸出的關係矩陣">
+<div class="arch-head"><div><small>PROJECT DELIVERY CONTROL</small><b>資訊進來之後，如何形成下一步</b></div><span>INPUT → AMBER'S CONTROL → OUTPUT</span></div>
+<div class="arch-columns"><span>專案資訊</span><span>我的控制點</span><span>可交付輸出</span></div>
+<article class="arch-row"><div class="arch-cell"><b>需求／圖面／報價</b><span>範圍與假設來源</span></div><div class="arch-cell control"><b>釐清範圍與責任介面</b><span>確認包含、排除與待決事項</span></div><div class="arch-cell output"><b>共同執行基準</b><span>WBS、責任與變更依據</span></div></article>
+<article class="arch-row"><div class="arch-cell"><b>製作／到貨／作業面</b><span>供應商與現場狀態</span></div><div class="arch-cell control"><b>連接前後置與里程碑</b><span>確認資源、期限與下游影響</span></div><div class="arch-cell output"><b>可執行排程</b><span>Owner、Due、下一個節點</span></div></article>
+<article class="arch-row warn"><div class="arch-cell"><b>異常／差異／變更</b><span>現場或文件訊號</span></div><div class="arch-cell control"><b>判斷影響並安排升級</b><span>成本、時程、品質與付款</span></div><div class="arch-cell output"><b>風險處理紀錄</b><span>回應、責任與關閉方式</span></div></article>
+<article class="arch-row"><div class="arch-cell"><b>照片／數量／測試資料</b><span>完成狀態與證據</span></div><div class="arch-cell control"><b>檢核驗收與請款條件</b><span>比對合約、現況與文件</span></div><div class="arch-cell output"><b>驗收與結案依據</b><span>可核對的交付結果</span></div></article>
+</div>
+</div>
+</section>
 
-    <section class="lifecycle" id="architecture"><div class="wrap"><div class="section-head"><div><p class="eyebrow">01 · PROJECT MANAGEMENT ARCHITECTURE</p><h2>管理的不是工作清單，<br>而是工作之間的依存關係。</h2></div><p>設備專案從需求到結案，每一個節點都會改變下游條件。我的工作是把責任、期限、證據與風險放進同一條交付路徑。</p></div><div class="flow" role="img" aria-label="專案全生命週期"><article class="phase"><i>1</i><small>REQUIREMENT</small><b>需求與目標</b></article><article class="phase active"><i>2</i><small>MY CONTROL</small><b>範圍／介面</b></article><article class="phase active"><i>3</i><small>MY CONTROL</small><b>WBS／排程</b></article><article class="phase"><i>4</i><small>SOURCING</small><b>採購／製作</b></article><article class="phase active"><i>5</i><small>MY CONTROL</small><b>到貨／作業面</b></article><article class="phase active"><i>6</i><small>MY CONTROL</small><b>安裝／異常</b></article><article class="phase"><i>7</i><small>VERIFY</small><b>測試／驗收</b></article><article class="phase active"><i>8</i><small>MY CONTROL</small><b>估驗／結案</b></article></div><div class="impact-row"><article class="impact"><b>範圍未釐清</b><span>→ 報價落差、追加成本</span></article><article class="impact"><b>材料或製作延後</b><span>→ 到貨與作業面中斷</span></article><article class="impact"><b>設備介面不一致</b><span>→ 現場修改、測試延後</span></article><article class="impact"><b>證據與數量不完整</b><span>→ 估驗、付款與結案卡住</span></article></div></div></section>
+    <section class="lifecycle" id="architecture">
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">01 · PROJECT MANAGEMENT ARCHITECTURE</p>
+<h2>管理的不是工作清單，<br>而是工作之間的依存關係。</h2>
+</div>
+<p>設備專案從需求到結案，每一個節點都會改變下游條件。我的工作是把責任、期限、證據與風險放進同一條交付路徑。</p>
+</div>
+<div class="flow" role="img" aria-label="專案全生命週期">
+<article class="phase">
+<i>1</i>
+<small>REQUIREMENT</small>
+<b>需求與目標</b>
+</article>
+<article class="phase active">
+<i>2</i>
+<small>MY CONTROL</small>
+<b>範圍／介面</b>
+</article>
+<article class="phase active">
+<i>3</i>
+<small>MY CONTROL</small>
+<b>WBS／排程</b>
+</article>
+<article class="phase">
+<i>4</i>
+<small>SOURCING</small>
+<b>採購／製作</b>
+</article>
+<article class="phase active">
+<i>5</i>
+<small>MY CONTROL</small>
+<b>到貨／作業面</b>
+</article>
+<article class="phase active">
+<i>6</i>
+<small>MY CONTROL</small>
+<b>安裝／異常</b>
+</article>
+<article class="phase">
+<i>7</i>
+<small>VERIFY</small>
+<b>測試／驗收</b>
+</article>
+<article class="phase active">
+<i>8</i>
+<small>MY CONTROL</small>
+<b>估驗／結案</b>
+</article>
+</div>
+<div class="impact-row">
+<article class="impact">
+<b>範圍未釐清</b>
+<span>→ 報價落差、追加成本</span>
+</article>
+<article class="impact">
+<b>材料或製作延後</b>
+<span>→ 到貨與作業面中斷</span>
+</article>
+<article class="impact">
+<b>設備介面不一致</b>
+<span>→ 現場修改、測試延後</span>
+</article>
+<article class="impact">
+<b>證據與數量不完整</b>
+<span>→ 估驗、付款與結案卡住</span>
+</article>
+</div>
+</div>
+</section>
 
-    <section><div class="wrap"><div class="section-head"><div><p class="eyebrow">02 · RESPONSIBILITY MAP</p><h2>我在專案裡，<br>實際控制哪些事情？</h2></div><p>不是替所有專業單位做決定，而是確認每個決定需要的資訊、負責窗口與期限，並追蹤它是否真的進入下一個工作節點。</p></div><div class="role-map"><div class="control-board"><h3>AMBER'S CONTROL POINTS</h3><div class="control-grid"><article class="control"><i>▦</i><b>工作拆解</b><p>將範圍拆成採購、製作、運輸、吊裝、安裝、測試與驗收。</p></article><article class="control"><i>◷</i><b>排程依存</b><p>確認材料、作業面、機具與人力是否支持里程碑。</p></article><article class="control"><i>⇄</i><b>跨單位對齊</b><p>整理工程、現場、供應商與客戶回覆，轉成待辦與期限。</p></article><article class="control"><i>⚠</i><b>異常處理</b><p>先限制影響範圍，再確認成本、工期、驗收與付款影響。</p></article><article class="control"><i>＄</i><b>成本檢核</b><p>比對合約、追加、估驗數量與實際完成範圍。</p></article><article class="control"><i>✓</i><b>交付證據</b><p>彙整進度、照片、檢查、測試與驗收文件，支持結案。</p></article></div></div><aside class="role-side"><article class="role-card"><i>旗</i><div><b>Decision Point｜需要判斷</b><p>方案差異是否會轉成下游風險；何時需要升級或重新安排。</p></div></article><article class="role-card"><i>人</i><div><b>Coordination｜需要協調</b><p>責任介面、資源衝突、進場條件、回覆期限與替代方案。</p></div></article><article class="role-card"><i>證</i><div><b>Evidence｜留下紀錄</b><p>排程、成本、議題、決策、現場照片、驗收與付款資料。</p></div></article><article class="role-card"><i>果</i><div><b>Result｜可核對結果</b><p>問題被提前發現、責任可追蹤、交付條件可確認、結案有依據。</p></div></article></aside></div></div></section>
+    <section>
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">02 · RESPONSIBILITY MAP</p>
+<h2>我在專案裡，<br>實際控制哪些事情？</h2>
+</div>
+<p>不是替所有專業單位做決定，而是確認每個決定需要的資訊、負責窗口與期限，並追蹤它是否真的進入下一個工作節點。</p>
+</div>
+<div class="role-map">
+<div class="control-board">
+<h3>AMBER'S CONTROL POINTS</h3>
+<div class="control-grid">
+<article class="control">
+<i>▦</i>
+<b>工作拆解</b>
+<p>將範圍拆成採購、製作、運輸、吊裝、安裝、測試與驗收。</p>
+</article>
+<article class="control">
+<i>◷</i>
+<b>排程依存</b>
+<p>確認材料、作業面、機具與人力是否支持里程碑。</p>
+</article>
+<article class="control">
+<i>⇄</i>
+<b>跨單位對齊</b>
+<p>整理工程、現場、供應商與客戶回覆，轉成待辦與期限。</p>
+</article>
+<article class="control">
+<i>⚠</i>
+<b>異常處理</b>
+<p>先限制影響範圍，再確認成本、工期、驗收與付款影響。</p>
+</article>
+<article class="control">
+<i>＄</i>
+<b>成本檢核</b>
+<p>比對合約、追加、估驗數量與實際完成範圍。</p>
+</article>
+<article class="control">
+<i>✓</i>
+<b>交付證據</b>
+<p>彙整進度、照片、檢查、測試與驗收文件，支持結案。</p>
+</article>
+</div>
+</div>
+<aside class="role-side">
+<article class="role-card">
+<i>旗</i>
+<div>
+<b>Decision Point｜需要判斷</b>
+<p>方案差異是否會轉成下游風險；何時需要升級或重新安排。</p>
+</div>
+</article>
+<article class="role-card">
+<i>人</i>
+<div>
+<b>Coordination｜需要協調</b>
+<p>責任介面、資源衝突、進場條件、回覆期限與替代方案。</p>
+</div>
+</article>
+<article class="role-card">
+<i>證</i>
+<div>
+<b>Evidence｜留下紀錄</b>
+<p>排程、成本、議題、決策、現場照片、驗收與付款資料。</p>
+</div>
+</article>
+<article class="role-card">
+<i>果</i>
+<div>
+<b>Result｜可核對結果</b>
+<p>問題被提前發現、責任可追蹤、交付條件可確認、結案有依據。</p>
+</div>
+</article>
+</aside>
+</div>
+</div>
+</section>
 
-    <section class="case" id="case"><div class="wrap"><div class="section-head"><div><p class="eyebrow">03 · CASE｜LARGE AUTOMATED WAREHOUSE</p><h2>大型自動化倉儲，<br>不是單一設備交付。</h2></div><p>貨架、堆垛機、輸送機、鋼構吊裝與電控必須依序銜接。任何一條工作流延後，都可能改變下一個設備的作業面、機具安排或測試條件。</p></div><div class="system-map"><article class="stream"><h3>STRUCTURE / RACK</h3><ul><li>材料與批次到貨</li><li>安裝區域釋放</li><li>吊裝順序與安全計畫</li><li>後續設備介面</li></ul></article><div class="system-center"><h3>DEPENDENCY MAP｜主要依存</h3><div class="dependency"><span>貨架區域完成</span><i>→</i><span>堆垛機可吊裝</span></div><div class="dependency"><span>設備基準與電源</span><i>→</i><span>輸送機可安裝</span></div><div class="dependency"><span>單機測試完成</span><i>→</i><span>系統聯調</span></div><div class="dependency"><span>異常與缺失關閉</span><i>→</i><span>驗收／請款</span></div><p class="micro">匿名化重建；顯示工作關係，不揭露客戶、供應商及合約資料。</p></div><article class="stream"><h3>EQUIPMENT / CONTROL</h3><ul><li>堆垛機與輸送設備</li><li>電源、控制與訊號</li><li>單機測試與聯調</li><li>文件與驗收條件</li></ul></article></div><div class="control-strip"><div><b>MY ROLE · 01</b><span>整理範圍與介面</span></div><div><b>MY ROLE · 02</b><span>追蹤里程碑與前置</span></div><div><b>MY ROLE · 03</b><span>協調供應商與作業面</span></div><div><b>MY ROLE · 04</b><span>確認異常下游影響</span></div><div><b>MY ROLE · 05</b><span>檢核驗收與付款資料</span></div></div></div></section>
+    <section class="case" id="case">
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">03 · CASE｜LARGE AUTOMATED WAREHOUSE</p>
+<h2>大型自動化倉儲，<br>不是單一設備交付。</h2>
+</div>
+<p>貨架、堆垛機、輸送機、鋼構吊裝與電控必須依序銜接。任何一條工作流延後，都可能改變下一個設備的作業面、機具安排或測試條件。</p>
+</div>
+<div class="system-map">
+<article class="stream">
+<h3>STRUCTURE / RACK</h3>
+<ul>
+<li>材料與批次到貨</li>
+<li>安裝區域釋放</li>
+<li>吊裝順序與安全計畫</li>
+<li>後續設備介面</li>
+</ul>
+</article>
+<div class="system-center">
+<h3>DEPENDENCY MAP｜主要依存</h3>
+<div class="dependency">
+<span>貨架區域完成</span>
+<i>→</i>
+<span>堆垛機可吊裝</span>
+</div>
+<div class="dependency">
+<span>設備基準與電源</span>
+<i>→</i>
+<span>輸送機可安裝</span>
+</div>
+<div class="dependency">
+<span>單機測試完成</span>
+<i>→</i>
+<span>系統聯調</span>
+</div>
+<div class="dependency">
+<span>異常與缺失關閉</span>
+<i>→</i>
+<span>驗收／請款</span>
+</div>
+<p class="micro">匿名化重建；顯示工作關係，不揭露客戶、供應商及合約資料。</p>
+</div>
+<article class="stream">
+<h3>EQUIPMENT / CONTROL</h3>
+<ul>
+<li>堆垛機與輸送設備</li>
+<li>電源、控制與訊號</li>
+<li>單機測試與聯調</li>
+<li>文件與驗收條件</li>
+</ul>
+</article>
+</div>
+<div class="control-strip">
+<div>
+<b>MY ROLE · 01</b>
+<span>整理範圍與介面</span>
+</div>
+<div>
+<b>MY ROLE · 02</b>
+<span>追蹤里程碑與前置</span>
+</div>
+<div>
+<b>MY ROLE · 03</b>
+<span>協調供應商與作業面</span>
+</div>
+<div>
+<b>MY ROLE · 04</b>
+<span>確認異常下游影響</span>
+</div>
+<div>
+<b>MY ROLE · 05</b>
+<span>檢核驗收與付款資料</span>
+</div>
+</div>
+</div>
+</section>
 
-    <section class="evidence" id="evidence"><div class="wrap"><div class="section-head"><div><p class="eyebrow">04 · FRAMEWORK + EVIDENCE + ACTION + RESULT</p><h2>管理框架旁邊，<br>必須看得到工作證據。</h2></div><p>以下資料以匿名化方式重建實際管理情境。切換頁籤可查看排程、依存、風險與判斷紀錄，而不是只看一張靜態流程圖。</p></div><div class="cockpit"><div class="tabs" role="tablist"><button class="tab active" data-panel="milestone" role="tab" aria-selected="true">MILESTONE</button><button class="tab" data-panel="dependency" role="tab" aria-selected="false">DEPENDENCY</button><button class="tab" data-panel="risk" role="tab" aria-selected="false">RISK / ISSUE</button><button class="tab" data-panel="decision" role="tab" aria-selected="false">DECISION LOG</button></div><div class="panel active" id="milestone"><div class="panel-grid"><div class="artifact"><div class="artifact-title"><b>PROJECT MILESTONE VIEW</b><span>6-WEEK WINDOW</span></div><div class="mini-gantt"><span></span><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><b>介面／圖面確認</b><span class="gbar" style="grid-column:2/4">BASELINE</span><span></span><span></span><span></span><span></span><b>製作與備料</b><span></span><span class="gbar gray" style="grid-column:3/6">FABRICATION</span><span></span><span></span><b>分批到貨／吊裝</b><span></span><span></span><span></span><span class="gbar orange" style="grid-column:5/7">SITE</span><span></span><b>安裝／測試</b><span></span><span></span><span></span><span></span><span class="gbar" style="grid-column:6/8">VERIFY</span></div></div><aside class="artifact"><div class="artifact-title"><b>MY ACTION</b><span>OWNER + DUE</span></div><div class="status-list"><div class="status"><i class="dot green"></i><b>確認工作面釋放條件</b><small>現場 · W1</small></div><div class="status"><i class="dot"></i><b>追蹤第二批材料到貨</b><small>供應商 · W3</small></div><div class="status"><i class="dot red"></i><b>釐清電控介面差異</b><small>工程 · W4</small></div><div class="status"><i class="dot"></i><b>準備測試與驗收清單</b><small>PM · W5</small></div></div></aside></div></div><div class="panel" id="dependency"><div class="panel-grid"><div class="artifact"><div class="artifact-title"><b>PREDECESSOR → SUCCESSOR</b><span>WORKFRONT LOGIC</span></div><div class="status-list"><div class="status"><i class="dot green"></i><b>基礎與基準確認 → 貨架安裝</b><small>已確認</small></div><div class="status"><i class="dot"></i><b>貨架區域完成 → 設備吊裝</b><small>分區釋放</small></div><div class="status"><i class="dot red"></i><b>電源與訊號完成 → 單機測試</b><small>待排除</small></div><div class="status"><i class="dot"></i><b>缺失關閉 → 系統驗收</b><small>文件連動</small></div></div></div><aside class="artifact"><div class="artifact-title"><b>DOWNSTREAM CHECK</b><span>AMBER</span></div><p>每次狀態改變，同步檢查：</p><div class="status-list"><div class="status"><i class="dot"></i><b>是否影響到貨與機具預約</b><small>TIME</small></div><div class="status"><i class="dot"></i><b>是否產生追加或待定成本</b><small>COST</small></div><div class="status"><i class="dot"></i><b>是否改變測試與驗收條件</b><small>QUALITY</small></div></div></aside></div></div><div class="panel" id="risk"><div class="panel-grid"><div class="artifact"><div class="artifact-title"><b>RISK / ISSUE LOG</b><span>IMPACT + RESPONSE</span></div><div class="status-list"><div class="status"><i class="dot red"></i><b>關鍵介面未凍結</b><small>成本／時程</small></div><div class="status"><i class="dot"></i><b>材料分批到貨延後</b><small>作業面</small></div><div class="status"><i class="dot"></i><b>吊裝資源與工序重疊</b><small>安全／時程</small></div><div class="status"><i class="dot green"></i><b>驗收文件尚未齊備</b><small>付款／結案</small></div></div></div><aside class="artifact"><div class="artifact-title"><b>RESPONSE</b><span>CONTROL POINT</span></div><p>將議題拆成「立即限制、下游影響、責任窗口、完成期限、驗證方式」，避免只有口頭追蹤。</p><p class="signal">需要升級：跨單位無法在期限內確認，且已影響關鍵路徑、追加成本或驗收條件。</p></aside></div></div><div class="panel" id="decision"><div class="panel-grid"><div class="artifact"><div class="artifact-title"><b>DECISION RECORD</b><span>WHY / INPUT / ACTION</span></div><div class="status-list"><div class="status"><i class="dot green"></i><b>分區釋放作業面</b><small>降低等待</small></div><div class="status"><i class="dot"></i><b>材料採兩批交付</b><small>連接吊裝</small></div><div class="status"><i class="dot red"></i><b>電控範圍重新釐清</b><small>避免重工</small></div><div class="status"><i class="dot"></i><b>估驗依實際完成數量</b><small>核對付款</small></div></div></div><aside class="artifact"><div class="artifact-title"><b>EVIDENCE</b><span>TRACEABLE</span></div><p>判斷依據包括圖面版本、現場照片、報價與合約範圍、進度回覆、實際數量、測試或驗收紀錄。</p><p class="signal" style="border-color:var(--teal);background:#eaf4f1">結果不是「開完會」，而是下一個工作能開始、責任能追蹤，或風險已被清楚保留。</p></aside></div></div></div>
-      <div class="decision-case"><div class="decision-copy"><p class="eyebrow">DECISION CASE · CONVEYOR PROJECT</p><h3>當成本預估轉為不利，不能只看最低報價。</h3><p>匿名化輸送機案例中，安裝、電氣、橋架與臨時用電存在責任介面，成本預估也出現缺口。需要先拆開工作範圍，再確認各方案對進場、施工與驗收的影響。</p><div class="signal"><b>判斷訊號</b><br>價格差異不代表可直接替換；必須同時確認能力、介面、工期與後續責任。</div></div><div class="decision-steps"><article><i>01</i><b>Framework｜拆分範圍</b><p>安裝、電氣、橋架、臨時用電、測試與驗收責任。</p></article><article><i>02</i><b>Evidence｜成本與報價</b><p>成本預估、供應商方案、排除項目與現場條件。</p></article><article><i>03</i><b>My Action｜補齊差異</b><p>更新成本資料、確認發包範圍、比較分工可行性並追蹤決策。</p></article><article><i>04</i><b>Result｜可供主管判斷</b><p>不利項目、待確認責任與下一個決策期限被清楚列出。</p></article></div></div>
-      <div style="margin-top:80px"><p class="eyebrow">DELIVERY CASE · STEEL PLATFORM</p><h2 style="font-size:clamp(30px,4vw,52px);line-height:1.15;margin:0">26天鋼構平台施工：把製作、到貨與現場順序接起來。</h2><div class="timeline"><article class="time-step"><i>D01</i><b>圖面／工序確認</b><p>範圍與前置條件</p></article><article class="time-step"><i>D04</i><b>製作／備料</b><p>追蹤產能與批次</p></article><article class="time-step"><i>D10</i><b>分批運輸</b><p>連接場地與機具</p></article><article class="time-step"><i>D13</i><b>吊裝／定位</b><p>依作業面安排順序</p></article><article class="time-step"><i>D18</i><b>安裝／查驗</b><p>記錄進度與缺失</p></article><article class="time-step"><i>D26</i><b>估驗／結案</b><p>核對完成範圍</p></article></div><div class="timeline-summary"><strong>26 DAYS</strong><span>實際施工週期</span><strong>15%+</strong><span>專案毛利率</span><span style="margin-left:auto">MY ROLE｜協調製作、運輸、吊裝、現場工序、估驗與結案資料</span></div></div>
-    </div></section>
+    <section class="evidence" id="evidence">
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">04 · FRAMEWORK + EVIDENCE + ACTION + RESULT</p>
+<h2>管理框架旁邊，<br>必須看得到工作證據。</h2>
+</div>
+<p>以下資料以匿名化方式重建實際管理情境。切換頁籤可查看排程、依存、風險與判斷紀錄，而不是只看一張靜態流程圖。</p>
+</div>
+<div class="cockpit">
+<div class="tabs" role="tablist">
+<button class="tab active" data-panel="milestone" role="tab" aria-selected="true">MILESTONE</button>
+<button class="tab" data-panel="dependency" role="tab" aria-selected="false">DEPENDENCY</button>
+<button class="tab" data-panel="risk" role="tab" aria-selected="false">RISK / ISSUE</button>
+<button class="tab" data-panel="decision" role="tab" aria-selected="false">DECISION LOG</button>
+</div>
+<div class="panel active" id="milestone">
+<div class="panel-grid">
+<div class="artifact">
+<div class="artifact-title">
+<b>PROJECT MILESTONE VIEW</b>
+<span>6-WEEK WINDOW</span>
+</div>
+<div class="mini-gantt">
+<span>
+</span>
+<span>W1</span>
+<span>W2</span>
+<span>W3</span>
+<span>W4</span>
+<span>W5</span>
+<span>W6</span>
+<b>介面／圖面確認</b>
+<span class="gbar" style="grid-column:2/4">BASELINE</span>
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+<b>製作與備料</b>
+<span>
+</span>
+<span class="gbar gray" style="grid-column:3/6">FABRICATION</span>
+<span>
+</span>
+<span>
+</span>
+<b>分批到貨／吊裝</b>
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+<span class="gbar orange" style="grid-column:5/7">SITE</span>
+<span>
+</span>
+<b>安裝／測試</b>
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+<span class="gbar" style="grid-column:6/8">VERIFY</span>
+</div>
+</div>
+<aside class="artifact">
+<div class="artifact-title">
+<b>MY ACTION</b>
+<span>OWNER + DUE</span>
+</div>
+<div class="status-list">
+<div class="status">
+<i class="dot green">
+</i>
+<b>確認工作面釋放條件</b>
+<small>現場 · W1</small>
+</div>
+<div class="status">
+<i class="dot">
+</i>
+<b>追蹤第二批材料到貨</b>
+<small>供應商 · W3</small>
+</div>
+<div class="status">
+<i class="dot red">
+</i>
+<b>釐清電控介面差異</b>
+<small>工程 · W4</small>
+</div>
+<div class="status">
+<i class="dot">
+</i>
+<b>準備測試與驗收清單</b>
+<small>PM · W5</small>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<div class="panel" id="dependency">
+<div class="panel-grid">
+<div class="artifact">
+<div class="artifact-title">
+<b>PREDECESSOR → SUCCESSOR</b>
+<span>WORKFRONT LOGIC</span>
+</div>
+<div class="status-list">
+<div class="status">
+<i class="dot green">
+</i>
+<b>基礎與基準確認 → 貨架安裝</b>
+<small>已確認</small>
+</div>
+<div class="status">
+<i class="dot">
+</i>
+<b>貨架區域完成 → 設備吊裝</b>
+<small>分區釋放</small>
+</div>
+<div class="status">
+<i class="dot red">
+</i>
+<b>電源與訊號完成 → 單機測試</b>
+<small>待排除</small>
+</div>
+<div class="status">
+<i class="dot">
+</i>
+<b>缺失關閉 → 系統驗收</b>
+<small>文件連動</small>
+</div>
+</div>
+</div>
+<aside class="artifact">
+<div class="artifact-title">
+<b>DOWNSTREAM CHECK</b>
+<span>AMBER</span>
+</div>
+<p>每次狀態改變，同步檢查：</p>
+<div class="status-list">
+<div class="status">
+<i class="dot">
+</i>
+<b>是否影響到貨與機具預約</b>
+<small>TIME</small>
+</div>
+<div class="status">
+<i class="dot">
+</i>
+<b>是否產生追加或待定成本</b>
+<small>COST</small>
+</div>
+<div class="status">
+<i class="dot">
+</i>
+<b>是否改變測試與驗收條件</b>
+<small>QUALITY</small>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<div class="panel" id="risk">
+<div class="panel-grid">
+<div class="artifact">
+<div class="artifact-title">
+<b>RISK / ISSUE LOG</b>
+<span>IMPACT + RESPONSE</span>
+</div>
+<div class="status-list">
+<div class="status">
+<i class="dot red">
+</i>
+<b>關鍵介面未凍結</b>
+<small>成本／時程</small>
+</div>
+<div class="status">
+<i class="dot">
+</i>
+<b>材料分批到貨延後</b>
+<small>作業面</small>
+</div>
+<div class="status">
+<i class="dot">
+</i>
+<b>吊裝資源與工序重疊</b>
+<small>安全／時程</small>
+</div>
+<div class="status">
+<i class="dot green">
+</i>
+<b>驗收文件尚未齊備</b>
+<small>付款／結案</small>
+</div>
+</div>
+</div>
+<aside class="artifact">
+<div class="artifact-title">
+<b>RESPONSE</b>
+<span>CONTROL POINT</span>
+</div>
+<p>將議題拆成「立即限制、下游影響、責任窗口、完成期限、驗證方式」，避免只有口頭追蹤。</p>
+<p class="signal">需要升級：跨單位無法在期限內確認，且已影響關鍵路徑、追加成本或驗收條件。</p>
+</aside>
+</div>
+</div>
+<div class="panel" id="decision">
+<div class="panel-grid">
+<div class="artifact">
+<div class="artifact-title">
+<b>DECISION RECORD</b>
+<span>WHY / INPUT / ACTION</span>
+</div>
+<div class="status-list">
+<div class="status">
+<i class="dot green">
+</i>
+<b>分區釋放作業面</b>
+<small>降低等待</small>
+</div>
+<div class="status">
+<i class="dot">
+</i>
+<b>材料採兩批交付</b>
+<small>連接吊裝</small>
+</div>
+<div class="status">
+<i class="dot red">
+</i>
+<b>電控範圍重新釐清</b>
+<small>避免重工</small>
+</div>
+<div class="status">
+<i class="dot">
+</i>
+<b>估驗依實際完成數量</b>
+<small>核對付款</small>
+</div>
+</div>
+</div>
+<aside class="artifact">
+<div class="artifact-title">
+<b>EVIDENCE</b>
+<span>TRACEABLE</span>
+</div>
+<p>判斷依據包括圖面版本、現場照片、報價與合約範圍、進度回覆、實際數量、測試或驗收紀錄。</p>
+<p class="signal" style="border-color:var(--teal);background:#eaf4f1">結果不是「開完會」，而是下一個工作能開始、責任能追蹤，或風險已被清楚保留。</p>
+</aside>
+</div>
+</div>
+</div>
+      <div class="decision-case">
+<div class="decision-copy">
+<p class="eyebrow">DECISION CASE · CONVEYOR PROJECT</p>
+<h3>當成本預估轉為不利，不能只看最低報價。</h3>
+<p>匿名化輸送機案例中，安裝、電氣、橋架與臨時用電存在責任介面，成本預估也出現缺口。需要先拆開工作範圍，再確認各方案對進場、施工與驗收的影響。</p>
+<div class="signal">
+<b>判斷訊號</b>
+<br>價格差異不代表可直接替換；必須同時確認能力、介面、工期與後續責任。</div>
+</div>
+<div class="decision-steps">
+<article>
+<i>01</i>
+<b>Framework｜拆分範圍</b>
+<p>安裝、電氣、橋架、臨時用電、測試與驗收責任。</p>
+</article>
+<article>
+<i>02</i>
+<b>Evidence｜成本與報價</b>
+<p>成本預估、供應商方案、排除項目與現場條件。</p>
+</article>
+<article>
+<i>03</i>
+<b>My Action｜補齊差異</b>
+<p>更新成本資料、確認發包範圍、比較分工可行性並追蹤決策。</p>
+</article>
+<article>
+<i>04</i>
+<b>Result｜可供主管判斷</b>
+<p>不利項目、待確認責任與下一個決策期限被清楚列出。</p>
+</article>
+</div>
+</div>
+      <div style="margin-top:80px">
+<p class="eyebrow">DELIVERY CASE · STEEL PLATFORM</p>
+<h2 style="font-size:clamp(30px,4vw,52px);line-height:1.15;margin:0">26天鋼構平台施工：把製作、到貨與現場順序接起來。</h2>
+<div class="timeline">
+<article class="time-step">
+<i>D01</i>
+<b>圖面／工序確認</b>
+<p>範圍與前置條件</p>
+</article>
+<article class="time-step">
+<i>D04</i>
+<b>製作／備料</b>
+<p>追蹤產能與批次</p>
+</article>
+<article class="time-step">
+<i>D10</i>
+<b>分批運輸</b>
+<p>連接場地與機具</p>
+</article>
+<article class="time-step">
+<i>D13</i>
+<b>吊裝／定位</b>
+<p>依作業面安排順序</p>
+</article>
+<article class="time-step">
+<i>D18</i>
+<b>安裝／查驗</b>
+<p>記錄進度與缺失</p>
+</article>
+<article class="time-step">
+<i>D26</i>
+<b>估驗／結案</b>
+<p>核對完成範圍</p>
+</article>
+</div>
+<div class="timeline-summary">
+<strong>26 DAYS</strong>
+<span>實際施工週期</span>
+<strong>15%+</strong>
+<span>專案毛利率</span>
+<span style="margin-left:auto">MY ROLE｜協調製作、運輸、吊裝、現場工序、估驗與結案資料</span>
+</div>
+</div>
+    </div>
+</section>
 
-    <section class="issues"><div class="wrap"><div class="section-head"><div><p class="eyebrow">05 · ISSUE ESCALATION FLOW</p><h2>異常處理要留下<br>影響、責任與關閉證據。</h2></div><p>以下兩個實際案例說明，我如何從現場或文件差異，往下確認成本、品質、工期與付款影響。</p></div><div class="issue-grid"><article class="issue-card"><h3>材料規格不符｜現場查驗</h3><div class="escalation"><div>發現<br><b>規格差異</b></div><div>限制<br><b>暫停使用</b></div><div>評估<br><b>重工／工期</b></div><div>安排<br><b>退換與複驗</b></div><div>關閉<br><b>留下紀錄</b></div></div><p class="issue-result"><b>My Action</b>核對要求與到貨規格，通知責任窗口，追蹤退換與重新查驗，避免不符材料進入後續施工。</p></article><article class="issue-card"><h3>估驗數量不一致｜付款檢核</h3><div class="escalation"><div>比對<br><b>合約／現況</b></div><div>標記<br><b>未完成項</b></div><div>確認<br><b>三方數量</b></div><div>調整<br><b>請款資料</b></div><div>付款<br><b>依核定範圍</b></div></div><p class="issue-result"><b>My Action</b>依實際完成範圍檢核估驗與請款，釐清差異後再進入付款，降低後續追補與責任爭議。</p></article></div></div></section>
+    <section class="issues">
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">05 · ISSUE ESCALATION FLOW</p>
+<h2>異常處理要留下<br>影響、責任與關閉證據。</h2>
+</div>
+<p>以下兩個實際案例說明，我如何從現場或文件差異，往下確認成本、品質、工期與付款影響。</p>
+</div>
+<div class="issue-grid">
+<article class="issue-card">
+<h3>材料規格不符｜現場查驗</h3>
+<div class="escalation">
+<div>發現<br>
+<b>規格差異</b>
+</div>
+<div>限制<br>
+<b>暫停使用</b>
+</div>
+<div>評估<br>
+<b>重工／工期</b>
+</div>
+<div>安排<br>
+<b>退換與複驗</b>
+</div>
+<div>關閉<br>
+<b>留下紀錄</b>
+</div>
+</div>
+<p class="issue-result">
+<b>My Action</b>核對要求與到貨規格，通知責任窗口，追蹤退換與重新查驗，避免不符材料進入後續施工。</p>
+</article>
+<article class="issue-card">
+<h3>估驗數量不一致｜付款檢核</h3>
+<div class="escalation">
+<div>比對<br>
+<b>合約／現況</b>
+</div>
+<div>標記<br>
+<b>未完成項</b>
+</div>
+<div>確認<br>
+<b>三方數量</b>
+</div>
+<div>調整<br>
+<b>請款資料</b>
+</div>
+<div>付款<br>
+<b>依核定範圍</b>
+</div>
+</div>
+<p class="issue-result">
+<b>My Action</b>依實際完成範圍檢核估驗與請款，釐清差異後再進入付款，降低後續追補與責任爭議。</p>
+</article>
+</div>
+</div>
+</section>
 
-    <section><div class="wrap"><div class="section-head"><div><p class="eyebrow">06 · OVERSEAS PROJECT PARTICIPATION</p><h2>海外專案參與，<br>重點是把現場資訊帶回決策。</h2></div><p>於艾立製研期間，參與泰國與馬來西亞專案，配合總經理與當地窗口確認專案進度與現場情況。可進行基本工作溝通，不將經驗描述為口譯或流利商務會話。</p></div><div class="overseas-grid"><article class="country" data-code="TH"><p class="eyebrow">THAILAND</p><h3>泰國專案</h3><ul><li>配合現場走訪與進度確認</li><li>整理已完成、待處理與需要回覆事項</li><li>回國後追蹤責任窗口與期限</li></ul></article><article class="country" data-code="MY"><p class="eyebrow">MALAYSIA</p><h3>馬來西亞專案</h3><ul><li>參與專案現況與工作介面溝通</li><li>確認供應、施工與後續處理事項</li><li>將現場資訊整理成內部可追蹤內容</li></ul></article><div class="language-note"><b>ENGLISH SCOPE</b><span>可用英文信件確認規格、交期與進度，並進行基本現場溝通；複雜技術或商務討論會先整理重點、使用書面資料並與專業窗口共同確認。</span></div></div></div></section>
+    <section>
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">06 · OVERSEAS PROJECT PARTICIPATION</p>
+<h2>海外專案參與，<br>重點是把現場資訊帶回決策。</h2>
+</div>
+<p>於艾立製研期間，參與泰國與馬來西亞專案，配合總經理及當地窗口確認現場進度、工作介面與待處理事項，並於返台後持續追蹤責任窗口與完成期限。</p>
+</div>
+<div class="overseas-grid">
+<article class="country" data-code="TH">
+<p class="eyebrow">THAILAND</p>
+<h3>泰國專案</h3>
+<ul>
+<li>配合現場走訪與進度確認</li>
+<li>整理已完成、待處理與需要回覆事項</li>
+<li>回國後追蹤責任窗口與期限</li>
+</ul>
+</article>
+<article class="country" data-code="MY">
+<p class="eyebrow">MALAYSIA</p>
+<h3>馬來西亞專案</h3>
+<ul>
+<li>參與專案現況與工作介面溝通</li>
+<li>確認供應、施工與後續處理事項</li>
+<li>將現場資訊整理成內部可追蹤內容</li>
+</ul>
+</article>
+<div class="language-note">
+<b>ENGLISH AT WORK</b>
+<span>以英文信件確認規格、交期、產能與報價假設；海外現場搭配書面資料與進度清單確認工作事項。</span>
+</div>
+</div>
+</div>
+</section>
 
-    <section class="field" id="field"><div class="wrap"><div class="section-head"><div><p class="eyebrow">07 · FIELD EVIDENCE</p><h2>這些不是裝飾照片，<br>是實際走訪現場的工作紀錄。</h2></div><p>點選照片可查看情境、我的責任、當時控制的問題，以及這張紀錄能證明的工作能力。</p></div><div class="photo-grid"><figure tabindex="0" data-note="情境｜大型自動化倉儲設備建置。我的責任｜追蹤材料、製作、運輸與安裝前置。控制事項｜供應商進度、作業面與整體里程碑。證明｜能辨認上游延誤對後續設備與驗收的影響。"><img src="/field-highbay-install-clean.jpg" alt="大型自動化倉儲施工現場"><figcaption><span>SYSTEM SCALE</span><b>系統範圍與工作依存</b></figcaption></figure><figure tabindex="0" data-note="情境｜自動化設備進場安裝。我的責任｜確認設備介面、安裝空間與供應商責任。控制事項｜圖面、施工條件與測試前置。證明｜能將現場限制轉成可追蹤條件。"><img src="/field-equipment-interface.jpg" alt="自動化設備安裝現場"><figcaption><span>EQUIPMENT INTERFACE</span><b>設備介面與現場條件</b></figcaption></figure><figure tabindex="0" data-note="情境｜材料與樣品確認。我的責任｜整理使用需求、圖面與驗收條件。控制事項｜材質、尺寸、外觀與適用情境。證明｜能在採購與施工前建立共同基準。"><img src="/field-material-review.jpg" alt="材料與樣品確認"><figcaption><span>MATERIAL REVIEW</span><b>實物、規格與使用情境</b></figcaption></figure><figure tabindex="0" data-note="情境｜大型鋼構吊裝與安裝。我的責任｜協調製作、運輸、吊裝與現場窗口。控制事項｜施工介面、材料到場與作業順序。證明｜能連接前後置工作與資源安排。"><img src="/field-structure-install.jpg" alt="大型鋼構吊裝現場"><figcaption><span>LIFTING SEQUENCE</span><b>製作、運輸與吊裝順序</b></figcaption></figure><figure tabindex="0" data-note="情境｜自動化系統完成安裝並進入運轉確認。我的責任｜核對操作需求、測試條件與供應商後續責任。控制事項｜功能、介面、文件與驗收。證明｜能把專案追到可使用與可結案。"><img src="/field-system-operating.jpg" alt="自動化系統運轉現場"><figcaption><span>OPERATION CHECK</span><b>設備運轉與驗收條件</b></figcaption></figure><figure tabindex="0" data-note="情境｜高架設備施工。我的責任｜確認供應商人力、機具與現場工序。控制事項｜資源衝突、施工順序與交付瓶頸。證明｜能把供應商承諾連到現場可執行條件。"><img src="/field-automation-lift.jpg" alt="自動化設備高架施工"><figcaption><span>SUPPLIER PROGRESS</span><b>設備施工與進度協調</b></figcaption></figure><figure tabindex="0" data-note="情境｜設備走道與安裝位置查驗。我的責任｜核對尺寸、動線、固定點與作業空間。控制事項｜圖面與現況差異。證明｜能提前發現可能影響成本、工期或驗收的問題。"><img src="/field-aisle-inspection.jpg" alt="現場走道與設備查驗"><figcaption><span>SITE INSPECTION</span><b>現場查驗與風險辨認</b></figcaption></figure><figure tabindex="0" data-note="情境｜自動化貨架內部查驗。我的責任｜確認結構、設備路徑與維修空間。控制事項｜安裝完成度、介面與操作限制。證明｜能從細部現況確認交付，而不只依賴書面進度。"><img src="/field-racking-interior.jpg" alt="自動化貨架內部查驗"><figcaption><span>DETAIL INSPECTION</span><b>結構細節與維修空間</b></figcaption></figure><figure tabindex="0" data-note="情境｜大型倉儲結構施工。我的責任｜追蹤材料到場、施工資源與安裝區域的前置條件。控制事項｜供應商人力、機具、作業面與里程碑。證明｜能把現場產能連到專案排程。"><img src="/chpt-procurement/assets/warehouse-build.jpg" alt="大型倉儲結構施工"><figcaption><span>WORKFRONT CONTROL</span><b>施工資源與作業面</b></figcaption></figure><figure tabindex="0" data-note="情境｜設備施工現場協調。我的責任｜彙整現況差異、確認責任窗口並跟進未完成事項。控制事項｜材料、工序、尺寸與回覆期限。證明｜能把現場討論轉成行動與追蹤節點。"><img src="/chpt-procurement/assets/equipment-install.jpg" alt="設備施工現場協調"><figcaption><span>SITE COORDINATION</span><b>現況差異與待辦追蹤</b></figcaption></figure></div></div></section>
+    <section class="field" id="field">
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">07 · FIELD EVIDENCE</p>
+<h2>這些不是裝飾照片，<br>是實際走訪現場的工作紀錄。</h2>
+</div>
+<p>點選照片可查看情境、我的責任、當時控制的問題，以及這張紀錄能證明的工作能力。</p>
+</div>
+<div class="photo-grid">
+<figure tabindex="0" data-note="情境｜大型自動化倉儲設備建置。我的責任｜追蹤材料、製作、運輸與安裝前置。控制事項｜供應商進度、作業面與整體里程碑。證明｜能辨認上游延誤對後續設備與驗收的影響。">
+<img src="/field-highbay-install-clean.jpg" alt="大型自動化倉儲施工現場">
+<figcaption>
+<span>SYSTEM SCALE</span>
+<b>系統範圍與工作依存</b>
+</figcaption>
+</figure>
+<figure tabindex="0" data-note="情境｜自動化設備進場安裝。我的責任｜確認設備介面、安裝空間與供應商責任。控制事項｜圖面、施工條件與測試前置。證明｜能將現場限制轉成可追蹤條件。">
+<img src="/field-equipment-interface.jpg" alt="自動化設備安裝現場">
+<figcaption>
+<span>EQUIPMENT INTERFACE</span>
+<b>設備介面與現場條件</b>
+</figcaption>
+</figure>
+<figure tabindex="0" data-note="情境｜材料與樣品確認。我的責任｜整理使用需求、圖面與驗收條件。控制事項｜材質、尺寸、外觀與適用情境。證明｜能在採購與施工前建立共同基準。">
+<img src="/field-material-review.jpg" alt="材料與樣品確認">
+<figcaption>
+<span>MATERIAL REVIEW</span>
+<b>實物、規格與使用情境</b>
+</figcaption>
+</figure>
+<figure tabindex="0" data-note="情境｜大型鋼構吊裝與安裝。我的責任｜協調製作、運輸、吊裝與現場窗口。控制事項｜施工介面、材料到場與作業順序。證明｜能連接前後置工作與資源安排。">
+<img src="/field-structure-install.jpg" alt="大型鋼構吊裝現場">
+<figcaption>
+<span>LIFTING SEQUENCE</span>
+<b>製作、運輸與吊裝順序</b>
+</figcaption>
+</figure>
+<figure tabindex="0" data-note="情境｜自動化系統完成安裝並進入運轉確認。我的責任｜核對操作需求、測試條件與供應商後續責任。控制事項｜功能、介面、文件與驗收。證明｜能把專案追到可使用與可結案。">
+<img src="/field-system-operating.jpg" alt="自動化系統運轉現場">
+<figcaption>
+<span>OPERATION CHECK</span>
+<b>設備運轉與驗收條件</b>
+</figcaption>
+</figure>
+<figure tabindex="0" data-note="情境｜高架設備施工。我的責任｜確認供應商人力、機具與現場工序。控制事項｜資源衝突、施工順序與交付瓶頸。證明｜能把供應商承諾連到現場可執行條件。">
+<img src="/field-automation-lift.jpg" alt="自動化設備高架施工">
+<figcaption>
+<span>SUPPLIER PROGRESS</span>
+<b>設備施工與進度協調</b>
+</figcaption>
+</figure>
+<figure tabindex="0" data-note="情境｜設備走道與安裝位置查驗。我的責任｜核對尺寸、動線、固定點與作業空間。控制事項｜圖面與現況差異。證明｜能提前發現可能影響成本、工期或驗收的問題。">
+<img src="/field-aisle-inspection.jpg" alt="現場走道與設備查驗">
+<figcaption>
+<span>SITE INSPECTION</span>
+<b>現場查驗與風險辨認</b>
+</figcaption>
+</figure>
+<figure tabindex="0" data-note="情境｜自動化貨架內部查驗。我的責任｜確認結構、設備路徑與維修空間。控制事項｜安裝完成度、介面與操作限制。證明｜能從細部現況確認交付，而不只依賴書面進度。">
+<img src="/field-racking-interior.jpg" alt="自動化貨架內部查驗">
+<figcaption>
+<span>DETAIL INSPECTION</span>
+<b>結構細節與維修空間</b>
+</figcaption>
+</figure>
+<figure tabindex="0" data-note="情境｜大型倉儲結構施工。我的責任｜追蹤材料到場、施工資源與安裝區域的前置條件。控制事項｜供應商人力、機具、作業面與里程碑。證明｜能把現場產能連到專案排程。">
+<img src="/chpt-procurement/assets/warehouse-build.jpg" alt="大型倉儲結構施工">
+<figcaption>
+<span>WORKFRONT CONTROL</span>
+<b>施工資源與作業面</b>
+</figcaption>
+</figure>
+<figure tabindex="0" data-note="情境｜設備施工現場協調。我的責任｜彙整現況差異、確認責任窗口並跟進未完成事項。控制事項｜材料、工序、尺寸與回覆期限。證明｜能把現場討論轉成行動與追蹤節點。">
+<img src="/chpt-procurement/assets/equipment-install.jpg" alt="設備施工現場協調">
+<figcaption>
+<span>SITE COORDINATION</span>
+<b>現況差異與待辦追蹤</b>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
   </main>
-  <section class="close"><div class="wrap close-grid"><div><p class="eyebrow">WORKING METHOD</p><h2>先把範圍與依存釐清，<br>再讓每個決定有下一步。</h2></div><div class="method"><div><b>01 · 整理</b><span>需求、範圍、排程、成本與現場資訊</span></div><div><b>02 · 判斷</b><span>前後置關係、下游影響與需要升級的風險</span></div><div><b>03 · 協調</b><span>責任窗口、期限、資源與替代處理方式</span></div><div><b>04 · 核對</b><span>完成狀態、現場證據、驗收與結案資料</span></div></div></div></section>
-  <footer><div class="wrap footer-inner"><strong>Amber Chang · Automation Equipment × Project Management</strong><span>匿名化工作方法重建 · 不揭露客戶、供應商與合約資料</span></div></footer>
-  <div class="lightbox" id="lightbox" aria-hidden="true"><div class="lightbox-card"><button class="lightbox-close" type="button" aria-label="關閉">×</button><img id="lightboxImage" alt=""><div class="lightbox-copy"><span>FIELD EVIDENCE</span><h3 id="lightboxTitle"></h3><p id="lightboxNote"></p><small class="micro">實際現場走訪紀錄；可識別的客戶、供應商與專案資訊均已移除。</small></div></div></div>
+  <section class="close">
+<div class="wrap close-grid">
+<div>
+<p class="eyebrow">WORKING METHOD</p>
+<h2>先把範圍與依存釐清，<br>再讓每個決定有下一步。</h2>
+</div>
+<div class="method">
+<div>
+<b>01 · 整理</b>
+<span>需求、範圍、排程、成本與現場資訊</span>
+</div>
+<div>
+<b>02 · 判斷</b>
+<span>前後置關係、下游影響與需要升級的風險</span>
+</div>
+<div>
+<b>03 · 協調</b>
+<span>責任窗口、期限、資源與替代處理方式</span>
+</div>
+<div>
+<b>04 · 核對</b>
+<span>完成狀態、現場證據、驗收與結案資料</span>
+</div>
+</div>
+</div>
+</section>
+  <footer>
+<div class="wrap footer-inner">
+<strong>Amber Chang · Automation Equipment × Project Management</strong>
+<span>匿名化工作方法重建 · 不揭露客戶、供應商與合約資料</span>
+</div>
+</footer>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+<div class="lightbox-card">
+<button class="lightbox-close" type="button" aria-label="關閉">×</button>
+<img id="lightboxImage" alt="">
+<div class="lightbox-copy">
+<span>FIELD EVIDENCE</span>
+<h3 id="lightboxTitle">
+</h3>
+<p id="lightboxNote">
+</p>
+<small class="micro">實際現場走訪紀錄；可識別的客戶、供應商與專案資訊均已移除。</small>
+</div>
+</div>
+</div>
   <script>
     const tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelectorAll('.panel')];
     function openPanel(id){tabs.forEach(t=>{const on=t.dataset.panel===id;t.classList.toggle('active',on);t.setAttribute('aria-selected',String(on))});panels.forEach(p=>p.classList.toggle('active',p.id===id))}
