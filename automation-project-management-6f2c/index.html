@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Amber Chang 自動化設備與工程專案管理作品集：專案拆解、依存關係、跨單位協調、現場查驗、風險與成本控制。">
+  <meta name="description" content="Amber Chang 自動化設備專案管理作品集：委外設備窗口、規格與介面確認、進度控管、導入協調、現場查驗與驗收交付。">
   <meta name="theme-color" content="#132a31">
   <title>Amber Chang｜Automation Project Management</title>
   <link rel="icon" href="/favicon.svg">
@@ -19,13 +19,14 @@
     .case{background:var(--ink);color:#fff}.case .section-head>p{color:#b7c9c9}.system-map{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:14px;align-items:stretch}.stream{border:1px solid rgba(255,255,255,.18);padding:20px;background:#18343d}.stream h3{margin:0 0 12px;color:var(--mint);font-size:15px}.stream ul{margin:0;padding-left:18px;color:#cbd9d8;font-size:13px}.stream li+li{margin-top:8px}.system-center{background:#fff;color:var(--ink);padding:26px}.system-center h3{margin:0 0 20px}.dependency{display:grid;grid-template-columns:1fr 28px 1fr;align-items:center;margin:9px 0}.dependency span{padding:10px;background:#eef2ef;font-size:12px}.dependency i{text-align:center;font-style:normal;color:var(--orange);font-weight:900}.case-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.case-fact{border:1px solid rgba(255,255,255,.18);padding:16px;background:#18343d}.case-fact b{display:block;color:var(--mint);font-size:18px}.case-fact span{display:block;color:#bfd0d0;font-size:11px}.case-fact small{display:block;color:#91a9aa;margin-top:6px}.control-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.18);margin-top:10px}.control-strip div{background:#19353d;padding:14px}.control-strip b{font-size:12px;color:var(--mint);display:block}.control-strip span{font-size:11px;color:#b9cbca}
     .evidence{background:#fff}.cockpit{border:1px solid var(--line);box-shadow:var(--shadow)}.tabs{display:flex;overflow:auto;background:#e9eeeb}.tab{border:0;border-right:1px solid #d4ddda;background:transparent;padding:17px 24px;color:var(--muted);font-weight:800;font-size:12px;letter-spacing:.04em;cursor:pointer;white-space:nowrap}.tab.active{background:#fff;color:var(--teal);box-shadow:inset 0 4px var(--teal)}.panel{display:none;padding:28px;min-width:0;scroll-margin-top:80px}.panel.active,.panel:target{display:block}.cockpit:has(.panel:target) .panel.active{display:none}.cockpit:has(#milestone:target) .tab,.cockpit:has(#dependency:target) .tab,.cockpit:has(#risk:target) .tab,.cockpit:has(#decision:target) .tab{background:transparent;color:var(--muted);box-shadow:none}.cockpit:has(#milestone:target) .tab[href="#milestone"],.cockpit:has(#dependency:target) .tab[href="#dependency"],.cockpit:has(#risk:target) .tab[href="#risk"],.cockpit:has(#decision:target) .tab[href="#decision"]{background:#fff;color:var(--teal);box-shadow:inset 0 4px var(--teal)}.panel-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;min-width:0}.panel-grid>*{min-width:0}.artifact{min-width:0;border:1px solid var(--line);background:#fbfbf8;padding:22px}.artifact-title{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:16px;font-size:12px}.artifact-title span{color:var(--muted)}
     .mini-gantt{display:grid;grid-template-columns:130px repeat(6,1fr);font-size:11px;overflow:auto}.mini-gantt>*{min-width:55px;border-right:1px solid #dfe5e2;border-bottom:1px solid #dfe5e2;padding:9px}.mini-gantt b{min-width:130px}.gbar{background:var(--teal);color:#fff;text-align:center}.gbar.orange{background:var(--orange)}.gbar.gray{background:#74878a}.status-list{display:grid;gap:10px}.status{display:grid;grid-template-columns:10px 1fr auto;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding:9px 0;font-size:13px}.dot{width:9px;height:9px;border-radius:50%;background:var(--amber)}.dot.red{background:var(--red)}.dot.green{background:var(--teal)}.status small{color:var(--muted)}
+    .doc-evidence{margin-top:28px}.doc-evidence-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:14px}.doc-evidence-head h3{margin:0;font-size:24px}.doc-evidence-head p{margin:0;max-width:620px;color:var(--muted);font-size:13px}.doc-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}.doc-card{margin:0;border:1px solid var(--line);background:#f8f8f5;overflow:hidden}.doc-card:first-child{grid-row:span 2}.doc-card img{height:100%;min-height:250px;object-fit:contain;background:#fff}.doc-card figcaption{padding:14px 16px;border-top:1px solid var(--line)}.doc-card b{display:block}.doc-card span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
     .decision-case{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;margin-top:70px}.decision-copy{background:var(--paper);padding:30px}.decision-copy h3{font-size:30px;line-height:1.2;margin:8px 0 15px}.decision-copy p{color:var(--muted)}.decision-steps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.decision-steps article{border:1px solid var(--line);padding:18px;background:#fff}.decision-steps i{font-style:normal;color:var(--orange);font-weight:900}.decision-steps b{display:block;margin:5px 0}.decision-steps p{font-size:12px;color:var(--muted);margin:0}.signal{border-left:4px solid var(--red);padding:12px 15px;background:#f6ece9;margin-top:18px;font-size:13px}
     .timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:30px}.time-step{position:relative;padding:64px 15px 18px;border-top:2px solid var(--teal)}.time-step:before{content:"";position:absolute;top:-7px;left:15px;width:12px;height:12px;border-radius:50%;background:var(--teal)}.time-step i{position:absolute;top:12px;font-style:normal;color:var(--teal);font-weight:800}.time-step b{font-size:13px}.time-step p{font-size:11px;color:var(--muted);margin:4px 0}.timeline-summary{display:flex;flex-wrap:wrap;gap:20px;align-items:center;background:var(--ink);color:#fff;padding:18px 22px}.timeline-summary strong{font-size:30px;color:var(--mint)}.timeline-summary span{font-size:12px;color:#bed0d0}
     .issues{background:#e9eeeb}.issue-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.issue-card{background:#fff;border-top:5px solid var(--orange);padding:26px}.issue-card h3{margin:0 0 18px}.escalation{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.escalation div{background:#f1f3f0;padding:10px;font-size:11px;position:relative}.escalation div:not(:last-child):after{content:"→";position:absolute;right:-8px;color:var(--orange);font-weight:900;z-index:2}.issue-result{margin-top:16px;border-left:3px solid var(--teal);padding-left:13px;font-size:13px}.issue-result b{display:block}
     .overseas-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.country{position:relative;min-height:310px;background:var(--ink);color:#fff;padding:34px;overflow:hidden}.country:after{content:attr(data-code);position:absolute;right:-5px;bottom:-55px;font-size:170px;font-weight:900;color:rgba(255,255,255,.05)}.country h3{font-size:30px;margin:0 0 18px}.country ul{padding-left:18px;color:#c9d8d8}.country li+li{margin-top:10px}.language-note{grid-column:1/-1;border:1px solid var(--line);padding:20px;background:#fff;display:grid;grid-template-columns:150px 1fr;gap:20px}.language-note b{color:var(--teal)}
     .field{background:#fff}.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:225px;gap:10px}.photo-grid figure{margin:0;position:relative;overflow:hidden;cursor:pointer;background:#cbd5d1}.photo-grid figure:nth-child(1),.photo-grid figure:nth-child(6){grid-column:span 2;grid-row:span 2}.photo-grid img{height:100%;object-fit:cover;transition:.4s}.photo-grid figure:hover img{transform:scale(1.035)}.photo-grid figcaption{position:absolute;inset:auto 0 0;padding:42px 16px 15px;background:linear-gradient(transparent,rgba(10,27,32,.9));color:#fff}.photo-grid span{font-size:10px;color:var(--mint);font-weight:800;letter-spacing:.12em}.photo-grid b{display:block;font-size:14px}.lightbox{display:none;position:fixed;inset:0;background:rgba(7,19,23,.86);z-index:100;padding:30px;align-items:center;justify-content:center}.lightbox.open{display:flex}.lightbox-card{background:#fff;max-width:1040px;width:100%;display:grid;grid-template-columns:1.25fr .75fr;max-height:88vh;position:relative}.lightbox-card img{height:100%;max-height:78vh;object-fit:cover}.lightbox-copy{padding:34px;overflow:auto}.lightbox-copy span{font-size:11px;color:var(--teal);font-weight:800;letter-spacing:.12em}.lightbox-copy h3{font-size:27px;margin:8px 0 14px}.lightbox-copy p{color:var(--muted)}.lightbox-close{position:absolute;right:12px;top:10px;border:0;background:var(--ink);color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;z-index:2}
     .close{background:var(--ink);color:#fff;padding:72px 0}.close-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.close h2{font-size:clamp(34px,5vw,62px);line-height:1.12;margin:0}.method{display:grid;gap:1px;background:rgba(255,255,255,.14)}.method div{background:#17343c;padding:16px}.method b{display:block;color:var(--mint)}.method span{font-size:12px;color:#b9cccc}footer{background:#0d2026;color:#9fb3b4;padding:22px 0;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:20px}
-    @media(max-width:900px){.links{display:none}.hero-grid,.section-head,.role-map,.panel-grid,.decision-case,.close-grid{grid-template-columns:1fr}.fit-grid,.case-facts{grid-template-columns:repeat(2,1fr)}.fit-item:nth-child(2){border-right:0}.fit-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.system-map{grid-template-columns:1fr}.control-strip{grid-template-columns:repeat(2,1fr)}.impact-row,.control-grid{grid-template-columns:repeat(2,1fr)}.photo-grid{grid-template-columns:repeat(2,1fr)}.issue-grid,.overseas-grid{grid-template-columns:1fr}.language-note{grid-column:auto}.timeline{grid-template-columns:repeat(3,1fr)}.time-step:nth-child(n+4){margin-top:24px}}
+    @media(max-width:900px){.links{display:none}.hero-grid,.section-head,.role-map,.panel-grid,.decision-case,.close-grid,.doc-grid{grid-template-columns:1fr}.doc-card:first-child{grid-row:auto}.fit-grid,.case-facts{grid-template-columns:repeat(2,1fr)}.fit-item:nth-child(2){border-right:0}.fit-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.system-map{grid-template-columns:1fr}.control-strip{grid-template-columns:repeat(2,1fr)}.impact-row,.control-grid{grid-template-columns:repeat(2,1fr)}.photo-grid{grid-template-columns:repeat(2,1fr)}.issue-grid,.overseas-grid{grid-template-columns:1fr}.language-note{grid-column:auto}.timeline{grid-template-columns:repeat(3,1fr)}.time-step:nth-child(n+4){margin-top:24px}}
     @media(max-width:600px){.wrap{width:min(100% - 26px,1180px)}.hero{padding-top:58px}.metrics,.fit-grid,.case-facts{grid-template-columns:1fr}.fit-item{border-right:0;border-bottom:1px solid var(--line)}.fit-item:last-child{border-bottom:0}.arch-head{display:block}.arch-head span{display:block;text-align:left;margin-top:5px}.arch-columns{display:none}.arch-row{grid-template-columns:1fr}.arch-cell{padding:12px 16px}.arch-cell+.arch-cell{border-left:0;border-top:1px solid rgba(255,255,255,.1)}.arch-cell:not(:last-child):after{content:"↓";right:14px;top:auto;bottom:-10px;transform:none}.section-head{gap:18px}.impact-row,.control-grid,.decision-steps{grid-template-columns:1fr}.control-board{padding:24px}.cockpit,.tabs,.panel,.panel-grid,.artifact{width:100%;max-width:100%;min-width:0}.cockpit,.panel,.artifact{overflow:hidden}.panel{padding:14px}.artifact{padding:14px}.mini-gantt{width:100%;max-width:100%;min-width:0;grid-template-columns:100px repeat(6,70px);overflow-x:auto}.photo-grid{grid-template-columns:1fr;grid-auto-rows:260px}.photo-grid figure:nth-child(1),.photo-grid figure:nth-child(6){grid-column:auto;grid-row:auto}.lightbox-card{grid-template-columns:1fr}.lightbox-card img{height:300px}.lightbox-copy{padding:24px}.issue-grid{grid-template-columns:1fr}.escalation{grid-template-columns:1fr}.escalation div:not(:last-child):after{content:"↓";right:14px;bottom:-13px;top:auto}.timeline{grid-template-columns:repeat(2,1fr)}.language-note{grid-template-columns:1fr}.footer-inner{display:block}.footer-inner span{display:block;margin-top:8px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.photo-grid img{transition:none}}
   </style>
@@ -51,24 +52,24 @@
     <section class="hero">
 <div class="wrap hero-grid">
 <div>
-<p class="eyebrow">AUTOMATION EQUIPMENT × PROJECT DELIVERY</p>
-<h1>把複雜工作拆清楚，<br>
-<em>讓專案持續往下走。</em>
+<p class="eyebrow">AUTOMATION PROJECT COORDINATION × EQUIPMENT DELIVERY</p>
+<h1>自動化設備專案，<br>
+<em>從需求協調到導入驗收。</em>
 </h1>
-<p class="lead">近8年工程、設備採購與跨場域專案經驗。工作內容涵蓋需求與範圍確認、排程依存、供應商交付、現場介面、成本與驗收資料；異常發生時，先確認下游影響，再安排責任與追蹤節點。</p>
-<p class="hero-note"><b>職務定位｜</b>協調設備與工程專案的範圍、供應商、現場條件與交付節點，讓待處理事項能被確認、分工與持續追蹤。</p>
+<p class="lead">近8年工程與跨場域專案經驗，參與自動倉儲、輸送設備、堆垛機及鋼構工程。負責協調需求與圖面、委外供應商、專案排程、設備進場、硬體與電控介面，以及測試、驗收與結案進度。</p>
+<p class="hero-note"><b>我的角色｜</b>擔任公司、供應商與現場之間的專案窗口；工作重點是釐清介面、追蹤進度、協調資源並確認交付條件。</p>
 <div class="metrics">
 <div class="metric">
 <b>近8年</b>
 <span>跨產業專案實務</span>
 </div>
 <div class="metric">
-<b class="long">泰國／馬來西亞</b>
-<span>現場進度確認、介面溝通與待辦追蹤</span>
+<b class="long">自動倉儲／輸送設備</b>
+<span>委外製作與導入協調</span>
 </div>
 <div class="metric">
-<b>26天</b>
-<span>鋼構平台施工案例</span>
+<b class="long">泰國／馬來西亞</b>
+<span>現場進度與介面確認</span>
 </div>
 <div class="metric">
 <b>NT$4M+</b>
@@ -89,10 +90,10 @@
 
     <div class="fit-strip" aria-label="職務相關能力摘要">
 <div class="wrap fit-grid">
-<div class="fit-item"><i>01 · EQUIPMENT INTRODUCTION</i><b>設備導入與排程依存</b><span>拆解製作、到貨、吊裝、安裝、測試與驗收前置</span></div>
-<div class="fit-item"><i>02 · SITE COORDINATION</i><b>現場介面與異常處理</b><span>確認作業面、設備介面、責任窗口與下游影響</span></div>
-<div class="fit-item"><i>03 · SUPPLIER DELIVERY</i><b>供應商與跨單位協調</b><span>連接工程、現場、客戶、採購與外部承攬商</span></div>
-<div class="fit-item"><i>04 · COST FEASIBILITY</i><b>成本合理性與方案比較</b><span>拆解報價、責任範圍、待定成本與交付風險</span></div>
+<div class="fit-item"><i>01 · PROJECT WINDOW</i><b>自製／委外專案窗口</b><span>彙整內部需求、供應商回覆、現場狀態與待辦</span></div>
+<div class="fit-item"><i>02 · REQUIREMENT &amp; INTERFACE</i><b>規格與工程介面確認</b><span>對照需求、圖面、設備配置、現場條件及驗收範圍</span></div>
+<div class="fit-item"><i>03 · SCHEDULE CONTROL</i><b>專案進度控管</b><span>以WBS、里程碑與Issue紀錄追蹤前後置工作</span></div>
+<div class="fit-item"><i>04 · IMPLEMENTATION</i><b>資源與導入協調</b><span>連接供應商、材料、人力、機具、作業面與測試前置</span></div>
 </div>
 </div>
 
@@ -103,47 +104,47 @@
 <p class="eyebrow">01 · PROJECT MANAGEMENT ARCHITECTURE</p>
 <h2>管理的不是工作清單，<br>而是工作之間的依存關係。</h2>
 </div>
-<p>設備專案從需求到結案，每一個節點都會改變下游條件。我的工作是把責任、期限、證據與風險放進同一條交付路徑。</p>
+<p>深色節點是我實際負責協調與追蹤的範圍，其餘節點為共同參與。我的責任是把資訊、窗口、期限與下游影響連接起來。</p>
 </div>
 <div class="flow" role="img" aria-label="專案全生命週期">
 <article class="phase">
 <i>1</i>
-<small>REQUIREMENT</small>
+<small>COORDINATE</small>
 <b>需求與目標</b>
 </article>
 <article class="phase active">
 <i>2</i>
-<small>MY CONTROL</small>
+<small>DIRECT ROLE</small>
 <b>範圍／介面</b>
 </article>
 <article class="phase active">
 <i>3</i>
-<small>MY CONTROL</small>
+<small>DIRECT ROLE</small>
 <b>WBS／排程</b>
 </article>
 <article class="phase">
 <i>4</i>
-<small>SOURCING</small>
+<small>COORDINATE</small>
 <b>採購／製作</b>
 </article>
 <article class="phase active">
 <i>5</i>
-<small>MY CONTROL</small>
+<small>DIRECT ROLE</small>
 <b>到貨／作業面</b>
 </article>
 <article class="phase active">
 <i>6</i>
-<small>MY CONTROL</small>
+<small>DIRECT ROLE</small>
 <b>安裝／異常</b>
 </article>
 <article class="phase">
 <i>7</i>
-<small>VERIFY</small>
+<small>COORDINATE</small>
 <b>測試／驗收</b>
 </article>
 <article class="phase active">
 <i>8</i>
-<small>MY CONTROL</small>
+<small>DIRECT ROLE</small>
 <b>估驗／結案</b>
 </article>
 </div>
@@ -254,7 +255,7 @@
 <p class="eyebrow">03 · CASE｜LARGE AUTOMATED WAREHOUSE</p>
 <h2>大型自動化倉儲，<br>不是單一設備交付。</h2>
 </div>
-<p>貨架、堆垛機、輸送機、鋼構吊裝與電控必須依序銜接。任何一條工作流延後，都可能改變下一個設備的作業面、機具安排或測試條件。</p>
+<p>貨架、堆垛機、輸送機、鋼構吊裝與電控介面需要依序銜接。我的工作聚焦於追蹤各專業進度、介面待辦與測試前置，讓問題能交由正確窗口處理。</p>
 </div>
 <div class="system-map">
 <article class="stream">
@@ -294,17 +295,17 @@
 <h3>EQUIPMENT / CONTROL</h3>
 <ul>
 <li>堆垛機與輸送設備</li>
-<li>電源、控制與訊號</li>
-<li>單機測試與聯調</li>
+<li>電源、控制與訊號介面</li>
+<li>單機測試與聯調進度</li>
 <li>文件與驗收條件</li>
 </ul>
 </article>
 </div>
 <div class="case-facts" aria-label="匿名化專案證據摘要">
-<article class="case-fact"><b>12 個作業區域</b><span>貨架鋼構分區施工</span><small>依區域釋放後續工序</small></article>
-<article class="case-fact"><b>10 台堆垛設備</b><span>吊裝與進場協調</span><small>銜接貨架空間與作業順序</small></article>
-<article class="case-fact"><b>12% 成本調整</b><span>輸送機安裝議價</span><small>納入試車與聯合測試條件</small></article>
-<article class="case-fact"><b>如期完成</b><span>輸送機安裝交付</span><small>協調堆垛機與現場介面</small></article>
+<article class="case-fact"><b>多設備介面</b><span>貨架、堆垛機與輸送設備</span><small>確認不同工項的前後置關係</small></article>
+<article class="case-fact"><b>分區進場</b><span>材料、設備與作業面</span><small>依現場條件安排交付順序</small></article>
+<article class="case-fact"><b>委外協調</b><span>製作、運輸與安裝進度</span><small>追蹤供應商承諾與待辦</small></article>
+<article class="case-fact"><b>驗收連動</b><span>缺失、文件與付款條件</span><small>確認完成範圍與結案依據</small></article>
 </div>
 <div class="control-strip">
 <div>
@@ -424,13 +425,13 @@
 <div class="status">
 <i class="dot red">
 </i>
-<b>釐清電控介面差異</b>
+<b>追蹤電控介面待確認事項</b>
 <small>工程 · W4</small>
 </div>
 <div class="status">
 <i class="dot">
 </i>
-<b>準備測試與驗收清單</b>
+<b>協調測試與驗收前置</b>
 <small>PM · W5</small>
 </div>
 </div>
@@ -567,7 +568,7 @@
 <div class="status">
 <i class="dot red">
 </i>
-<b>電控範圍重新釐清</b>
+<b>協調電控範圍重新確認</b>
 <small>避免重工</small>
 </div>
 <div class="status">
@@ -587,6 +588,26 @@
 <p class="signal" style="border-color:var(--teal);background:#eaf4f1">結果不是「開完會」，而是下一個工作能開始、責任能追蹤，或風險已被清楚保留。</p>
 </aside>
 </div>
+</div>
+</div>
+<div class="doc-evidence" aria-label="匿名化專案管理文件證據">
+<div class="doc-evidence-head">
+<h3>管理圖不是概念示意，而是由實際工作資料重建</h3>
+<p>以下將實際使用的管理邏輯匿名化重建：里程碑與Issue對照、成本方案比較，以及合約、驗收與付款之間的關係。公司、供應商、金額及專案識別資料均已移除。</p>
+</div>
+<div class="doc-grid">
+<figure class="doc-card">
+<img src="/project-portfolio-6f2c/delivery-sheet.png" alt="專案里程碑與Issue追蹤匿名化重建">
+<figcaption><b>Project Delivery Control</b><span>Evidence｜排程、異常影響、責任窗口、下一步與狀態。</span></figcaption>
+</figure>
+<figure class="doc-card">
+<img src="/project-portfolio-6f2c/cost-sheet.png" alt="成本與替代方案比較匿名化重建">
+<figcaption><b>Cost Decision Workpaper</b><span>Evidence｜範圍拆解、方案差異、履約風險與決策依據。</span></figcaption>
+</figure>
+<figure class="doc-card">
+<img src="/project-portfolio-6f2c/closure-sheet.png" alt="驗收付款與結案流程匿名化重建">
+<figcaption><b>Acceptance &amp; Closure</b><span>Evidence｜合約範圍、完成狀態、驗收文件與付款條件。</span></figcaption>
+</figure>
 </div>
 </div>
       <div class="decision-case">
@@ -659,8 +680,6 @@
 <div class="timeline-summary">
 <strong>26 DAYS</strong>
 <span>實際施工週期</span>
-<strong>15%+</strong>
-<span>專案毛利率</span>
 <span style="margin-left:auto">MY ROLE｜協調製作、運輸、吊裝、現場工序、估驗與結案資料</span>
 </div>
 </div>
@@ -678,48 +697,70 @@
 </div>
 <div class="issue-grid">
 <article class="issue-card">
-<h3>材料規格不符｜現場查驗</h3>
+<h3>規格與到貨內容不一致｜先限制下游影響</h3>
 <div class="escalation">
 <div>發現<br>
-<b>規格差異</b>
+<b>圖面／實物差異</b>
 </div>
 <div>限制<br>
-<b>暫停使用</b>
+<b>標記並暫停使用</b>
 </div>
 <div>評估<br>
-<b>重工／工期</b>
+<b>安裝／工期影響</b>
 </div>
 <div>安排<br>
-<b>退換與複驗</b>
+<b>供應商回覆方案</b>
 </div>
 <div>關閉<br>
-<b>留下紀錄</b>
+<b>複驗與留存紀錄</b>
 </div>
 </div>
 <p class="issue-result">
-<b>My Action</b>核對要求與到貨規格，通知責任窗口，追蹤退換與重新查驗，避免不符材料進入後續施工。</p>
+<b>My Action</b>先比對圖面、採購範圍與到貨內容，標記差異並通知工程與供應商；確認是否影響安裝尺寸、作業順序及驗收，再追蹤退換、修正或替代方案與完成日期。</p>
 </article>
 <article class="issue-card">
-<h3>估驗數量不一致｜付款檢核</h3>
+<h3>供應商進度與現場條件不同步｜重新安排導入順序</h3>
 <div class="escalation">
-<div>比對<br>
-<b>合約／現況</b>
-</div>
-<div>標記<br>
-<b>未完成項</b>
-</div>
 <div>確認<br>
-<b>三方數量</b>
+<b>供應商完成狀態</b>
+</div>
+<div>查核<br>
+<b>作業面／機具／人力</b>
+</div>
+<div>判斷<br>
+<b>關鍵路徑影響</b>
 </div>
 <div>調整<br>
-<b>請款資料</b>
+<b>分批到貨與工序</b>
 </div>
-<div>付款<br>
-<b>依核定範圍</b>
+<div>追蹤<br>
+<b>Owner／Due／證據</b>
 </div>
 </div>
 <p class="issue-result">
-<b>My Action</b>依實際完成範圍檢核估驗與請款，釐清差異後再進入付款，降低後續追補與責任爭議。</p>
+<b>My Action</b>分開確認設備是否可出貨，以及現場是否具備進場條件；若兩者不同步，協調分批交付、安裝區域與機具時段，並同步更新後續測試及驗收節點。</p>
+</article>
+<article class="issue-card">
+<h3>硬體與電控介面待確認｜把技術問題轉成可追蹤事項</h3>
+<div class="escalation">
+<div>整理<br><b>圖面／現場差異</b></div>
+<div>分類<br><b>機構／電控／施工</b></div>
+<div>確認<br><b>專業責任窗口</b></div>
+<div>追蹤<br><b>方案與完成日期</b></div>
+<div>驗證<br><b>測試前置完成</b></div>
+</div>
+<p class="issue-result"><b>My Action</b>整理差異位置、需要決定的內容及受影響工項，交由機構、電控或供應商提出處理方式，並追蹤責任窗口、完成日期及測試前置狀態。</p>
+</article>
+<article class="issue-card">
+<h3>驗收與請款資料不一致｜先確認完成範圍</h3>
+<div class="escalation">
+<div>比對<br><b>合約／現場</b></div>
+<div>標記<br><b>未完成與缺失</b></div>
+<div>確認<br><b>數量／文件／責任</b></div>
+<div>修正<br><b>驗收與請款資料</b></div>
+<div>關閉<br><b>依核定範圍處理</b></div>
+</div>
+<p class="issue-result"><b>My Action</b>依合約範圍、現場完成狀態與相關紀錄檢核估驗及請款，將缺失、待補文件與完成期限列入追蹤，確認資料一致後再銜接付款與結案。</p>
 </article>
 </div>
 </div>
@@ -755,7 +796,7 @@
 </article>
 <div class="language-note">
 <b>ENGLISH AT WORK</b>
-<span>以英文信件確認規格、交期、產能與報價假設；海外現場搭配書面資料與進度清單確認工作事項。</span>
+<span>TOEIC 635。以英文信件確認規格、交期、產能與報價假設；海外現場搭配書面資料與進度清單進行基本工作溝通。</span>
 </div>
 </div>
 </div>
@@ -849,7 +890,7 @@
 <div class="wrap close-grid">
 <div>
 <p class="eyebrow">WORKING METHOD</p>
-<h2>先把範圍與依存釐清，<br>再讓每個決定有下一步。</h2>
+<h2>把需求、供應商與現場進度，<br>整理成可追蹤的導入計畫。</h2>
 </div>
 <div class="method">
 <div>
@@ -873,7 +914,7 @@
 </section>
   <footer>
 <div class="wrap footer-inner">
-<strong>Amber Chang · Automation Equipment × Project Management</strong>
+<strong>Amber Chang · Automation Project Coordination × Equipment Delivery</strong>
 <span>匿名化工作方法重建 · 不揭露客戶、供應商與合約資料</span>
 </div>
 </footer>
@@ -898,3 +939,4 @@
     document.querySelector('.lightbox-close').addEventListener('click',closeLightbox);lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
   </script>
 </body>
+</html>
