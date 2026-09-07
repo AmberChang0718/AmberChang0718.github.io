@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">設備導入專案管理儀表板</title>
+  <desc id="desc">依匿名化專案會議與現場紀錄重建的管理視圖，顯示控制節點、RAID紀錄、管理證據與下一檢查點。</desc>
+  <style>
+    text{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;fill:#132a31}
+    .kicker{font-size:17px;font-weight:800;letter-spacing:3px;fill:#197e7e}
+    .title{font-size:39px;font-weight:800;letter-spacing:-1px}
+    .sub{font-size:17px;fill:#66777b}
+    .label{font-size:14px;font-weight:800;letter-spacing:1.2px;fill:#66777b}
+    .metric{font-size:39px;font-weight:800}
+    .metric-note{font-size:15px;fill:#66777b}
+    .panel-title{font-size:20px;font-weight:800}
+    .panel-sub{font-size:14px;fill:#66777b}
+    .axis{font-size:14px;fill:#44575c}
+    .value{font-size:15px;font-weight:800}
+    .small{font-size:13px;fill:#66777b}
+    .table-head{font-size:13px;font-weight:800;fill:#d8e5e3;letter-spacing:.7px}
+    .table-main{font-size:15px;font-weight:700}
+    .table-sub{font-size:13px;fill:#66777b}
+    .white{fill:#ffffff}.mint{fill:#9dd6ca}.orange{fill:#e87532}.on-dark{fill:#d8e5e3}.on-dark-muted{fill:#b9ccca}
+  </style>
+
+  <rect width="1600" height="1000" fill="#f4f3ee"/>
+  <rect x="0" y="0" width="1600" height="118" fill="#132a31"/>
+  <rect x="0" y="0" width="12" height="118" fill="#e87532"/>
+  <text x="58" y="42" class="kicker mint">PROJECT DELIVERY DASHBOARD</text>
+  <text x="58" y="85" class="title white">設備導入專案管理儀表板</text>
+  <text x="1540" y="46" class="label mint" text-anchor="end">PORTFOLIO VIEW</text>
+  <text x="1540" y="77" class="sub on-dark" text-anchor="end">匿名化紀錄｜2026/03/13–04/28</text>
+
+  <!-- KPI strip -->
+  <g transform="translate(42 148)">
+    <rect width="356" height="138" rx="4" fill="#ffffff" stroke="#cdd7d4"/>
+    <text x="26" y="35" class="label">CONTROL NODES</text>
+    <text x="26" y="84" class="metric">6</text>
+    <text x="88" y="80" class="metric-note">個已記錄控制節點</text>
+    <rect x="26" y="107" width="304" height="4" fill="#eaf4f1"/>
+    <rect x="26" y="107" width="228" height="4" fill="#197e7e"/>
+  </g>
+  <g transform="translate(419 148)">
+    <rect width="356" height="138" rx="4" fill="#ffffff" stroke="#cdd7d4"/>
+    <text x="26" y="35" class="label">RAID RECORDS</text>
+    <text x="26" y="84" class="metric">6</text>
+    <text x="88" y="80" class="metric-note">項風險／議題／決策</text>
+    <circle cx="300" cy="68" r="28" fill="none" stroke="#e8ecea" stroke-width="10"/>
+    <circle cx="300" cy="68" r="28" fill="none" stroke="#e87532" stroke-width="10" stroke-dasharray="88 176" transform="rotate(-90 300 68)"/>
+  </g>
+  <g transform="translate(796 148)">
+    <rect width="356" height="138" rx="4" fill="#ffffff" stroke="#cdd7d4"/>
+    <text x="26" y="35" class="label">DATED SOURCES</text>
+    <text x="26" y="84" class="metric">4</text>
+    <text x="88" y="80" class="metric-note">次會議／現場紀錄</text>
+    <text x="330" y="114" class="small" text-anchor="end">03/13 · 04/09 · 04/14 · 04/28</text>
+  </g>
+  <g transform="translate(1173 148)">
+    <rect width="385" height="138" rx="4" fill="#ffffff" stroke="#cdd7d4"/>
+    <text x="26" y="35" class="label">MANAGEMENT AREAS</text>
+    <text x="26" y="84" class="metric">5</text>
+    <text x="88" y="80" class="metric-note">個可回查管理面向</text>
+    <text x="359" y="114" class="small" text-anchor="end">窗口 · 規格 · 進度 · 資源 · 供應商</text>
+  </g>
+
+  <!-- Evidence coverage -->
+  <g transform="translate(42 312)">
+    <rect width="742" height="330" rx="4" fill="#ffffff" stroke="#cdd7d4"/>
+    <text x="26" y="38" class="panel-title">管理證據索引</text>
+    <text x="26" y="62" class="panel-sub">證據數為工作紀錄中的可回查項目，不代表績效評分</text>
+    <g transform="translate(26 92)">
+      <text x="0" y="18" class="axis">進度控管</text>
+      <rect x="146" y="3" width="510" height="20" fill="#eef2f0"/>
+      <rect x="146" y="3" width="510" height="20" fill="#197e7e"/>
+      <text x="674" y="19" class="value">6</text>
+
+      <text x="0" y="64" class="axis">資源調度</text>
+      <rect x="146" y="49" width="510" height="20" fill="#eef2f0"/>
+      <rect x="146" y="49" width="425" height="20" fill="#197e7e"/>
+      <text x="589" y="65" class="value">5</text>
+
+      <text x="0" y="110" class="axis">委外／供應商</text>
+      <rect x="146" y="95" width="510" height="20" fill="#eef2f0"/>
+      <rect x="146" y="95" width="425" height="20" fill="#197e7e"/>
+      <text x="589" y="111" class="value">5</text>
+
+      <text x="0" y="156" class="axis">專案窗口</text>
+      <rect x="146" y="141" width="510" height="20" fill="#eef2f0"/>
+      <rect x="146" y="141" width="340" height="20" fill="#197e7e"/>
+      <text x="504" y="157" class="value">4</text>
+
+      <text x="0" y="202" class="axis">規格／介面</text>
+      <rect x="146" y="187" width="510" height="20" fill="#eef2f0"/>
+      <rect x="146" y="187" width="340" height="20" fill="#197e7e"/>
+      <text x="504" y="203" class="value">4</text>
+    </g>
+  </g>
+
+  <!-- RAID composition -->
+  <g transform="translate(806 312)">
+    <rect width="752" height="330" rx="4" fill="#ffffff" stroke="#cdd7d4"/>
+    <text x="26" y="38" class="panel-title">RAID 紀錄組成</text>
+    <text x="26" y="62" class="panel-sub">共 6 項；保留事件、影響、責任窗口、檢查點與關閉證據</text>
+    <g transform="translate(38 98)">
+      <circle cx="120" cy="93" r="74" fill="none" stroke="#edf1ef" stroke-width="32"/>
+      <circle cx="120" cy="93" r="74" fill="none" stroke="#e87532" stroke-width="32" stroke-dasharray="232.5 465" stroke-dashoffset="0" transform="rotate(-90 120 93)"/>
+      <circle cx="120" cy="93" r="74" fill="none" stroke="#197e7e" stroke-width="32" stroke-dasharray="155 465" stroke-dashoffset="-232.5" transform="rotate(-90 120 93)"/>
+      <circle cx="120" cy="93" r="74" fill="none" stroke="#9dd6ca" stroke-width="32" stroke-dasharray="77.5 465" stroke-dashoffset="-387.5" transform="rotate(-90 120 93)"/>
+      <text x="120" y="87" class="metric" text-anchor="middle">6</text>
+      <text x="120" y="111" class="small" text-anchor="middle">筆紀錄</text>
+    </g>
+    <g transform="translate(300 102)">
+      <rect x="0" y="0" width="16" height="16" fill="#e87532"/>
+      <text x="28" y="14" class="axis">Risk</text><text x="310" y="14" class="value" text-anchor="end">3</text>
+      <line x1="0" y1="36" x2="310" y2="36" stroke="#e2e8e5"/>
+      <rect x="0" y="56" width="16" height="16" fill="#197e7e"/>
+      <text x="28" y="70" class="axis">Decision</text><text x="310" y="70" class="value" text-anchor="end">2</text>
+      <line x1="0" y1="92" x2="310" y2="92" stroke="#e2e8e5"/>
+      <rect x="0" y="112" width="16" height="16" fill="#9dd6ca"/>
+      <text x="28" y="126" class="axis">Issue</text><text x="310" y="126" class="value" text-anchor="end">1</text>
+      <line x1="0" y1="148" x2="310" y2="148" stroke="#e2e8e5"/>
+      <text x="0" y="182" class="small">風險與決策分開紀錄，避免把待確認事項寫成完成結果。</text>
+    </g>
+  </g>
+
+  <!-- Control flow -->
+  <g transform="translate(42 666)">
+    <rect width="965" height="292" rx="4" fill="#132a31"/>
+    <text x="28" y="42" class="panel-title white">控制節點與前後置關係</text>
+    <text x="28" y="66" class="panel-sub on-dark-muted">節點依會議紀錄整理；不同工作面可平行，不解讀為完工比例</text>
+    <line x1="82" y1="142" x2="883" y2="142" stroke="#426068" stroke-width="3"/>
+    <g transform="translate(82 142)">
+      <circle r="15" fill="#9dd6ca" stroke="#ffffff" stroke-width="4"/><text y="-33" class="label mint" text-anchor="middle">01</text><text y="48" class="small on-dark" text-anchor="middle">放樣／複核</text>
+    </g>
+    <g transform="translate(242 142)">
+      <circle r="15" fill="#9dd6ca" stroke="#ffffff" stroke-width="4"/><text y="-33" class="label mint" text-anchor="middle">02</text><text y="48" class="small on-dark" text-anchor="middle">探孔／組裝</text>
+    </g>
+    <g transform="translate(402 142)">
+      <circle r="15" fill="#e87532" stroke="#ffffff" stroke-width="4"/><text y="-33" class="label orange" text-anchor="middle">03</text><text y="48" class="small on-dark" text-anchor="middle">鋼平台立柱</text>
+    </g>
+    <g transform="translate(562 142)">
+      <circle r="15" fill="#197e7e" stroke="#ffffff" stroke-width="4"/><text y="-33" class="label mint" text-anchor="middle">04</text><text y="48" class="small on-dark" text-anchor="middle">電氣資源導入</text>
+    </g>
+    <g transform="translate(722 142)">
+      <circle r="15" fill="#197e7e" stroke="#ffffff" stroke-width="4"/><text y="-33" class="label mint" text-anchor="middle">05</text><text y="48" class="small on-dark" text-anchor="middle">貨架／輸送機</text>
+    </g>
+    <g transform="translate(883 142)">
+      <circle r="15" fill="#e87532" stroke="#ffffff" stroke-width="4"/><text y="-33" class="label orange" text-anchor="middle">06</text><text y="48" class="small on-dark" text-anchor="middle">測試／查驗</text>
+    </g>
+    <rect x="28" y="226" width="909" height="40" fill="#1d3d46"/>
+    <text x="48" y="251" class="small on-dark">控制重點：工作面釋放、材料到場、跨工種依賴與測試前置必須連續核對。</text>
+  </g>
+
+  <!-- Next checks -->
+  <g transform="translate(1029 666)">
+    <rect width="529" height="292" rx="4" fill="#ffffff" stroke="#cdd7d4"/>
+    <text x="24" y="40" class="panel-title">下一檢查點</text>
+    <text x="24" y="63" class="panel-sub">從 RAID 紀錄回到可查驗的下一步</text>
+    <rect x="24" y="88" width="481" height="34" fill="#1d3d46"/>
+    <text x="40" y="110" class="table-head">事件</text>
+    <text x="316" y="110" class="table-head">檢查點</text>
+
+    <text x="40" y="151" class="table-main">鑽孔干涉風險</text>
+    <text x="316" y="151" class="table-main">前 20 米複核</text>
+    <text x="40" y="173" class="table-sub">孔位紀錄與費用影響</text>
+    <line x1="24" y1="190" x2="505" y2="190" stroke="#dbe3e0"/>
+
+    <text x="40" y="219" class="table-main">材料日期未確認</text>
+    <text x="316" y="219" class="table-main">供應商承諾日</text>
+    <text x="40" y="241" class="table-sub">書面交期與到貨紀錄</text>
+    <line x1="24" y1="258" x2="505" y2="258" stroke="#dbe3e0"/>
+
+    <rect x="456" y="211" width="27" height="27" rx="14" fill="#f7e8df"/>
+    <text x="469.5" y="230" class="value" fill="#b64b3d" text-anchor="middle">!</text>
+  </g>
+
+  <text x="1548" y="987" class="small" text-anchor="end">來源：匿名化專案會議、現場與管理紀錄重建</text>
+</svg>
