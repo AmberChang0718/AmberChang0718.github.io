@@ -11,7 +11,7 @@
     :root{--ink:#132a31;--ink2:#1d3d46;--paper:#f4f3ee;--white:#fff;--line:#cdd7d4;--muted:#66777b;--teal:#197e7e;--mint:#9dd6ca;--orange:#e87532;--amber:#f4b04d;--red:#b64b3d;--shadow:0 18px 48px rgba(20,42,49,.12)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:clip;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button{font:inherit}img{display:block;width:100%}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}.eyebrow{margin:0 0 12px;color:var(--teal);font-size:12px;font-weight:800;letter-spacing:.18em}.micro{font-size:12px;color:var(--muted)}
     header{position:sticky;top:0;z-index:50;background:rgba(19,42,49,.96);color:#fff;border-bottom:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.05em}.brand i{width:11px;height:11px;border-radius:50%;background:var(--orange);box-shadow:18px 0 0 var(--mint)}.brand small{display:block;font-size:10px;color:#b9cecf;letter-spacing:.16em}.links{display:flex;gap:22px;color:#dce7e7;font-size:13px}.links a:hover{color:var(--mint)}
-    .hero{background:var(--ink);color:#fff;overflow:hidden;position:relative;padding:92px 0 70px}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,rgba(255,255,255,.04) 50%),linear-gradient(rgba(255,255,255,.04) 49.8%,transparent 50%);background-size:56px 56px;mask-image:linear-gradient(90deg,transparent,#000 55%)}.hero-grid{position:relative;display:grid;grid-template-columns:.88fr 1.12fr;gap:56px;align-items:center}.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.08;letter-spacing:-.055em;margin:0 0 24px}.hero h1 em{font-style:normal;color:var(--mint)}.lead{font-size:18px;color:#d7e3e2;max-width:580px}.hero-note{border-left:3px solid var(--orange);padding-left:18px;margin-top:30px;color:#bdcdcd;font-size:14px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.16);margin-top:45px}.metric{background:var(--ink);padding:18px 12px}.metric b{display:block;font-size:26px;color:#fff}.metric b.long{font-size:17px;line-height:1.35;margin:5px 0 4px}.metric span{font-size:11px;color:#aec1c1;letter-spacing:.05em}
+    .hero{background:var(--ink);color:#fff;overflow:hidden;position:relative;padding:92px 0 70px}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,rgba(255,255,255,.04) 50%),linear-gradient(rgba(255,255,255,.04) 49.8%,transparent 50%);background-size:56px 56px;mask-image:linear-gradient(90deg,transparent,#000 55%)}.hero-grid{position:relative;display:grid;grid-template-columns:.88fr 1.12fr;gap:56px;align-items:center}.hero h1{font-size:clamp(40px,4.7vw,60px);line-height:1.12;letter-spacing:-.045em;margin:0 0 24px;word-break:keep-all;overflow-wrap:normal;text-wrap:balance}.hero h1 em{font-style:normal;color:var(--mint)}.lead{font-size:18px;color:#d7e3e2;max-width:580px}.hero-note{border-left:3px solid var(--orange);padding-left:18px;margin-top:30px;color:#bdcdcd;font-size:14px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.16);margin-top:45px}.metric{background:var(--ink);padding:18px 12px}.metric b{display:block;font-size:26px;color:#fff}.metric b.long{font-size:17px;line-height:1.35;margin:5px 0 4px}.metric span{font-size:11px;color:#aec1c1;letter-spacing:.05em}
     .architecture{border:1px solid rgba(255,255,255,.22);background:rgba(17,41,48,.88);box-shadow:var(--shadow)}.arch-head{display:flex;justify-content:space-between;align-items:end;gap:20px;padding:20px 22px;border-bottom:1px solid rgba(255,255,255,.17)}.arch-head small{display:block;color:var(--mint);font-size:10px;font-weight:800;letter-spacing:.15em}.arch-head b{font-size:20px}.arch-head span{font-size:11px;color:#adc1c1;text-align:right}.arch-columns{display:grid;grid-template-columns:.9fr 1.15fr .95fr;padding:0 22px;color:#9eb3b4;font-size:10px;font-weight:800;letter-spacing:.12em}.arch-columns span{padding:12px 10px}.arch-columns span:nth-child(2){color:var(--orange)}.arch-row{display:grid;grid-template-columns:.9fr 1.15fr .95fr;align-items:stretch;border-top:1px solid rgba(255,255,255,.12);min-height:82px}.arch-cell{position:relative;padding:14px 18px;display:flex;flex-direction:column;justify-content:center}.arch-cell+ .arch-cell{border-left:1px solid rgba(255,255,255,.12)}.arch-cell:not(:last-child):after{content:"→";position:absolute;right:-10px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--ink);color:var(--mint);z-index:2}.arch-cell b{font-size:12px;color:#fff}.arch-cell span{font-size:11px;color:#b9cccc}.arch-cell.control{background:rgba(232,117,50,.09);border-left-color:rgba(232,117,50,.35)}.arch-cell.control b{color:#ffb27f}.arch-cell.output b{color:var(--mint)}.arch-row.warn .arch-cell.control{background:rgba(182,75,61,.12)}.arch-row.warn .arch-cell.control b{color:#ffad9f}
     section{padding:92px 0}.section-head{display:grid;grid-template-columns:1fr .75fr;gap:56px;align-items:end;margin-bottom:42px}.section-head h2{font-size:clamp(32px,4.4vw,58px);line-height:1.13;letter-spacing:-.04em;margin:0;text-wrap:balance}.section-head>p{color:var(--muted);margin:0}.fit-strip{background:#fff;border-bottom:1px solid var(--line)}.fit-grid{display:grid;grid-template-columns:repeat(4,1fr)}.fit-item{padding:22px 24px;border-right:1px solid var(--line)}.fit-item:last-child{border-right:0}.fit-item i{display:block;color:var(--orange);font-style:normal;font-size:11px;font-weight:900;letter-spacing:.12em}.fit-item b{display:block;margin:4px 0 2px}.fit-item span{display:block;color:var(--muted);font-size:12px}
     .lifecycle{background:#fff}.flow{display:grid;grid-template-columns:repeat(8,1fr);border:1px solid var(--line);overflow:auto}.phase{min-width:138px;position:relative;padding:24px 16px 26px;border-right:1px solid var(--line);background:#fff}.phase:last-child{border:0}.phase:after{content:"›";position:absolute;right:-11px;top:28px;z-index:2;background:var(--ink);color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;line-height:20px}.phase:last-child:after{display:none}.phase i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#e8f4f1;color:var(--teal);font-style:normal;font-weight:800}.phase small{display:block;color:var(--muted);font-size:10px;margin-top:14px;letter-spacing:.1em}.phase b{font-size:14px}.phase.active{background:var(--ink);color:#fff}.phase.active small{color:#adc0c1}.phase.active i{background:var(--orange);color:#fff}.impact-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.impact{padding:15px;border-top:3px solid var(--orange);background:#f2f4f1;font-size:13px}.impact b{display:block}.impact span{color:var(--muted)}
@@ -23,6 +23,7 @@
     .decision-case{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;margin-top:70px}.decision-copy{background:var(--paper);padding:30px}.decision-copy h3{font-size:30px;line-height:1.2;margin:8px 0 15px}.decision-copy p{color:var(--muted)}.decision-steps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.decision-steps article{border:1px solid var(--line);padding:18px;background:#fff}.decision-steps i{font-style:normal;color:var(--orange);font-weight:900}.decision-steps b{display:block;margin:5px 0}.decision-steps p{font-size:12px;color:var(--muted);margin:0}.signal{border-left:4px solid var(--red);padding:12px 15px;background:#f6ece9;margin-top:18px;font-size:13px}
     .evidence-ledger{margin-top:68px;border-top:1px solid var(--line);padding-top:42px}.ledger-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:end;margin-bottom:20px}.ledger-intro h3{font-size:30px;line-height:1.2;margin:6px 0 0}.ledger-intro p{margin:0;color:var(--muted)}.ledger{border:1px solid var(--line);background:#fff;overflow:auto}.ledger-row{display:grid;grid-template-columns:80px 1fr 1.15fr 1.25fr;min-width:820px;min-height:92px;border-bottom:1px solid var(--line)}.ledger-row:last-child{border-bottom:0}.ledger-row>div{padding:16px 18px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}.ledger-row>div:last-child{border-right:0}.ledger-head{min-height:auto;background:var(--ink);color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em}.ledger-id{font-weight:900;color:var(--teal)}.ledger-row b{font-size:13px}.ledger-row span{font-size:12px;color:var(--muted)}.ledger-head span{color:#b9cccc}.proof-title{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:58px 0 18px}.proof-title h3{font-size:30px;line-height:1.2;margin:6px 0 0}.proof-title p{max-width:520px;margin:0;color:var(--muted);font-size:13px}.proof-cases{display:grid;gap:18px}.proof-case{border:1px solid var(--line);background:#f8f8f5}.proof-case-head{display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line);background:#fff}.case-no{font-size:11px;font-weight:900;letter-spacing:.12em;color:var(--orange)}.proof-case-head h4{font-size:19px;margin:0}.proof-case-head span:last-child{font-size:11px;color:var(--muted);text-align:right}.proof-chain{display:grid;grid-template-columns:repeat(5,1fr)}.proof-step{position:relative;padding:20px 18px;min-height:168px;border-right:1px solid var(--line)}.proof-step:last-child{border-right:0}.proof-step:not(:last-child):after{content:"›";position:absolute;right:-11px;top:22px;z-index:2;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff}.proof-step i{display:block;font-style:normal;color:var(--teal);font-size:10px;font-weight:900;letter-spacing:.1em}.proof-step b{display:block;margin:7px 0;font-size:13px}.proof-step p{font-size:12px;color:var(--muted);margin:0}.proof-step.action{background:#edf6f3}.proof-step.action i{color:var(--orange)}.proof-step.result{background:var(--ink);color:#fff}.proof-step.result i{color:var(--mint)}.proof-step.result p{color:#bfd0d0}.evidence-packet{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:18px}.packet-visual{margin:0;border:1px solid var(--line);background:#fff;overflow:hidden}.packet-visual img{height:100%;min-height:360px;object-fit:contain}.packet-side{display:grid;gap:10px}.packet-item{background:#fff;border:1px solid var(--line);padding:17px}.packet-item small{display:block;color:var(--teal);font-weight:900;letter-spacing:.1em}.packet-item b{display:block;margin:4px 0}.packet-item p{margin:0;color:var(--muted);font-size:12px}.verification-note{margin-top:14px;padding:18px 20px;border-left:4px solid var(--orange);background:#f5eee8;display:grid;grid-template-columns:160px 1fr;gap:18px;font-size:13px}.verification-note b{color:var(--ink)}.verification-note span{color:var(--muted)}
     .personal-files{margin-top:68px;border-top:1px solid var(--line);padding-top:42px}.personal-files-head{display:grid;grid-template-columns:.94fr 1.06fr;gap:42px;align-items:end;margin-bottom:22px}.personal-files-head h3{font-size:30px;line-height:1.24;letter-spacing:-.025em;margin:6px 0 0;text-wrap:balance}.personal-files-head p{margin:0;color:var(--muted)}.project-file{border:1px solid var(--line);background:#fff;margin-top:20px;box-shadow:0 12px 32px rgba(20,42,49,.08)}.file-head{display:grid;grid-template-columns:92px 1fr .8fr;gap:18px;align-items:center;padding:20px 22px;border-bottom:1px solid var(--line)}.file-id{color:var(--orange);font-size:11px;font-weight:900;letter-spacing:.12em}.file-head h4{font-size:22px;line-height:1.25;margin:0}.file-head p{margin:0;color:var(--muted);font-size:13px}.file-role{padding:17px 22px;background:#edf6f3;border-bottom:1px solid var(--line);display:grid;grid-template-columns:130px 1fr;gap:20px;font-size:13px}.file-role b{color:var(--teal)}.file-role span{color:var(--ink)}.file-body{display:grid;grid-template-columns:.62fr 1.38fr}.file-photos{display:grid;grid-template-rows:1fr 1fr;border-right:1px solid var(--line);min-height:510px}.file-photos figure{margin:0;position:relative;overflow:hidden}.file-photos figure+figure{border-top:1px solid var(--line)}.file-photos img{height:100%;object-fit:cover}.file-photos figcaption{position:absolute;inset:auto 0 0;padding:35px 15px 13px;background:linear-gradient(transparent,rgba(10,27,32,.88));color:#fff;font-size:12px}.file-record{padding:22px;min-width:0}.record-title{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:12px}.record-title b{font-size:16px}.record-title span{font-size:11px;color:var(--muted)}.case-log{border:1px solid var(--line);overflow:auto}.case-log-row{display:grid;grid-template-columns:.82fr 1fr 1fr 1.12fr 1fr;min-width:760px;border-bottom:1px solid var(--line)}.case-log-row:last-child{border-bottom:0}.case-log-row>div{padding:13px 14px;border-right:1px solid var(--line);font-size:12.5px}.case-log-row>div:last-child{border-right:0}.case-log-row b{display:block;margin-bottom:3px}.case-log-row span{display:block;color:var(--muted)}.case-log-head{background:var(--ink);color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em}.case-log-head>div{color:#bcd0d0}.file-output{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:14px;background:var(--line)}.file-output div{background:#f6f7f4;padding:13px}.file-output small{display:block;color:var(--teal);font-size:9px;font-weight:900;letter-spacing:.1em}.file-output b{display:block;font-size:12px;margin-top:4px}.project-file.compact .file-body{grid-template-columns:1fr 1.15fr}.project-file.compact .file-photos{min-height:390px;grid-template-rows:1fr}.project-file.compact .file-record{display:flex;flex-direction:column;justify-content:center}.personal-evidence{margin:0;border:1px solid var(--line);background:#fff}.personal-evidence img{height:100%;min-height:360px;object-fit:contain}.personal-note{margin-top:14px;padding:18px 20px;border-left:4px solid var(--orange);background:#f5eee8;display:grid;grid-template-columns:160px 1fr;gap:18px;font-size:13px}.personal-note span{color:var(--muted)}.delivery-title{font-size:clamp(30px,3.3vw,44px);line-height:1.18;letter-spacing:-.035em;margin:0;text-wrap:balance}.overseas-heading{font-size:clamp(32px,3vw,40px)!important;line-height:1.22!important;text-wrap:balance}.overseas-heading span{white-space:nowrap}.evidence-ledger,.proof-title,.proof-cases,.evidence-packet,.verification-note{display:none}
+    .control-room{margin-top:72px;padding-top:44px;border-top:1px solid var(--line)}.control-room-head{display:grid;grid-template-columns:.92fr 1.08fr;gap:42px;align-items:end}.control-room-head h3{font-size:clamp(29px,3.2vw,42px);line-height:1.18;margin:6px 0 0;letter-spacing:-.035em;text-wrap:balance}.control-room-head p{margin:0;color:var(--muted)}.source-timeline{display:grid;grid-template-columns:repeat(4,1fr);margin:28px 0;background:var(--ink);color:#fff}.source-step{position:relative;padding:21px;border-right:1px solid rgba(255,255,255,.16)}.source-step:last-child{border-right:0}.source-step time{display:block;color:var(--mint);font-size:11px;font-weight:900;letter-spacing:.1em}.source-step b{display:block;margin:6px 0 4px;font-size:14px}.source-step span{display:block;color:#bed0d0;font-size:12px}.source-step:after{content:"›";position:absolute;right:-11px;top:25px;z-index:2;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--orange);color:#fff;font-weight:900}.source-step:last-child:after{display:none}.artifact-wall{display:grid;grid-template-columns:1fr 1fr;gap:16px}.artifact-preview{margin:0;border:1px solid var(--line);background:#fff;overflow:hidden;cursor:zoom-in}.artifact-preview:first-child{grid-column:1/-1}.artifact-preview img{display:block;width:100%;height:auto;min-height:0;object-fit:contain;background:#fff}.artifact-preview figcaption{padding:15px 17px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px}.artifact-preview b{font-size:14px}.artifact-preview span{font-size:11px;color:var(--muted);text-align:right}.decision-replay{margin-top:18px;border:1px solid var(--line);background:#fff}.replay-head{display:grid;grid-template-columns:150px 1fr 1fr;gap:20px;padding:20px 22px;background:#f6f7f4;border-bottom:1px solid var(--line)}.replay-head span{font-size:11px;color:var(--orange);font-weight:900;letter-spacing:.1em}.replay-head b{font-size:18px}.replay-head p{margin:0;color:var(--muted);font-size:12px}.replay-grid{display:grid;grid-template-columns:repeat(5,1fr)}.replay-step{position:relative;padding:19px 17px;min-height:174px;border-right:1px solid var(--line)}.replay-step:last-child{border-right:0;background:var(--ink);color:#fff}.replay-step small{display:block;color:var(--teal);font-weight:900;letter-spacing:.08em}.replay-step:last-child small{color:var(--mint)}.replay-step b{display:block;margin:7px 0;font-size:13px}.replay-step p{margin:0;color:var(--muted);font-size:12px}.replay-step:last-child p{color:#bed0d0}.replay-note{padding:16px 20px;border-top:1px solid var(--line);display:grid;grid-template-columns:150px 1fr;gap:20px;font-size:12px}.replay-note b{color:var(--teal)}.replay-note span{color:var(--muted)}
     .timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:30px}.time-step{position:relative;padding:64px 15px 18px;border-top:2px solid var(--teal)}.time-step:before{content:"";position:absolute;top:-7px;left:15px;width:12px;height:12px;border-radius:50%;background:var(--teal)}.time-step i{position:absolute;top:12px;font-style:normal;color:var(--teal);font-weight:800}.time-step b{font-size:13px}.time-step p{font-size:11px;color:var(--muted);margin:4px 0}.timeline-summary{display:flex;flex-wrap:wrap;gap:20px;align-items:center;background:var(--ink);color:#fff;padding:18px 22px}.timeline-summary strong{font-size:30px;color:var(--mint)}.timeline-summary span{font-size:12px;color:#bed0d0}
     .issues{background:#e9eeeb}.issue-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.issue-card{background:#fff;border-top:5px solid var(--orange);padding:26px}.issue-card h3{margin:0 0 18px;line-height:1.35;text-wrap:balance}.escalation{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.escalation div{background:#f1f3f0;padding:10px;font-size:11px;position:relative}.escalation div:not(:last-child):after{content:"→";position:absolute;right:-8px;color:var(--orange);font-weight:900;z-index:2}.escalation b{line-height:1.42}.term{white-space:nowrap}.issue-result{margin-top:16px;border-left:3px solid var(--teal);padding-left:13px;font-size:13px}.issue-result b{display:block}
     .overseas-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.country{position:relative;min-height:310px;background:var(--ink);color:#fff;padding:34px;overflow:hidden}.country:after{content:attr(data-code);position:absolute;right:-5px;bottom:-55px;font-size:170px;font-weight:900;color:rgba(255,255,255,.05)}.country h3{font-size:30px;margin:0 0 18px}.country ul{padding-left:18px;color:#c9d8d8}.country li+li{margin-top:10px}.language-note{grid-column:1/-1;border:1px solid var(--line);padding:20px;background:#fff;display:grid;grid-template-columns:150px 1fr;gap:20px}.language-note b{color:var(--teal)}
@@ -30,8 +31,8 @@
     .close{background:var(--ink);color:#fff;padding:72px 0}.close-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.close h2{font-size:clamp(34px,5vw,62px);line-height:1.12;margin:0}.method{display:grid;gap:1px;background:rgba(255,255,255,.14)}.method div{background:#17343c;padding:16px}.method b{display:block;color:var(--mint)}.method span{font-size:12px;color:#b9cccc}footer{background:#0d2026;color:#9fb3b4;padding:22px 0;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:20px}
     @media(max-width:900px){.links{display:none}.hero-grid,.section-head,.role-map,.panel-grid,.decision-case,.close-grid,.doc-grid{grid-template-columns:1fr}.doc-card:first-child{grid-row:auto}.fit-grid,.case-facts{grid-template-columns:repeat(2,1fr)}.fit-item:nth-child(2){border-right:0}.fit-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.system-map{grid-template-columns:1fr}.control-strip{grid-template-columns:repeat(2,1fr)}.impact-row,.control-grid{grid-template-columns:repeat(2,1fr)}.photo-grid{grid-template-columns:repeat(2,1fr)}.issue-grid,.overseas-grid{grid-template-columns:1fr}.language-note{grid-column:auto}.timeline{grid-template-columns:repeat(3,1fr)}.time-step:nth-child(n+4){margin-top:24px}}
     @media(max-width:600px){.wrap{width:min(100% - 26px,1180px)}.hero{padding-top:58px}.metrics,.fit-grid,.case-facts{grid-template-columns:1fr}.fit-item{border-right:0;border-bottom:1px solid var(--line)}.fit-item:last-child{border-bottom:0}.arch-head{display:block}.arch-head span{display:block;text-align:left;margin-top:5px}.arch-columns{display:none}.arch-row{grid-template-columns:1fr}.arch-cell{padding:12px 16px}.arch-cell+.arch-cell{border-left:0;border-top:1px solid rgba(255,255,255,.1)}.arch-cell:not(:last-child):after{content:"↓";right:14px;top:auto;bottom:-10px;transform:none}.section-head{gap:18px}.impact-row,.control-grid,.decision-steps{grid-template-columns:1fr}.control-board{padding:24px}.cockpit,.tabs,.panel,.panel-grid,.artifact{width:100%;max-width:100%;min-width:0}.cockpit,.panel,.artifact{overflow:hidden}.panel{padding:14px}.artifact{padding:14px}.mini-gantt{width:100%;max-width:100%;min-width:0;grid-template-columns:100px repeat(6,70px);overflow-x:auto}.photo-grid{grid-template-columns:1fr;grid-auto-rows:260px}.photo-grid figure:nth-child(1),.photo-grid figure:nth-child(6){grid-column:auto;grid-row:auto}.lightbox-card{grid-template-columns:1fr}.lightbox-card img{height:300px}.lightbox-copy{padding:24px}.issue-grid{grid-template-columns:1fr}.escalation{grid-template-columns:1fr}.escalation div:not(:last-child):after{content:"↓";right:14px;bottom:-13px;top:auto}.timeline{grid-template-columns:repeat(2,1fr)}.language-note{grid-template-columns:1fr}.footer-inner{display:block}.footer-inner span{display:block;margin-top:8px}}
-    @media(max-width:900px){.ledger-intro,.evidence-packet,.personal-files-head,.file-body,.project-file.compact .file-body{grid-template-columns:1fr}.proof-chain{grid-template-columns:1fr}.proof-step{min-height:auto;border-right:0;border-bottom:1px solid var(--line)}.proof-step:not(:last-child):after{content:"↓";right:18px;top:auto;bottom:-11px}.proof-case-head{grid-template-columns:90px 1fr}.proof-case-head span:last-child{grid-column:2;text-align:left}.file-photos{grid-template-columns:1fr 1fr;grid-template-rows:1fr;min-height:280px;border-right:0;border-bottom:1px solid var(--line)}.file-photos figure+figure{border-top:0;border-left:1px solid var(--line)}.project-file.compact .file-photos{min-height:320px}.file-output{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:600px){.verification-note,.personal-note,.file-role{grid-template-columns:1fr}.proof-title{display:block}.proof-title p{margin-top:10px}.packet-visual img{min-height:220px}.evidence-ledger,.personal-files{margin-top:48px}.file-head{grid-template-columns:1fr}.file-photos{grid-template-columns:1fr;grid-template-rows:240px 240px}.file-photos figure+figure{border-left:0;border-top:1px solid var(--line)}.file-output{grid-template-columns:1fr}.personal-files-head h3{font-size:28px}.overseas-heading{font-size:30px!important}.overseas-heading span{white-space:normal}}
+    @media(max-width:900px){.ledger-intro,.evidence-packet,.personal-files-head,.file-body,.project-file.compact .file-body,.control-room-head,.artifact-wall{grid-template-columns:1fr}.proof-chain,.replay-grid{grid-template-columns:1fr}.proof-step,.replay-step{min-height:auto;border-right:0;border-bottom:1px solid var(--line)}.proof-step:not(:last-child):after{content:"↓";right:18px;top:auto;bottom:-11px}.proof-case-head{grid-template-columns:90px 1fr}.proof-case-head span:last-child{grid-column:2;text-align:left}.file-photos{grid-template-columns:1fr 1fr;grid-template-rows:1fr;min-height:280px;border-right:0;border-bottom:1px solid var(--line)}.file-photos figure+figure{border-top:0;border-left:1px solid var(--line)}.project-file.compact .file-photos{min-height:320px}.file-output{grid-template-columns:repeat(2,1fr)}.source-timeline{grid-template-columns:repeat(2,1fr)}.source-step:nth-child(2){border-right:0}.source-step:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.16)}.source-step:nth-child(2):after{display:none}.artifact-preview:first-child{grid-row:auto}.replay-head{grid-template-columns:110px 1fr}.replay-head p{grid-column:2}.replay-note{grid-template-columns:110px 1fr}}
+    @media(max-width:600px){.hero h1{font-size:clamp(34px,10vw,44px);word-break:normal;text-wrap:pretty}.verification-note,.personal-note,.file-role,.replay-head,.replay-note{grid-template-columns:1fr}.proof-title{display:block}.proof-title p{margin-top:10px}.packet-visual img{min-height:220px}.evidence-ledger,.personal-files{margin-top:48px}.file-head{grid-template-columns:1fr}.file-photos{grid-template-columns:1fr;grid-template-rows:240px 240px}.file-photos figure+figure{border-left:0;border-top:1px solid var(--line)}.file-output,.source-timeline{grid-template-columns:1fr}.source-step{border-right:0;border-bottom:1px solid rgba(255,255,255,.16)}.source-step:after{display:none}.personal-files-head h3{font-size:28px}.overseas-heading{font-size:30px!important}.overseas-heading span{white-space:normal}.artifact-preview figcaption{display:block}.artifact-preview span{display:block;text-align:left;margin-top:4px}.replay-head p{grid-column:auto}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.photo-grid img{transition:none}}
   </style>
 </head>
@@ -61,7 +62,7 @@
 <em>從需求協調到導入驗收。</em>
 </h1>
 <p class="lead">近8年工程與跨場域專案經驗，參與自動倉儲、輸送設備、堆垛機及鋼構工程。負責協調需求與圖面、委外供應商、專案排程、設備進場、硬體與電控介面，以及測試、驗收與結案進度。</p>
-<p class="hero-note"><b>我的工作方式｜</b>先確認需求、圖面與現場條件，再把差異整理成責任窗口、完成期限與查驗方式；持續追蹤至下一個工作節點具備執行條件。</p>
+<p class="hero-note"><b>工作方式｜</b>先確認需求、圖面與現場條件，再把差異整理成責任窗口、完成期限與查驗方式；持續追蹤至下一個工作節點具備執行條件。</p>
 <div class="metrics">
 <div class="metric">
 <b>近8年</b>
@@ -83,7 +84,7 @@
 </div>
 <div class="architecture" aria-label="專案資訊、Amber控制點與交付輸出的關係矩陣">
 <div class="arch-head"><div><small>PROJECT DELIVERY CONTROL</small><b>資訊進來之後，如何形成下一步</b></div><span>INPUT → AMBER'S CONTROL → OUTPUT</span></div>
-<div class="arch-columns"><span>專案資訊</span><span>我的控制點</span><span>可交付輸出</span></div>
+<div class="arch-columns"><span>專案資訊</span><span>負責控制點</span><span>可交付輸出</span></div>
 <article class="arch-row"><div class="arch-cell"><b>需求／圖面／報價</b><span>範圍與假設來源</span></div><div class="arch-cell control"><b>釐清範圍與責任介面</b><span>確認包含、排除與待決事項</span></div><div class="arch-cell output"><b>共同執行基準</b><span>WBS、責任與變更依據</span></div></article>
 <article class="arch-row"><div class="arch-cell"><b>製作／到貨／作業面</b><span>供應商與現場狀態</span></div><div class="arch-cell control"><b>連接前後置與里程碑</b><span>確認資源、期限與下游影響</span></div><div class="arch-cell output"><b>可執行排程</b><span>Owner、Due、下一個節點</span></div></article>
 <article class="arch-row warn"><div class="arch-cell"><b>異常／差異／變更</b><span>現場或文件訊號</span></div><div class="arch-cell control"><b>判斷影響並安排升級</b><span>成本、時程、品質與付款</span></div><div class="arch-cell output"><b>風險處理紀錄</b><span>回應、責任與關閉方式</span></div></article>
@@ -341,7 +342,7 @@
 <div class="section-head">
 <div>
 <p class="eyebrow">04 · FRAMEWORK + EVIDENCE + ACTION + RESULT</p>
-<h2>我的管理紀錄，<br>必須能對應到現場與決策。</h2>
+<h2>管理紀錄必須能<br>對應到現場與決策。</h2>
 </div>
 <p>以下內容由實際工作資料匿名化重建。排程、依存、風險與判斷紀錄，均對應我參與的專案情境與負責環節。</p>
 </div>
@@ -410,7 +411,7 @@
 </div>
 <aside class="artifact">
 <div class="artifact-title">
-<b>MY ACTION</b>
+<b>COORDINATION ACTION</b>
 <span>OWNER + DUE</span>
 </div>
 <div class="status-list">
@@ -614,15 +615,15 @@
 </figure>
 </div>
 </div>
-<div class="personal-files" aria-label="Amber 個人專案工作卷宗">
+<div class="personal-files" aria-label="Amber 專案工作卷宗">
 <div class="personal-files-head">
-<div><p class="eyebrow">AMBER'S PROJECT FILES</p><h3>從現場訊號，到我留下的管理紀錄</h3></div>
-<p>以下內容不是專案管理制度說明，而是將我參與的自動化倉儲、鋼構施工與專案採購經驗，依實際工作脈絡匿名化重建。每一份卷宗都標示我負責的環節、採用的判斷依據，以及如何追蹤至下一個可查驗節點。</p>
+<div><p class="eyebrow">PROJECT WORK FILES</p><h3>從現場訊號，到可查驗的管理紀錄</h3></div>
+<p>以下將實際參與的自動化倉儲、鋼構施工與專案採購經驗，依工作脈絡匿名化整理。每一份卷宗標示負責環節、判斷依據與下一個查驗節點。</p>
 </div>
 
 <article class="project-file">
 <div class="file-head"><span class="file-id">FILE 01</span><h4>大型自動化倉儲｜設備導入與介面協調</h4><p>貨架、堆垛機、輸送設備、吊裝作業及電控介面需依序銜接。</p></div>
-<div class="file-role"><b>我的工作位置</b><span>負責整理需求與圖面、追蹤委外供應商進度、確認設備進場條件，並將機構、電控與現場差異交由對應專業窗口處理及追蹤。專業施工與技術核定由相關單位執行。</span></div>
+<div class="file-role"><b>負責範圍</b><span>整理需求與圖面、追蹤委外供應商進度、確認設備進場條件，並將機構、電控與現場差異交由對應專業窗口處理及追蹤。專業施工與技術核定由相關單位執行。</span></div>
 <div class="file-body">
 <div class="file-photos">
 <figure><img src="/field-highbay-install-clean.jpg" alt="大型自動化倉儲現場走訪紀錄"><figcaption>現場紀錄｜確認施工範圍、吊裝作業面與設備進場順序</figcaption></figure>
@@ -631,13 +632,13 @@
 <div class="file-record">
 <div class="record-title"><b>Issue／Action Record｜匿名化重建</b><span>照片、圖面、供應商回覆與進度紀錄交叉核對</span></div>
 <div class="case-log" role="table" aria-label="大型自動化倉儲問題處理紀錄">
-<div class="case-log-row case-log-head" role="row"><div>現場訊號</div><div>查核資料</div><div>我的判斷</div><div>我的協調動作</div><div>關閉依據</div></div>
+<div class="case-log-row case-log-head" role="row"><div>現場訊號</div><div>查核資料</div><div>判斷依據</div><div>協調處理</div><div>關閉依據</div></div>
 <div class="case-log-row" role="row"><div><b>供應進度與作業面不同步</b><span>設備可交付，但現場條件仍需確認</span></div><div>供應商進度、現場照片、區域釋放與吊裝資源</div><div>若直接進場，可能增加等待並影響後續安裝節點</div><div>協調分批交付、進場區域與機具時段，更新責任窗口及期限</div><div>更新後的里程碑、到貨紀錄與現場進度</div></div>
 <div class="case-log-row" role="row"><div><b>硬體與電控介面待確認</b><span>圖面、設備條件或現場資訊存在差異</span></div><div>圖面版本、現況照片、設備範圍與專業單位回覆</div><div>確認差異是否影響安裝順序、修改需求與測試前置</div><div>整理待決內容及受影響工項，交由機構、電控或供應商確認方案</div><div>更新圖面、完成回覆、現場複驗或測試條件確認</div></div>
 <div class="case-log-row" role="row"><div><b>驗收資料與現場狀態需對齊</b><span>完成範圍、缺失與文件進度不同步</span></div><div>合約範圍、完成數量、缺失紀錄、照片及驗收文件</div><div>差異會影響估驗、付款與結案判定</div><div>列出待補資料與完成期限，追蹤責任窗口並重新核對</div><div>核定數量、缺失關閉與驗收文件</div></div>
 </div>
 <div class="file-output">
-<div><small>MY OUTPUT 01</small><b>介面與待決事項清單</b></div><div><small>MY OUTPUT 02</small><b>Milestone／Dependency追蹤</b></div><div><small>MY OUTPUT 03</small><b>Issue／Action責任紀錄</b></div><div><small>MY OUTPUT 04</small><b>驗收與結案查核資料</b></div>
+<div><small>OUTPUT 01</small><b>介面與待決事項清單</b></div><div><small>OUTPUT 02</small><b>Milestone／Dependency追蹤</b></div><div><small>OUTPUT 03</small><b>Issue／Action責任紀錄</b></div><div><small>OUTPUT 04</small><b>驗收與結案查核資料</b></div>
 </div>
 </div>
 </div>
@@ -645,7 +646,7 @@
 
 <article class="project-file compact">
 <div class="file-head"><span class="file-id">FILE 02</span><h4>鋼構平台｜26天施工交付紀錄</h4><p>已確認成果｜實際施工週期26天</p></div>
-<div class="file-role"><b>我的工作位置</b><span>協調圖面與工序確認、製作與備料、分批運輸、吊裝及現場安裝進度，並銜接估驗與結案資料。</span></div>
+<div class="file-role"><b>負責範圍</b><span>協調圖面與工序確認、製作與備料、分批運輸、吊裝及現場安裝進度，並銜接估驗與結案資料。</span></div>
 <div class="file-body">
 <div class="file-photos"><figure><img src="/field-structure-install.jpg" alt="鋼構平台吊裝施工現場"><figcaption>現場紀錄｜鋼構吊裝、作業面與施工順序確認</figcaption></figure></div>
 <div class="file-record">
@@ -660,7 +661,7 @@
 
 <article class="project-file compact">
 <div class="file-head"><span class="file-id">FILE 03</span><h4>專案採購｜範圍重整與成本改善</h4><p>已確認成果｜單一專案成本改善逾NT$400萬</p></div>
-<div class="file-role"><b>我的工作位置</b><span>檢核採購範圍與報價基準，拆分設備、材料、施工及商務條件，整理替代方案並協調報價與合約條件。</span></div>
+<div class="file-role"><b>負責範圍</b><span>檢核採購範圍與報價基準，拆分設備、材料、施工及商務條件，整理替代方案並協調報價與合約條件。</span></div>
 <div class="file-body">
 <figure class="personal-evidence"><img src="/project-portfolio-6f2c/cost-sheet.png" alt="Amber專案採購成本比較工作表匿名化重建"></figure>
 <div class="file-record">
@@ -668,12 +669,61 @@
 <div class="file-output">
 <div><small>01 · SCOPE</small><b>固定不可變需求</b></div><div><small>02 · NORMALIZE</small><b>統一設備、材料與施工基準</b></div><div><small>03 · RISK</small><b>檢核產能、交期與履約條件</b></div><div><small>04 · DECISION</small><b>將選擇回寫合約與付款節點</b></div>
 </div>
-<div class="personal-note"><b>我的判斷依據</b><span>報價差異若來自責任範圍、排除項目或交付條件，最低總價不一定代表較低專案成本；因此先建立一致比較基準，再評估替代方案與商務條件。</span></div>
+<div class="personal-note"><b>判斷依據</b><span>報價差異若來自責任範圍、排除項目或交付條件，最低總價不一定代表較低專案成本；因此先建立一致比較基準，再評估替代方案與商務條件。</span></div>
 </div>
 </div>
 </article>
 
-<div class="personal-note"><b>證據如何查驗</b><span>作品集中的流程、表格與照片均對應實際工作內容並採匿名化重建。面試時可依「現場或文件訊號 → 原始資料 → 我的判斷 → 協調紀錄 → 後續查驗」說明，不以工具畫面取代工作事實。</span></div>
+<div class="personal-note"><b>證據如何查驗</b><span>作品集中的流程、表格與照片均對應實際工作內容並採匿名化重建。面試時可依「現場或文件訊號 → 原始資料 → 判斷依據 → 協調紀錄 → 後續查驗」說明，不以工具畫面取代工作事實。</span></div>
+
+<div class="control-room" aria-label="來源可追溯的專案管理輸出">
+<div class="control-room-head">
+<div><p class="eyebrow">SOURCE → DECISION → CONTROL RECORD</p><h3>時間節點來自會議、數量、工序與現場條件</h3></div>
+<p>節點不是為了讓甘特圖完整而補上。以下四次紀錄分別提供工期估算、人力配置、交付風險與跨工種依賴，並轉成排程、RAID、供應商訪廠與溝通矩陣。</p>
+</div>
+
+<div class="source-timeline" aria-label="匿名化專案紀錄來源時間軸">
+<article class="source-step"><time>2026 · 03 · 13</time><b>施工策略與探孔風險</b><span>前20米、72片、3–4天；比較兩種施工起點並保留工作面切換。</span></article>
+<article class="source-step"><time>2026 · 04 · 09</time><b>資源分階段導入</b><span>電氣4人先行；線槽未齊時先做電櫃定位與圖面熟悉。</span></article>
+<article class="source-step"><time>2026 · 04 · 14</time><b>材料交期未明</b><span>訂單、下料與4月20日進場相依；要求書面承諾並設定延後紀錄。</span></article>
+<article class="source-step"><time>2026 · 04 · 28</time><b>跨工種依賴與緩衝</b><span>貨架80天、輸送機15天；拆出DMS、吊車與樓層工作面，預留100–120天。</span></article>
+</div>
+
+<div class="artifact-wall">
+<figure class="artifact-preview" tabindex="0" data-note="以2026年3月13日、4月9日與4月28日匿名化會議紀錄為來源，將已確認工期、人力、前置條件、依賴工項、風險訊號及關閉條件整理在同一張控制表。">
+<img src="assets/generated/schedule-control.png" alt="設備導入排程與工作面控制表">
+<figcaption><b>Schedule &amp; Workfront Control</b><span>點擊放大｜排程、資源、依賴與關閉條件</span></figcaption>
+</figure>
+<figure class="artifact-preview" tabindex="0" data-note="訪廠不是單純看環境，而是核對報價與圖面版本、排產與在製品、檢驗追溯、包裝運輸及安裝介面；離場後形成缺口、責任與來源決策紀錄。">
+<img src="assets/generated/supplier-visit.png" alt="供應商訪廠與交付判斷表">
+<figcaption><b>Supplier Visit Decision Record</b><span>點擊放大｜訪廠前、現場、訪廠後</span></figcaption>
+</figure>
+<figure class="artifact-preview" tabindex="0" data-note="將機構、電控、現場、供應商、採購商務、管理層與客戶窗口需要交換的資訊，以及升級條件與保留證據放在同一張矩陣，清楚區分專案協調與技術核定責任。">
+<img src="assets/generated/communication-matrix.png" alt="跨部門資訊與決策路由矩陣">
+<figcaption><b>Communication Routing Matrix</b><span>點擊放大｜輸入、決策、輸出與升級</span></figcaption>
+</figure>
+<figure class="artifact-preview" tabindex="0" data-note="將現場訊號拆成原因、下游影響、查核依據、協調動作、責任窗口、下一檢查點與關閉證據，避免議題只留下口頭結論。">
+<img src="assets/generated/raid-log.png" alt="專案問題風險與關閉條件追蹤表">
+<figcaption><b>RAID &amp; Closure Log</b><span>點擊放大｜原因、影響、責任與關閉證據</span></figcaption>
+</figure>
+<figure class="artifact-preview" tabindex="0" data-note="這張索引將排程、風險、訪廠與溝通紀錄對回原始會議、現場照片、供應商回覆及查驗資料，讓每一個管理結論都能回溯來源。">
+<img src="assets/generated/evidence-dashboard.png" alt="專案管理證據索引與查驗儀表板">
+<figcaption><b>Evidence Control Dashboard</b><span>點擊放大｜來源、管理輸出與查驗狀態</span></figcaption>
+</figure>
+</div>
+
+<article class="decision-replay">
+<div class="replay-head"><span>DECISION REPLAY · 03/13</span><b>鋼平台區可能卡住時，施工起點如何選擇？</b><p>這不是技術設計決定，而是把現場條件、時間與人力限制轉成可執行的工作面安排。</p></div>
+<div class="replay-grid">
+<div class="replay-step"><small>01 · SIGNAL</small><b>單一區域可能讓整隊待工</b><p>鋼平台與前20米貨架校正互相影響。</p></div>
+<div class="replay-step"><small>02 · EVIDENCE</small><b>用數量與時間估算</b><p>72片約3–4天；立柱進料至完成約6天。</p></div>
+<div class="replay-step"><small>03 · OPTIONS</small><b>比較兩個施工起點</b><p>鋼平台端較易吸收誤差；中間起點可保留兩側工作面。</p></div>
+<div class="replay-step"><small>04 · COORDINATION</small><b>先釋放前20米，再逐段檢查</b><p>每20米確認一次；遇阻時切換另一側並保留異常數量。</p></div>
+<div class="replay-step"><small>05 · CONTROL OUTPUT</small><b>形成工作面策略與追蹤點</b><p>排程不只寫日期，同時連接人力、材料、探孔、成本與下一次複核。</p></div>
+</div>
+<div class="replay-note"><b>工作貢獻</b><span>將會議討論整理成選項、限制、行動項目與查驗節點；需要技術判斷的內容交由施工與專業窗口確認，持續追蹤對排程及成本的影響。</span></div>
+</article>
+</div>
 </div>
 <div class="evidence-ledger">
 <div class="ledger-intro">
@@ -700,7 +750,7 @@
 <div class="proof-step"><i>01 · ISSUE</i><b>辨識圖面與現場差異</b><p>記錄差異位置、文件版本及待確認介面，建立共同檢核基準。</p></div>
 <div class="proof-step"><i>02 · EVIDENCE</i><b>彙整圖面、照片與範圍資料</b><p>對照預期條件與現況，釐清涉及機構、電控、施工或供應商的責任介面。</p></div>
 <div class="proof-step"><i>03 · JUDGMENT</i><b>評估後續工項影響</b><p>確認差異對安裝順序、現場修改、單機測試、驗收及追加成本的影響。</p></div>
-<div class="proof-step action"><i>04 · MY ACTION</i><b>確認窗口並追蹤處理期限</b><p>將待決事項、責任窗口、回覆日期與查驗方式納入Issue／Action紀錄。</p></div>
+<div class="proof-step action"><i>04 · ACTION</i><b>確認窗口並追蹤處理期限</b><p>將待決事項、責任窗口、回覆日期與查驗方式納入Issue／Action紀錄。</p></div>
 <div class="proof-step result"><i>05 · CLOSURE</i><b>依修正與複驗結果關閉</b><p>確認處理結果已反映於現場、更新文件或後續測試條件後結案。</p></div>
 </div>
 </article>
@@ -710,7 +760,7 @@
 <div class="proof-step"><i>01 · ISSUE</i><b>供應與進場條件不同步</b><p>供應商完成狀態與現場作業面、機具、人力或前置工項存在時間差。</p></div>
 <div class="proof-step"><i>02 · EVIDENCE</i><b>核對進度與現場條件</b><p>比對製作、分批到貨、區域釋放、吊裝資源及後續安裝條件。</p></div>
 <div class="proof-step"><i>03 · JUDGMENT</i><b>確認關鍵路徑與受影響節點</b><p>判斷延誤對後續安裝、測試與驗收時程的影響。</p></div>
-<div class="proof-step action"><i>04 · MY ACTION</i><b>協調交付批次與作業順序</b><p>對齊材料、運輸、吊裝、安裝與作業面，更新責任窗口及完成期限。</p></div>
+<div class="proof-step action"><i>04 · ACTION</i><b>協調交付批次與作業順序</b><p>對齊材料、運輸、吊裝、安裝與作業面，更新責任窗口及完成期限。</p></div>
 <div class="proof-step result"><i>05 · VERIFIED RESULT</i><b>26天完成鋼構平台施工</b><p>依施工週期、現場進度與估驗資料核對實際完成範圍。</p></div>
 </div>
 </article>
@@ -720,7 +770,7 @@
 <div class="proof-step"><i>01 · ISSUE</i><b>供應商報價基準不一致</b><p>不同報價包含的範圍、材料、交付條件及排除項目存在差異。</p></div>
 <div class="proof-step"><i>02 · EVIDENCE</i><b>拆分報價、規格與責任範圍</b><p>區分已確認成本、暫估項目、替代方案及尚待釐清的介面。</p></div>
 <div class="proof-step"><i>03 · JUDGMENT</i><b>評估成本與履約條件</b><p>除價格外，同步檢核產能、交期、品質文件及現場條件。</p></div>
-<div class="proof-step action"><i>04 · MY ACTION</i><b>統一比較基準並協調條件</b><p>檢核採購範圍、整理替代方案，追蹤報價修正及商務條件確認。</p></div>
+<div class="proof-step action"><i>04 · ACTION</i><b>統一比較基準並協調條件</b><p>檢核採購範圍、整理替代方案，追蹤報價修正及商務條件確認。</p></div>
 <div class="proof-step result"><i>05 · VERIFIED RESULT</i><b>單案成本改善逾NT$400萬</b><p>成果依範圍檢核、報價基準調整、方案比較與條件協商資料核對。</p></div>
 </div>
 </article>
@@ -759,7 +809,7 @@
 </article>
 <article>
 <i>03</i>
-<b>My Action｜補齊差異</b>
+<b>Action｜補齊差異</b>
 <p>更新成本資料、確認發包範圍、比較分工可行性並追蹤決策。</p>
 </article>
 <article>
@@ -807,7 +857,7 @@
 <div class="timeline-summary">
 <strong>26 DAYS</strong>
 <span>實際施工週期</span>
-<span style="margin-left:auto">MY ROLE｜協調製作、運輸、吊裝、現場工序、估驗與結案資料</span>
+<span style="margin-left:auto">負責範圍｜協調製作、運輸、吊裝、現場工序、估驗與結案資料</span>
 </div>
 </div>
     </div>
@@ -843,7 +893,7 @@
 </div>
 </div>
 <p class="issue-result">
-<b>My Action</b>先比對圖面、採購範圍與到貨內容，標記差異並通知工程與供應商；確認是否影響安裝尺寸、作業順序及驗收，再追蹤退換、修正或替代方案與完成日期。</p>
+<b>協調處理</b>先比對圖面、採購範圍與到貨內容，標記差異並通知工程與供應商；確認是否影響安裝尺寸、作業順序及驗收，再追蹤退換、修正或替代方案與完成日期。</p>
 </article>
 <article class="issue-card">
 <h3>供應商進度與現場條件不同步｜重新安排導入順序</h3>
@@ -865,7 +915,7 @@
 </div>
 </div>
 <p class="issue-result">
-<b>My Action</b>分開確認設備是否可出貨，以及現場是否具備進場條件；若兩者不同步，協調分批交付、安裝區域與機具時段，並同步更新後續測試及驗收節點。</p>
+<b>協調處理</b>分開確認設備是否可出貨，以及現場是否具備進場條件；若兩者不同步，協調分批交付、安裝區域與機具時段，並同步更新後續測試及驗收節點。</p>
 </article>
 <article class="issue-card">
 <h3>硬體與電控介面待確認｜把技術問題轉成可追蹤事項</h3>
@@ -876,7 +926,7 @@
 <div>追蹤<br><b>方案與完成日期</b></div>
 <div>驗證<br><b>測試前置完成</b></div>
 </div>
-<p class="issue-result"><b>My Action</b>整理差異位置、需要決定的內容及受影響工項，交由機構、電控或供應商提出處理方式，並追蹤責任窗口、完成日期及測試前置狀態。</p>
+<p class="issue-result"><b>協調處理</b>整理差異位置、需要決定的內容及受影響工項，交由機構、電控或供應商提出處理方式，並追蹤責任窗口、完成日期及測試前置狀態。</p>
 </article>
 <article class="issue-card">
 <h3>驗收與請款資料不一致｜先確認完成範圍</h3>
@@ -887,7 +937,7 @@
 <div>修正<br><b>驗收與請款資料</b></div>
 <div>關閉<br><b>依核定範圍處理</b></div>
 </div>
-<p class="issue-result"><b>My Action</b>依合約範圍、現場完成狀態與相關紀錄檢核估驗及請款，將缺失、待補文件與完成期限列入追蹤，確認資料一致後再銜接付款與結案。</p>
+<p class="issue-result"><b>協調處理</b>依合約範圍、現場完成狀態與相關紀錄檢核估驗及請款，將缺失、待補文件與完成期限列入追蹤，確認資料一致後再銜接付款與結案。</p>
 </article>
 </div>
 </div>
@@ -936,73 +986,73 @@
 <p class="eyebrow">07 · FIELD EVIDENCE</p>
 <h2>這些不是裝飾照片，<br>是實際走訪現場的工作紀錄。</h2>
 </div>
-<p>點選照片可查看情境、我的責任、當時控制的問題，以及這張紀錄能證明的工作能力。</p>
+<p>點選照片可查看情境、負責範圍、當時控制的問題，以及這張紀錄能證明的工作能力。</p>
 </div>
 <div class="photo-grid">
-<figure tabindex="0" data-note="情境｜大型自動化倉儲設備建置。我的責任｜追蹤材料、製作、運輸與安裝前置。控制事項｜供應商進度、作業面與整體里程碑。證明｜能辨認上游延誤對後續設備與驗收的影響。">
+<figure tabindex="0" data-note="情境｜大型自動化倉儲設備建置。負責範圍｜追蹤材料、製作、運輸與安裝前置。控制事項｜供應商進度、作業面與整體里程碑。證明｜能辨認上游延誤對後續設備與驗收的影響。">
 <img src="/field-highbay-install-clean.jpg" alt="大型自動化倉儲施工現場">
 <figcaption>
 <span>SYSTEM SCALE</span>
 <b>系統範圍與工作依存</b>
 </figcaption>
 </figure>
-<figure tabindex="0" data-note="情境｜自動化設備進場安裝。我的責任｜確認設備介面、安裝空間與供應商責任。控制事項｜圖面、施工條件與測試前置。證明｜能將現場限制轉成可追蹤條件。">
+<figure tabindex="0" data-note="情境｜自動化設備進場安裝。負責範圍｜確認設備介面、安裝空間與供應商責任。控制事項｜圖面、施工條件與測試前置。證明｜能將現場限制轉成可追蹤條件。">
 <img src="/field-equipment-interface.jpg" alt="自動化設備安裝現場">
 <figcaption>
 <span>EQUIPMENT INTERFACE</span>
 <b>設備介面與現場條件</b>
 </figcaption>
 </figure>
-<figure tabindex="0" data-note="情境｜材料與樣品確認。我的責任｜整理使用需求、圖面與驗收條件。控制事項｜材質、尺寸、外觀與適用情境。證明｜能在採購與施工前建立共同基準。">
+<figure tabindex="0" data-note="情境｜材料與樣品確認。負責範圍｜整理使用需求、圖面與驗收條件。控制事項｜材質、尺寸、外觀與適用情境。證明｜能在採購與施工前建立共同基準。">
 <img src="/field-material-review.jpg" alt="材料與樣品確認">
 <figcaption>
 <span>MATERIAL REVIEW</span>
 <b>實物、規格與使用情境</b>
 </figcaption>
 </figure>
-<figure tabindex="0" data-note="情境｜大型鋼構吊裝與安裝。我的責任｜協調製作、運輸、吊裝與現場窗口。控制事項｜施工介面、材料到場與作業順序。證明｜能連接前後置工作與資源安排。">
+<figure tabindex="0" data-note="情境｜大型鋼構吊裝與安裝。負責範圍｜協調製作、運輸、吊裝與現場窗口。控制事項｜施工介面、材料到場與作業順序。證明｜能連接前後置工作與資源安排。">
 <img src="/field-structure-install.jpg" alt="大型鋼構吊裝現場">
 <figcaption>
 <span>LIFTING SEQUENCE</span>
 <b>製作、運輸與吊裝順序</b>
 </figcaption>
 </figure>
-<figure tabindex="0" data-note="情境｜自動化系統完成安裝並進入運轉確認。我的責任｜核對操作需求、測試條件與供應商後續責任。控制事項｜功能、介面、文件與驗收。證明｜能把專案追到可使用與可結案。">
+<figure tabindex="0" data-note="情境｜自動化系統完成安裝並進入運轉確認。負責範圍｜核對操作需求、測試條件與供應商後續責任。控制事項｜功能、介面、文件與驗收。證明｜能把專案追到可使用與可結案。">
 <img src="/field-system-operating.jpg" alt="自動化系統運轉現場">
 <figcaption>
 <span>OPERATION CHECK</span>
 <b>設備運轉與驗收條件</b>
 </figcaption>
 </figure>
-<figure tabindex="0" data-note="情境｜高架設備施工。我的責任｜確認供應商人力、機具與現場工序。控制事項｜資源衝突、施工順序與交付瓶頸。證明｜能把供應商承諾連到現場可執行條件。">
+<figure tabindex="0" data-note="情境｜高架設備施工。負責範圍｜確認供應商人力、機具與現場工序。控制事項｜資源衝突、施工順序與交付瓶頸。證明｜能把供應商承諾連到現場可執行條件。">
 <img src="/field-automation-lift.jpg" alt="自動化設備高架施工">
 <figcaption>
 <span>SUPPLIER PROGRESS</span>
 <b>設備施工與進度協調</b>
 </figcaption>
 </figure>
-<figure tabindex="0" data-note="情境｜設備走道與安裝位置查驗。我的責任｜核對尺寸、動線、固定點與作業空間。控制事項｜圖面與現況差異。證明｜能提前發現可能影響成本、工期或驗收的問題。">
+<figure tabindex="0" data-note="情境｜設備走道與安裝位置查驗。負責範圍｜核對尺寸、動線、固定點與作業空間。控制事項｜圖面與現況差異。證明｜能提前發現可能影響成本、工期或驗收的問題。">
 <img src="/field-aisle-inspection.jpg" alt="現場走道與設備查驗">
 <figcaption>
 <span>SITE INSPECTION</span>
 <b>現場查驗與風險辨認</b>
 </figcaption>
 </figure>
-<figure tabindex="0" data-note="情境｜自動化貨架內部查驗。我的責任｜確認結構、設備路徑與維修空間。控制事項｜安裝完成度、介面與操作限制。證明｜能從細部現況確認交付，而不只依賴書面進度。">
+<figure tabindex="0" data-note="情境｜自動化貨架內部查驗。負責範圍｜確認結構、設備路徑與維修空間。控制事項｜安裝完成度、介面與操作限制。證明｜能從細部現況確認交付，而不只依賴書面進度。">
 <img src="/field-racking-interior.jpg" alt="自動化貨架內部查驗">
 <figcaption>
 <span>DETAIL INSPECTION</span>
 <b>結構細節與維修空間</b>
 </figcaption>
 </figure>
-<figure tabindex="0" data-note="情境｜大型倉儲結構施工。我的責任｜追蹤材料到場、施工資源與安裝區域的前置條件。控制事項｜供應商人力、機具、作業面與里程碑。證明｜能把現場產能連到專案排程。">
+<figure tabindex="0" data-note="情境｜大型倉儲結構施工。負責範圍｜追蹤材料到場、施工資源與安裝區域的前置條件。控制事項｜供應商人力、機具、作業面與里程碑。證明｜能把現場產能連到專案排程。">
 <img src="/chpt-procurement/assets/warehouse-build.jpg" alt="大型倉儲結構施工">
 <figcaption>
 <span>WORKFRONT CONTROL</span>
 <b>施工資源與作業面</b>
 </figcaption>
 </figure>
-<figure tabindex="0" data-note="情境｜設備施工現場協調。我的責任｜彙整現況差異、確認責任窗口並跟進未完成事項。控制事項｜材料、工序、尺寸與回覆期限。證明｜能把現場討論轉成行動與追蹤節點。">
+<figure tabindex="0" data-note="情境｜設備施工現場協調。負責範圍｜彙整現況差異、確認責任窗口並跟進未完成事項。控制事項｜材料、工序、尺寸與回覆期限。證明｜能把現場討論轉成行動與追蹤節點。">
 <img src="/chpt-procurement/assets/equipment-install.jpg" alt="設備施工現場協調">
 <figcaption>
 <span>SITE COORDINATION</span>
@@ -1062,7 +1112,7 @@
   <script>
     const lightbox=document.getElementById('lightbox'),lbImage=document.getElementById('lightboxImage'),lbTitle=document.getElementById('lightboxTitle'),lbNote=document.getElementById('lightboxNote');
     function closeLightbox(){lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true')}
-    document.querySelectorAll('.photo-grid figure').forEach(fig=>{const open=()=>{const img=fig.querySelector('img');lbImage.src=img.src;lbImage.alt=img.alt;lbTitle.textContent=fig.querySelector('b').textContent;lbNote.textContent=fig.dataset.note;lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false')};fig.addEventListener('click',open);fig.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}})});
+    document.querySelectorAll('.photo-grid figure,.artifact-preview').forEach(fig=>{const open=()=>{const img=fig.querySelector('img');lbImage.src=img.src;lbImage.alt=img.alt;lbTitle.textContent=fig.querySelector('b').textContent;lbNote.textContent=fig.dataset.note;lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false')};fig.addEventListener('click',open);fig.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}})});
     document.querySelector('.lightbox-close').addEventListener('click',closeLightbox);lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
   </script>
 </body>
