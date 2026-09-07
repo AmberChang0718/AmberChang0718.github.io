@@ -26,7 +26,7 @@
   <text x="58" y="42" class="kicker mint">PROJECT DELIVERY DASHBOARD</text>
   <text x="58" y="85" class="title white">設備導入專案管理儀表板</text>
   <text x="1540" y="46" class="label mint" text-anchor="end">PORTFOLIO VIEW</text>
-  <text x="1540" y="77" class="sub on-dark" text-anchor="end">匿名化紀錄｜2026/03/13–04/28</text>
+  <text x="1540" y="77" class="sub on-dark" text-anchor="end">匿名化管理紀錄｜不揭露專案日期</text>
 
   <!-- KPI strip -->
   <g transform="translate(42 148)">
@@ -50,7 +50,7 @@
     <text x="26" y="35" class="label">DATED SOURCES</text>
     <text x="26" y="84" class="metric">4</text>
     <text x="88" y="80" class="metric-note">次會議／現場紀錄</text>
-    <text x="330" y="114" class="small" text-anchor="end">03/13 · 04/09 · 04/14 · 04/28</text>
+    <text x="330" y="114" class="small" text-anchor="end">會議 · 現場 · 供應商 · 管理紀錄</text>
   </g>
   <g transform="translate(1173 148)">
     <rect width="385" height="138" rx="4" fill="#ffffff" stroke="#cdd7d4"/>
